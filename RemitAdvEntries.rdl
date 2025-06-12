@@ -9,7 +9,7 @@
       <am:Name>MSRB</am:Name>
       <am:Version>15.0.20283.0</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2025-06-09T22:41:22.4012178Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-06-11T09:39:31.5125920Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -22,346 +22,6 @@
       <rd:DataSourceID>a45fc554-3bde-4247-9a5f-7121b4dcca43</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="CompanyAddr1">
-          <DataField>CompanyAddr1</DataField>
-        </Field>
-        <Field Name="VendorAddr1">
-          <DataField>VendorAddr1</DataField>
-        </Field>
-        <Field Name="CompanyAddr2">
-          <DataField>CompanyAddr2</DataField>
-        </Field>
-        <Field Name="VendorAddr2">
-          <DataField>VendorAddr2</DataField>
-        </Field>
-        <Field Name="CompanyAddr3">
-          <DataField>CompanyAddr3</DataField>
-        </Field>
-        <Field Name="VendorAddr3">
-          <DataField>VendorAddr3</DataField>
-        </Field>
-        <Field Name="CompanyAddr4">
-          <DataField>CompanyAddr4</DataField>
-        </Field>
-        <Field Name="VendorAddr4">
-          <DataField>VendorAddr4</DataField>
-        </Field>
-        <Field Name="CompanyAddr5">
-          <DataField>CompanyAddr5</DataField>
-        </Field>
-        <Field Name="CompanyAddr6">
-          <DataField>CompanyAddr6</DataField>
-        </Field>
-        <Field Name="CompanyAddr7">
-          <DataField>CompanyAddr7</DataField>
-        </Field>
-        <Field Name="CompanyAddr8">
-          <DataField>CompanyAddr8</DataField>
-        </Field>
-        <Field Name="VendorAddr5">
-          <DataField>VendorAddr5</DataField>
-        </Field>
-        <Field Name="VendorAddr6">
-          <DataField>VendorAddr6</DataField>
-        </Field>
-        <Field Name="CompanyInfoPhoneNo">
-          <DataField>CompanyInfoPhoneNo</DataField>
-        </Field>
-        <Field Name="VendorAddr7">
-          <DataField>VendorAddr7</DataField>
-        </Field>
-        <Field Name="CompanyInfoVATRegNo">
-          <DataField>CompanyInfoVATRegNo</DataField>
-        </Field>
-        <Field Name="CompanyInfoFaxNo">
-          <DataField>CompanyInfoFaxNo</DataField>
-        </Field>
-        <Field Name="VendorAddr8">
-          <DataField>VendorAddr8</DataField>
-        </Field>
-        <Field Name="CompanyInfoBankName">
-          <DataField>CompanyInfoBankName</DataField>
-        </Field>
-        <Field Name="CompanyInfoBankAccNo">
-          <DataField>CompanyInfoBankAccNo</DataField>
-        </Field>
-        <Field Name="CompanyInfoBankBranchNo">
-          <DataField>CompanyInfoBankBranchNo</DataField>
-        </Field>
-        <Field Name="DocNo_VendLedgEntry">
-          <DataField>DocNo_VendLedgEntry</DataField>
-        </Field>
-        <Field Name="EntryNo_VendLedgEntry">
-          <DataField>EntryNo_VendLedgEntry</DataField>
-        </Field>
-        <Field Name="VendorLedgerEntryVendorNo">
-          <DataField>VendorLedgerEntryVendorNo</DataField>
-        </Field>
-        <Field Name="RemittanceAdviceCaption">
-          <DataField>RemittanceAdviceCaption</DataField>
-        </Field>
-        <Field Name="PhoneNoCaption">
-          <DataField>PhoneNoCaption</DataField>
-        </Field>
-        <Field Name="FaxNoCaption">
-          <DataField>FaxNoCaption</DataField>
-        </Field>
-        <Field Name="VATRegNoCaption">
-          <DataField>VATRegNoCaption</DataField>
-        </Field>
-        <Field Name="BankNameCaption">
-          <DataField>BankNameCaption</DataField>
-        </Field>
-        <Field Name="BankAccountNoCaption">
-          <DataField>BankAccountNoCaption</DataField>
-        </Field>
-        <Field Name="SortCodeCaption">
-          <DataField>SortCodeCaption</DataField>
-        </Field>
-        <Field Name="AmountCaption">
-          <DataField>AmountCaption</DataField>
-        </Field>
-        <Field Name="PmtDiscTakenCaption">
-          <DataField>PmtDiscTakenCaption</DataField>
-        </Field>
-        <Field Name="RemainingAmtCaption">
-          <DataField>RemainingAmtCaption</DataField>
-        </Field>
-        <Field Name="OriginalAmountCaption">
-          <DataField>OriginalAmountCaption</DataField>
-        </Field>
-        <Field Name="YourDocNoCaption">
-          <DataField>YourDocNoCaption</DataField>
-        </Field>
-        <Field Name="DocTypeCaption_VendLedgEntry2">
-          <DataField>DocTypeCaption_VendLedgEntry2</DataField>
-        </Field>
-        <Field Name="OurDocNoCaption">
-          <DataField>OurDocNoCaption</DataField>
-        </Field>
-        <Field Name="CurrCodeCaption">
-          <DataField>CurrCodeCaption</DataField>
-        </Field>
-        <Field Name="DocumentDateCaption">
-          <DataField>DocumentDateCaption</DataField>
-        </Field>
-        <Field Name="PostingDateCaption">
-          <DataField>PostingDateCaption</DataField>
-        </Field>
-        <Field Name="LineAmtLineDiscCurr">
-          <DataField>LineAmtLineDiscCurr</DataField>
-        </Field>
-        <Field Name="LineAmtLineDiscCurrFormat">
-          <DataField>LineAmtLineDiscCurrFormat</DataField>
-        </Field>
-        <Field Name="NegAmount_VendLedgEntry2">
-          <DataField>NegAmount_VendLedgEntry2</DataField>
-        </Field>
-        <Field Name="NegAmount_VendLedgEntry2Format">
-          <DataField>NegAmount_VendLedgEntry2Format</DataField>
-        </Field>
-        <Field Name="RemAmt_VendLedgEntry2">
-          <DataField>RemAmt_VendLedgEntry2</DataField>
-        </Field>
-        <Field Name="RemAmt_VendLedgEntry2Format">
-          <DataField>RemAmt_VendLedgEntry2Format</DataField>
-        </Field>
-        <Field Name="DocType_VendLedgEntry2">
-          <DataField>DocType_VendLedgEntry2</DataField>
-        </Field>
-        <Field Name="ExtDocNo_VendLedgEntry2">
-          <DataField>ExtDocNo_VendLedgEntry2</DataField>
-        </Field>
-        <Field Name="LineDiscount_VendLedgEntry2">
-          <DataField>LineDiscount_VendLedgEntry2</DataField>
-        </Field>
-        <Field Name="LineDiscount_VendLedgEntry2Format">
-          <DataField>LineDiscount_VendLedgEntry2Format</DataField>
-        </Field>
-        <Field Name="CurrCode_VendLedgEntry2">
-          <DataField>CurrCode_VendLedgEntry2</DataField>
-        </Field>
-        <Field Name="DocDateFormat_VendLedgEntry2">
-          <DataField>DocDateFormat_VendLedgEntry2</DataField>
-        </Field>
-        <Field Name="PostingDateFormat_VendLedgEntry2">
-          <DataField>PostingDateFormat_VendLedgEntry2</DataField>
-        </Field>
-        <Field Name="LAmountWDiscCur">
-          <DataField>LAmountWDiscCur</DataField>
-        </Field>
-        <Field Name="LAmountWDiscCurFormat">
-          <DataField>LAmountWDiscCurFormat</DataField>
-        </Field>
-        <Field Name="EntryNo_VendLedgEntry2">
-          <DataField>EntryNo_VendLedgEntry2</DataField>
-        </Field>
-        <Field Name="LineDisc_DtldVendLedgEntry">
-          <DataField>LineDisc_DtldVendLedgEntry</DataField>
-        </Field>
-        <Field Name="LineDisc_DtldVendLedgEntryFormat">
-          <DataField>LineDisc_DtldVendLedgEntryFormat</DataField>
-        </Field>
-        <Field Name="VendLedgEntry3RemAmt">
-          <DataField>VendLedgEntry3RemAmt</DataField>
-        </Field>
-        <Field Name="VendLedgEntry3RemAmtFormat">
-          <DataField>VendLedgEntry3RemAmtFormat</DataField>
-        </Field>
-        <Field Name="Amt_DtldVendLedgEntry">
-          <DataField>Amt_DtldVendLedgEntry</DataField>
-        </Field>
-        <Field Name="Amt_DtldVendLedgEntryFormat">
-          <DataField>Amt_DtldVendLedgEntryFormat</DataField>
-        </Field>
-        <Field Name="VendLedgEntry3CurrCode">
-          <DataField>VendLedgEntry3CurrCode</DataField>
-        </Field>
-        <Field Name="VendLedgEntry3DocDateFormat">
-          <DataField>VendLedgEntry3DocDateFormat</DataField>
-        </Field>
-        <Field Name="VendLedgEntry3PostingDateFormat">
-          <DataField>VendLedgEntry3PostingDateFormat</DataField>
-        </Field>
-        <Field Name="VendLedgEntry3ExtDocNo">
-          <DataField>VendLedgEntry3ExtDocNo</DataField>
-        </Field>
-        <Field Name="DocType_DtldVendLedgEntry">
-          <DataField>DocType_DtldVendLedgEntry</DataField>
-        </Field>
-        <Field Name="VendLedgerEntryNo_DtldVendLedgEntry">
-          <DataField>VendLedgerEntryNo_DtldVendLedgEntry</DataField>
-        </Field>
-        <Field Name="Amount_VendLedgEntry">
-          <DataField>Amount_VendLedgEntry</DataField>
-        </Field>
-        <Field Name="Amount_VendLedgEntryFormat">
-          <DataField>Amount_VendLedgEntryFormat</DataField>
-        </Field>
-        <Field Name="CurrCode_VendLedgEntry">
-          <DataField>CurrCode_VendLedgEntry</DataField>
-        </Field>
-        <Field Name="TotalCaption">
-          <DataField>TotalCaption</DataField>
-        </Field>
-        <Field Name="GetABN">
-          <DataField>GetABN</DataField>
-        </Field>
-        <Field Name="VendEmail">
-          <DataField>VendEmail</DataField>
-        </Field>
-        <Field Name="PostingDate">
-          <DataField>PostingDate</DataField>
-        </Field>
-        <Field Name="DocumentDate">
-          <DataField>DocumentDate</DataField>
-        </Field>
-        <Field Name="PaymentMethod">
-          <DataField>PaymentMethod</DataField>
-        </Field>
-        <Field Name="CompInfoPicture">
-          <DataField>CompInfoPicture</DataField>
-        </Field>
-        <Field Name="CompInfoVATRegNo">
-          <DataField>CompInfoVATRegNo</DataField>
-        </Field>
-        <Field Name="CompInfoGiroNo">
-          <DataField>CompInfoGiroNo</DataField>
-        </Field>
-        <Field Name="CompInfoBankName">
-          <DataField>CompInfoBankName</DataField>
-        </Field>
-        <Field Name="CompInfoBankAccountNo">
-          <DataField>CompInfoBankAccountNo</DataField>
-        </Field>
-        <Field Name="CompInfoName">
-          <DataField>CompInfoName</DataField>
-        </Field>
-        <Field Name="CompInfoName2">
-          <DataField>CompInfoName2</DataField>
-        </Field>
-        <Field Name="CompInfoAddress">
-          <DataField>CompInfoAddress</DataField>
-        </Field>
-        <Field Name="CompInfoAddress2">
-          <DataField>CompInfoAddress2</DataField>
-        </Field>
-        <Field Name="CompInfoCounty">
-          <DataField>CompInfoCounty</DataField>
-        </Field>
-        <Field Name="CompInfoFaxNo1">
-          <DataField>CompInfoFaxNo1</DataField>
-        </Field>
-        <Field Name="CompInfoPhoneNo">
-          <DataField>CompInfoPhoneNo</DataField>
-        </Field>
-        <Field Name="CompInfoPostCode">
-          <DataField>CompInfoPostCode</DataField>
-        </Field>
-        <Field Name="CompInfoCity">
-          <DataField>CompInfoCity</DataField>
-        </Field>
-        <Field Name="CompInfoCountryRegionCode">
-          <DataField>CompInfoCountryRegionCode</DataField>
-        </Field>
-        <Field Name="CompInfoVATRegsNo">
-          <DataField>CompInfoVATRegsNo</DataField>
-        </Field>
-        <Field Name="CompInfoEmail">
-          <DataField>CompInfoEmail</DataField>
-        </Field>
-        <Field Name="CompInfoABN">
-          <DataField>CompInfoABN</DataField>
-        </Field>
-        <Field Name="VendorNo">
-          <DataField>VendorNo</DataField>
-        </Field>
-        <Field Name="VendorName">
-          <DataField>VendorName</DataField>
-        </Field>
-        <Field Name="VendorName2">
-          <DataField>VendorName2</DataField>
-        </Field>
-        <Field Name="VendorAddress1">
-          <DataField>VendorAddress1</DataField>
-        </Field>
-        <Field Name="VendorAddress2">
-          <DataField>VendorAddress2</DataField>
-        </Field>
-        <Field Name="VendorCity">
-          <DataField>VendorCity</DataField>
-        </Field>
-        <Field Name="VendorCounty">
-          <DataField>VendorCounty</DataField>
-        </Field>
-        <Field Name="VendorPostCode">
-          <DataField>VendorPostCode</DataField>
-        </Field>
-        <Field Name="VendorPhoneNo">
-          <DataField>VendorPhoneNo</DataField>
-        </Field>
-        <Field Name="VendorFaxNo">
-          <DataField>VendorFaxNo</DataField>
-        </Field>
-        <Field Name="VendorBankAccNo">
-          <DataField>VendorBankAccNo</DataField>
-        </Field>
-        <Field Name="VendorBankAccName">
-          <DataField>VendorBankAccName</DataField>
-        </Field>
-        <Field Name="VendorBankBSB">
-          <DataField>VendorBankBSB</DataField>
-        </Field>
-      </Fields>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -370,7 +30,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>18.00673cm</Width>
+                  <Width>18.45124cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -385,22 +45,22 @@
                               <TablixBody>
                                 <TablixColumns>
                                   <TablixColumn>
-                                    <Width>2.55781cm</Width>
+                                    <Width>4.18764cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>2.97694cm</Width>
+                                    <Width>3.35794cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>2.91589cm</Width>
+                                    <Width>2.53489cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>3.04631cm</Width>
+                                    <Width>3.00924cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>3.39539cm</Width>
+                                    <Width>2.7128cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>3.11439cm</Width>
+                                    <Width>2.64872cm</Width>
                                   </TablixColumn>
                                 </TablixColumns>
                                 <TablixRows>
@@ -1108,7 +768,6 @@
                                             <Style>
                                               <VerticalAlign>Middle</VerticalAlign>
                                               <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
                                             </Style>
                                           </Textbox>
                                         </CellContents>
@@ -1423,59 +1082,6 @@
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox142">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style />
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style />
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox142</rd:DefaultName>
-                                            <Style>
-                                              <VerticalAlign>Middle</VerticalAlign>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox24">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style />
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Left</TextAlign>
-                                                </Style>
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox24</rd:DefaultName>
-                                            <Style>
-                                              <VerticalAlign>Middle</VerticalAlign>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
                                           <Textbox Name="Textbox204">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
@@ -1503,7 +1109,7 @@
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox67">
+                                          <Textbox Name="Textbox71">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
@@ -1520,6 +1126,34 @@
                                               </Paragraph>
                                             </Paragraphs>
                                             <rd:DefaultName>Textbox44</rd:DefaultName>
+                                            <Style>
+                                              <VerticalAlign>Middle</VerticalAlign>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                            </Style>
+                                          </Textbox>
+                                          <ColSpan>2</ColSpan>
+                                        </CellContents>
+                                      </TablixCell>
+                                      <TablixCell />
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="Textbox148">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value />
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Left</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>Textbox148</rd:DefaultName>
                                             <Style>
                                               <VerticalAlign>Middle</VerticalAlign>
                                               <PaddingLeft>2pt</PaddingLeft>
@@ -1565,59 +1199,6 @@
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox143">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style />
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style />
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox143</rd:DefaultName>
-                                            <Style>
-                                              <VerticalAlign>Middle</VerticalAlign>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox26">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style />
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Left</TextAlign>
-                                                </Style>
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox26</rd:DefaultName>
-                                            <Style>
-                                              <VerticalAlign>Middle</VerticalAlign>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
                                           <Textbox Name="Textbox209">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
@@ -1645,7 +1226,7 @@
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox70">
+                                          <Textbox Name="Textbox74">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
@@ -1662,6 +1243,34 @@
                                               </Paragraph>
                                             </Paragraphs>
                                             <rd:DefaultName>Textbox44</rd:DefaultName>
+                                            <Style>
+                                              <VerticalAlign>Middle</VerticalAlign>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                            </Style>
+                                          </Textbox>
+                                          <ColSpan>2</ColSpan>
+                                        </CellContents>
+                                      </TablixCell>
+                                      <TablixCell />
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="Textbox149">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value />
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Left</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>Textbox149</rd:DefaultName>
                                             <Style>
                                               <VerticalAlign>Middle</VerticalAlign>
                                               <PaddingLeft>2pt</PaddingLeft>
@@ -1707,59 +1316,6 @@
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox144">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style />
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style />
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox144</rd:DefaultName>
-                                            <Style>
-                                              <VerticalAlign>Middle</VerticalAlign>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox28">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style />
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Left</TextAlign>
-                                                </Style>
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox28</rd:DefaultName>
-                                            <Style>
-                                              <VerticalAlign>Middle</VerticalAlign>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
                                           <Textbox Name="Textbox218">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
@@ -1787,7 +1343,7 @@
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox71">
+                                          <Textbox Name="Textbox77">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
@@ -1804,6 +1360,34 @@
                                               </Paragraph>
                                             </Paragraphs>
                                             <rd:DefaultName>Textbox44</rd:DefaultName>
+                                            <Style>
+                                              <VerticalAlign>Middle</VerticalAlign>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                            </Style>
+                                          </Textbox>
+                                          <ColSpan>2</ColSpan>
+                                        </CellContents>
+                                      </TablixCell>
+                                      <TablixCell />
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="Textbox150">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value />
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Left</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>Textbox150</rd:DefaultName>
                                             <Style>
                                               <VerticalAlign>Middle</VerticalAlign>
                                               <PaddingLeft>2pt</PaddingLeft>
@@ -3117,7 +2701,7 @@
                               </TablixRowHierarchy>
                               <DataSetName>DataSet_Result</DataSetName>
                               <Height>8.20707cm</Height>
-                              <Width>18.00673cm</Width>
+                              <Width>18.45124cm</Width>
                               <Style />
                             </Tablix>
                           </ReportItems>
@@ -3156,14 +2740,14 @@
             </PageBreak>
             <Left>0.02337cm</Left>
             <Height>8.20707cm</Height>
-            <Width>18.00673cm</Width>
+            <Width>18.45124cm</Width>
             <Style />
           </Tablix>
         </ReportItems>
         <Height>8.20707cm</Height>
         <Style />
       </Body>
-      <Width>18.03011cm</Width>
+      <Width>18.47461cm</Width>
       <Page>
         <PageHeader>
           <Height>4.34519cm</Height>
@@ -3374,9 +2958,9 @@
                 </Paragraph>
               </Paragraphs>
               <Top>2.62541cm</Top>
-              <Left>10.72349cm</Left>
+              <Left>11.04099cm</Left>
               <Height>1.62277cm</Height>
-              <Width>7.30662cm</Width>
+              <Width>7.43362cm</Width>
               <ZIndex>2</ZIndex>
               <Style>
                 <VerticalAlign>Top</VerticalAlign>
@@ -3399,7 +2983,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Fields!CompInfoFaxNo1.Value</Value>
+                      <Value>=Fields!CompInfoEmail.Value</Value>
                       <Style />
                     </TextRun>
                   </TextRuns>
@@ -3427,9 +3011,9 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox37</rd:DefaultName>
-              <Left>14.36012cm</Left>
+              <Left>13.91562cm</Left>
               <Height>1.96394cm</Height>
-              <Width>3.66998cm</Width>
+              <Width>4.55899cm</Width>
               <ZIndex>3</ZIndex>
               <Style>
                 <Border>
@@ -3448,7 +3032,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Telephone ................:</Value>
+                      <Value>Telephone ...............:</Value>
                       <Style />
                     </TextRun>
                   </TextRuns>
@@ -3459,7 +3043,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Fax...........................:</Value>
+                      <Value>Email.......................:</Value>
                       <Style />
                     </TextRun>
                   </TextRuns>
@@ -3470,7 +3054,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>ABN..........................:</Value>
+                      <Value>ABN........................:</Value>
                       <Style />
                     </TextRun>
                   </TextRuns>
@@ -3491,9 +3075,9 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox37</rd:DefaultName>
-              <Left>10.43933cm</Left>
+              <Left>10.29823cm</Left>
               <Height>1.96394cm</Height>
-              <Width>3.92078cm</Width>
+              <Width>3.58211cm</Width>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border>
@@ -3522,9 +3106,9 @@
               <Value>Egg</Value>
               <Sizing>FitProportional</Sizing>
               <Top>0.03528cm</Top>
-              <Left>14.38011cm</Left>
+              <Left>14.69761cm</Left>
               <Height>1.97cm</Height>
-              <Width>3.65cm</Width>
+              <Width>3.777cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -3550,12 +3134,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -3625,4 +3203,344 @@ SttTByo7B1StPLXW3rQGZTGdJO0BWdnnRGNdhtHjv2jM3wD4tz0N+wdr7f/c85ygGGOafXUKAO8GFvcF
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>03448af6-0c6e-4895-82be-dbebd3c423b1</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompanyAddr1">
+          <DataField>CompanyAddr1</DataField>
+        </Field>
+        <Field Name="VendorAddr1">
+          <DataField>VendorAddr1</DataField>
+        </Field>
+        <Field Name="CompanyAddr2">
+          <DataField>CompanyAddr2</DataField>
+        </Field>
+        <Field Name="VendorAddr2">
+          <DataField>VendorAddr2</DataField>
+        </Field>
+        <Field Name="CompanyAddr3">
+          <DataField>CompanyAddr3</DataField>
+        </Field>
+        <Field Name="VendorAddr3">
+          <DataField>VendorAddr3</DataField>
+        </Field>
+        <Field Name="CompanyAddr4">
+          <DataField>CompanyAddr4</DataField>
+        </Field>
+        <Field Name="VendorAddr4">
+          <DataField>VendorAddr4</DataField>
+        </Field>
+        <Field Name="CompanyAddr5">
+          <DataField>CompanyAddr5</DataField>
+        </Field>
+        <Field Name="CompanyAddr6">
+          <DataField>CompanyAddr6</DataField>
+        </Field>
+        <Field Name="CompanyAddr7">
+          <DataField>CompanyAddr7</DataField>
+        </Field>
+        <Field Name="CompanyAddr8">
+          <DataField>CompanyAddr8</DataField>
+        </Field>
+        <Field Name="VendorAddr5">
+          <DataField>VendorAddr5</DataField>
+        </Field>
+        <Field Name="VendorAddr6">
+          <DataField>VendorAddr6</DataField>
+        </Field>
+        <Field Name="CompanyInfoPhoneNo">
+          <DataField>CompanyInfoPhoneNo</DataField>
+        </Field>
+        <Field Name="VendorAddr7">
+          <DataField>VendorAddr7</DataField>
+        </Field>
+        <Field Name="CompanyInfoVATRegNo">
+          <DataField>CompanyInfoVATRegNo</DataField>
+        </Field>
+        <Field Name="CompanyInfoFaxNo">
+          <DataField>CompanyInfoFaxNo</DataField>
+        </Field>
+        <Field Name="VendorAddr8">
+          <DataField>VendorAddr8</DataField>
+        </Field>
+        <Field Name="CompanyInfoBankName">
+          <DataField>CompanyInfoBankName</DataField>
+        </Field>
+        <Field Name="CompanyInfoBankAccNo">
+          <DataField>CompanyInfoBankAccNo</DataField>
+        </Field>
+        <Field Name="CompanyInfoBankBranchNo">
+          <DataField>CompanyInfoBankBranchNo</DataField>
+        </Field>
+        <Field Name="DocNo_VendLedgEntry">
+          <DataField>DocNo_VendLedgEntry</DataField>
+        </Field>
+        <Field Name="EntryNo_VendLedgEntry">
+          <DataField>EntryNo_VendLedgEntry</DataField>
+        </Field>
+        <Field Name="VendorLedgerEntryVendorNo">
+          <DataField>VendorLedgerEntryVendorNo</DataField>
+        </Field>
+        <Field Name="RemittanceAdviceCaption">
+          <DataField>RemittanceAdviceCaption</DataField>
+        </Field>
+        <Field Name="PhoneNoCaption">
+          <DataField>PhoneNoCaption</DataField>
+        </Field>
+        <Field Name="FaxNoCaption">
+          <DataField>FaxNoCaption</DataField>
+        </Field>
+        <Field Name="VATRegNoCaption">
+          <DataField>VATRegNoCaption</DataField>
+        </Field>
+        <Field Name="BankNameCaption">
+          <DataField>BankNameCaption</DataField>
+        </Field>
+        <Field Name="BankAccountNoCaption">
+          <DataField>BankAccountNoCaption</DataField>
+        </Field>
+        <Field Name="SortCodeCaption">
+          <DataField>SortCodeCaption</DataField>
+        </Field>
+        <Field Name="AmountCaption">
+          <DataField>AmountCaption</DataField>
+        </Field>
+        <Field Name="PmtDiscTakenCaption">
+          <DataField>PmtDiscTakenCaption</DataField>
+        </Field>
+        <Field Name="RemainingAmtCaption">
+          <DataField>RemainingAmtCaption</DataField>
+        </Field>
+        <Field Name="OriginalAmountCaption">
+          <DataField>OriginalAmountCaption</DataField>
+        </Field>
+        <Field Name="YourDocNoCaption">
+          <DataField>YourDocNoCaption</DataField>
+        </Field>
+        <Field Name="DocTypeCaption_VendLedgEntry2">
+          <DataField>DocTypeCaption_VendLedgEntry2</DataField>
+        </Field>
+        <Field Name="OurDocNoCaption">
+          <DataField>OurDocNoCaption</DataField>
+        </Field>
+        <Field Name="CurrCodeCaption">
+          <DataField>CurrCodeCaption</DataField>
+        </Field>
+        <Field Name="DocumentDateCaption">
+          <DataField>DocumentDateCaption</DataField>
+        </Field>
+        <Field Name="PostingDateCaption">
+          <DataField>PostingDateCaption</DataField>
+        </Field>
+        <Field Name="LineAmtLineDiscCurr">
+          <DataField>LineAmtLineDiscCurr</DataField>
+        </Field>
+        <Field Name="LineAmtLineDiscCurrFormat">
+          <DataField>LineAmtLineDiscCurrFormat</DataField>
+        </Field>
+        <Field Name="NegAmount_VendLedgEntry2">
+          <DataField>NegAmount_VendLedgEntry2</DataField>
+        </Field>
+        <Field Name="NegAmount_VendLedgEntry2Format">
+          <DataField>NegAmount_VendLedgEntry2Format</DataField>
+        </Field>
+        <Field Name="RemAmt_VendLedgEntry2">
+          <DataField>RemAmt_VendLedgEntry2</DataField>
+        </Field>
+        <Field Name="RemAmt_VendLedgEntry2Format">
+          <DataField>RemAmt_VendLedgEntry2Format</DataField>
+        </Field>
+        <Field Name="DocType_VendLedgEntry2">
+          <DataField>DocType_VendLedgEntry2</DataField>
+        </Field>
+        <Field Name="ExtDocNo_VendLedgEntry2">
+          <DataField>ExtDocNo_VendLedgEntry2</DataField>
+        </Field>
+        <Field Name="LineDiscount_VendLedgEntry2">
+          <DataField>LineDiscount_VendLedgEntry2</DataField>
+        </Field>
+        <Field Name="LineDiscount_VendLedgEntry2Format">
+          <DataField>LineDiscount_VendLedgEntry2Format</DataField>
+        </Field>
+        <Field Name="CurrCode_VendLedgEntry2">
+          <DataField>CurrCode_VendLedgEntry2</DataField>
+        </Field>
+        <Field Name="DocDateFormat_VendLedgEntry2">
+          <DataField>DocDateFormat_VendLedgEntry2</DataField>
+        </Field>
+        <Field Name="PostingDateFormat_VendLedgEntry2">
+          <DataField>PostingDateFormat_VendLedgEntry2</DataField>
+        </Field>
+        <Field Name="LAmountWDiscCur">
+          <DataField>LAmountWDiscCur</DataField>
+        </Field>
+        <Field Name="LAmountWDiscCurFormat">
+          <DataField>LAmountWDiscCurFormat</DataField>
+        </Field>
+        <Field Name="EntryNo_VendLedgEntry2">
+          <DataField>EntryNo_VendLedgEntry2</DataField>
+        </Field>
+        <Field Name="LineDisc_DtldVendLedgEntry">
+          <DataField>LineDisc_DtldVendLedgEntry</DataField>
+        </Field>
+        <Field Name="LineDisc_DtldVendLedgEntryFormat">
+          <DataField>LineDisc_DtldVendLedgEntryFormat</DataField>
+        </Field>
+        <Field Name="VendLedgEntry3RemAmt">
+          <DataField>VendLedgEntry3RemAmt</DataField>
+        </Field>
+        <Field Name="VendLedgEntry3RemAmtFormat">
+          <DataField>VendLedgEntry3RemAmtFormat</DataField>
+        </Field>
+        <Field Name="Amt_DtldVendLedgEntry">
+          <DataField>Amt_DtldVendLedgEntry</DataField>
+        </Field>
+        <Field Name="Amt_DtldVendLedgEntryFormat">
+          <DataField>Amt_DtldVendLedgEntryFormat</DataField>
+        </Field>
+        <Field Name="VendLedgEntry3CurrCode">
+          <DataField>VendLedgEntry3CurrCode</DataField>
+        </Field>
+        <Field Name="VendLedgEntry3DocDateFormat">
+          <DataField>VendLedgEntry3DocDateFormat</DataField>
+        </Field>
+        <Field Name="VendLedgEntry3PostingDateFormat">
+          <DataField>VendLedgEntry3PostingDateFormat</DataField>
+        </Field>
+        <Field Name="VendLedgEntry3ExtDocNo">
+          <DataField>VendLedgEntry3ExtDocNo</DataField>
+        </Field>
+        <Field Name="DocType_DtldVendLedgEntry">
+          <DataField>DocType_DtldVendLedgEntry</DataField>
+        </Field>
+        <Field Name="VendLedgerEntryNo_DtldVendLedgEntry">
+          <DataField>VendLedgerEntryNo_DtldVendLedgEntry</DataField>
+        </Field>
+        <Field Name="Amount_VendLedgEntry">
+          <DataField>Amount_VendLedgEntry</DataField>
+        </Field>
+        <Field Name="Amount_VendLedgEntryFormat">
+          <DataField>Amount_VendLedgEntryFormat</DataField>
+        </Field>
+        <Field Name="CurrCode_VendLedgEntry">
+          <DataField>CurrCode_VendLedgEntry</DataField>
+        </Field>
+        <Field Name="TotalCaption">
+          <DataField>TotalCaption</DataField>
+        </Field>
+        <Field Name="GetABN">
+          <DataField>GetABN</DataField>
+        </Field>
+        <Field Name="VendEmail">
+          <DataField>VendEmail</DataField>
+        </Field>
+        <Field Name="PostingDate">
+          <DataField>PostingDate</DataField>
+        </Field>
+        <Field Name="DocumentDate">
+          <DataField>DocumentDate</DataField>
+        </Field>
+        <Field Name="PaymentMethod">
+          <DataField>PaymentMethod</DataField>
+        </Field>
+        <Field Name="CompInfoPicture">
+          <DataField>CompInfoPicture</DataField>
+        </Field>
+        <Field Name="CompInfoVATRegNo">
+          <DataField>CompInfoVATRegNo</DataField>
+        </Field>
+        <Field Name="CompInfoGiroNo">
+          <DataField>CompInfoGiroNo</DataField>
+        </Field>
+        <Field Name="CompInfoBankName">
+          <DataField>CompInfoBankName</DataField>
+        </Field>
+        <Field Name="CompInfoBankAccountNo">
+          <DataField>CompInfoBankAccountNo</DataField>
+        </Field>
+        <Field Name="CompInfoName">
+          <DataField>CompInfoName</DataField>
+        </Field>
+        <Field Name="CompInfoName2">
+          <DataField>CompInfoName2</DataField>
+        </Field>
+        <Field Name="CompInfoAddress">
+          <DataField>CompInfoAddress</DataField>
+        </Field>
+        <Field Name="CompInfoAddress2">
+          <DataField>CompInfoAddress2</DataField>
+        </Field>
+        <Field Name="CompInfoCounty">
+          <DataField>CompInfoCounty</DataField>
+        </Field>
+        <Field Name="CompInfoFaxNo1">
+          <DataField>CompInfoFaxNo1</DataField>
+        </Field>
+        <Field Name="CompInfoPhoneNo">
+          <DataField>CompInfoPhoneNo</DataField>
+        </Field>
+        <Field Name="CompInfoPostCode">
+          <DataField>CompInfoPostCode</DataField>
+        </Field>
+        <Field Name="CompInfoCity">
+          <DataField>CompInfoCity</DataField>
+        </Field>
+        <Field Name="CompInfoCountryRegionCode">
+          <DataField>CompInfoCountryRegionCode</DataField>
+        </Field>
+        <Field Name="CompInfoVATRegsNo">
+          <DataField>CompInfoVATRegsNo</DataField>
+        </Field>
+        <Field Name="CompInfoEmail">
+          <DataField>CompInfoEmail</DataField>
+        </Field>
+        <Field Name="CompInfoABN">
+          <DataField>CompInfoABN</DataField>
+        </Field>
+        <Field Name="VendorNo">
+          <DataField>VendorNo</DataField>
+        </Field>
+        <Field Name="VendorName">
+          <DataField>VendorName</DataField>
+        </Field>
+        <Field Name="VendorName2">
+          <DataField>VendorName2</DataField>
+        </Field>
+        <Field Name="VendorAddress1">
+          <DataField>VendorAddress1</DataField>
+        </Field>
+        <Field Name="VendorAddress2">
+          <DataField>VendorAddress2</DataField>
+        </Field>
+        <Field Name="VendorCity">
+          <DataField>VendorCity</DataField>
+        </Field>
+        <Field Name="VendorCounty">
+          <DataField>VendorCounty</DataField>
+        </Field>
+        <Field Name="VendorPostCode">
+          <DataField>VendorPostCode</DataField>
+        </Field>
+        <Field Name="VendorPhoneNo">
+          <DataField>VendorPhoneNo</DataField>
+        </Field>
+        <Field Name="VendorFaxNo">
+          <DataField>VendorFaxNo</DataField>
+        </Field>
+        <Field Name="VendorBankAccNo">
+          <DataField>VendorBankAccNo</DataField>
+        </Field>
+        <Field Name="VendorBankAccName">
+          <DataField>VendorBankAccName</DataField>
+        </Field>
+        <Field Name="VendorBankBSB">
+          <DataField>VendorBankBSB</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

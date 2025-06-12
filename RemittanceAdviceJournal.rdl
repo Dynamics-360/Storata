@@ -9,7 +9,7 @@
       <am:Name>MSRB</am:Name>
       <am:Version>15.0.20283.0</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2025-06-09T18:15:16.0495199Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-06-11T09:14:28.1752572Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -30,7 +30,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>17.95724cm</Width>
+                  <Width>17.96209cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -45,22 +45,22 @@
                               <TablixBody>
                                 <TablixColumns>
                                   <TablixColumn>
-                                    <Width>2.68922cm</Width>
+                                    <Width>4.29223cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>3.03018cm</Width>
+                                    <Width>3.33869cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>2.92596cm</Width>
+                                    <Width>2.55712cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>2.85274cm</Width>
+                                    <Width>2.06641cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>2.983cm</Width>
+                                    <Width>2.9105cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>3.32427cm</Width>
+                                    <Width>2.71776cm</Width>
                                   </TablixColumn>
                                 </TablixColumns>
                                 <TablixRows>
@@ -1132,59 +1132,6 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox154">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style />
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style />
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox154</rd:DefaultName>
-                                            <Style>
-                                              <VerticalAlign>Middle</VerticalAlign>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox13">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style />
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Left</TextAlign>
-                                                </Style>
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox13</rd:DefaultName>
-                                            <Style>
-                                              <VerticalAlign>Middle</VerticalAlign>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
                                           <Textbox Name="Textbox186">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
@@ -1203,7 +1150,7 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                             <Style>
                                               <VerticalAlign>Middle</VerticalAlign>
                                               <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingRight>1pt</PaddingRight>
                                               <PaddingTop>2pt</PaddingTop>
                                               <PaddingBottom>2pt</PaddingBottom>
                                             </Style>
@@ -1229,6 +1176,34 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                               </Paragraph>
                                             </Paragraphs>
                                             <rd:DefaultName>Textbox44</rd:DefaultName>
+                                            <Style>
+                                              <VerticalAlign>Middle</VerticalAlign>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                            </Style>
+                                          </Textbox>
+                                          <ColSpan>2</ColSpan>
+                                        </CellContents>
+                                      </TablixCell>
+                                      <TablixCell />
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="Textbox160">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value />
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Left</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>Textbox160</rd:DefaultName>
                                             <Style>
                                               <VerticalAlign>Middle</VerticalAlign>
                                               <PaddingLeft>2pt</PaddingLeft>
@@ -1272,59 +1247,6 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox155">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style />
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style />
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox155</rd:DefaultName>
-                                            <Style>
-                                              <VerticalAlign>Middle</VerticalAlign>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox14">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style />
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Left</TextAlign>
-                                                </Style>
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox14</rd:DefaultName>
-                                            <Style>
-                                              <VerticalAlign>Middle</VerticalAlign>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
                                           <Textbox Name="Textbox199">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
@@ -1352,7 +1274,7 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox63">
+                                          <Textbox Name="Textbox70">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
@@ -1369,6 +1291,34 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                               </Paragraph>
                                             </Paragraphs>
                                             <rd:DefaultName>Textbox44</rd:DefaultName>
+                                            <Style>
+                                              <VerticalAlign>Middle</VerticalAlign>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                            </Style>
+                                          </Textbox>
+                                          <ColSpan>2</ColSpan>
+                                        </CellContents>
+                                      </TablixCell>
+                                      <TablixCell />
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="Textbox161">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value />
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Left</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>Textbox161</rd:DefaultName>
                                             <Style>
                                               <VerticalAlign>Middle</VerticalAlign>
                                               <PaddingLeft>2pt</PaddingLeft>
@@ -1412,59 +1362,6 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox156">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style />
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style />
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox156</rd:DefaultName>
-                                            <Style>
-                                              <VerticalAlign>Middle</VerticalAlign>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox15">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style />
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Left</TextAlign>
-                                                </Style>
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox15</rd:DefaultName>
-                                            <Style>
-                                              <VerticalAlign>Middle</VerticalAlign>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
                                           <Textbox Name="Textbox219">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
@@ -1492,7 +1389,7 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox65">
+                                          <Textbox Name="Textbox73">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
@@ -1509,6 +1406,34 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                               </Paragraph>
                                             </Paragraphs>
                                             <rd:DefaultName>Textbox44</rd:DefaultName>
+                                            <Style>
+                                              <VerticalAlign>Middle</VerticalAlign>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                            </Style>
+                                          </Textbox>
+                                          <ColSpan>2</ColSpan>
+                                        </CellContents>
+                                      </TablixCell>
+                                      <TablixCell />
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="Textbox162">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value />
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Left</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>Textbox162</rd:DefaultName>
                                             <Style>
                                               <VerticalAlign>Middle</VerticalAlign>
                                               <PaddingLeft>2pt</PaddingLeft>
@@ -3268,7 +3193,7 @@ Sum(Fields!AppliedVendLedgEntryTempRemainingAmt.Value)</Value>
                               </TablixRowHierarchy>
                               <DataSetName>DataSet_Result</DataSetName>
                               <Height>8.33cm</Height>
-                              <Width>17.88475cm</Width>
+                              <Width>17.96209cm</Width>
                               <Style />
                             </Tablix>
                           </ReportItems>
@@ -3315,17 +3240,16 @@ Sum(Fields!AppliedVendLedgEntryTempRemainingAmt.Value)</Value>
                 </FilterValues>
               </Filter>
             </Filters>
-            <Top>0cm</Top>
             <Left>0.0023cm</Left>
             <Height>8.33cm</Height>
-            <Width>17.95724cm</Width>
+            <Width>17.96209cm</Width>
             <Style />
           </Tablix>
         </ReportItems>
         <Height>8.33cm</Height>
         <Style />
       </Body>
-      <Width>17.95955cm</Width>
+      <Width>17.96439cm</Width>
       <Page>
         <PageHeader>
           <Height>4.34519cm</Height>
@@ -3589,9 +3513,9 @@ Sum(Fields!AppliedVendLedgEntryTempRemainingAmt.Value)</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox37</rd:DefaultName>
-              <Left>13.9015cm</Left>
+              <Left>13.76039cm</Left>
               <Height>1.96394cm</Height>
-              <Width>4.05804cm</Width>
+              <Width>4.19915cm</Width>
               <ZIndex>3</ZIndex>
               <Style>
                 <Border>
@@ -3631,7 +3555,7 @@ Sum(Fields!AppliedVendLedgEntryTempRemainingAmt.Value)</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>ABN.........................:</Value>
+                      <Value>ABN........................:</Value>
                       <Style />
                     </TextRun>
                   </TextRuns>
@@ -3652,9 +3576,9 @@ Sum(Fields!AppliedVendLedgEntryTempRemainingAmt.Value)</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox37</rd:DefaultName>
-              <Left>10.36877cm</Left>
+              <Left>10.22766cm</Left>
               <Height>1.96394cm</Height>
-              <Width>3.46218cm</Width>
+              <Width>3.49745cm</Width>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border>

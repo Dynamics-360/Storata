@@ -9,7 +9,7 @@
       <am:Name>MSRB</am:Name>
       <am:Version>15.0.20283.0</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2025-06-09T19:11:48.6417168Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-06-10T14:25:16.3355430Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -30,7 +30,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>2.35969cm</Width>
+                  <Width>1.64039cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>2.36349cm</Width>
@@ -48,16 +48,16 @@
                   <Width>1.5204cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.45441cm</Width>
+                  <Width>1.65263cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.1371cm</Width>
+                  <Width>1.62227cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.07938cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.07269cm</Width>
+                  <Width>2.22062cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -185,7 +185,7 @@
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>9pt</FontSize>
-                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <Format>#,0;(#,0)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -297,6 +297,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>9pt</FontSize>
                                     <Format>'$' #,0.00;('$' #,0.00);''</Format>
+                                    <rd:FormatSymbolCulture>af-NA</rd:FormatSymbolCulture>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -849,7 +850,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
             <DataSetName>DataSet_Result</DataSetName>
             <Top>0.00014cm</Top>
             <Height>1.92855cm</Height>
-            <Width>19.42232cm</Width>
+            <Width>19.53434cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -863,7 +864,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
       <Width>19.91517cm</Width>
       <Page>
         <PageHeader>
-          <Height>15.43208cm</Height>
+          <Height>15.43222cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -1253,7 +1254,7 @@ Invoice Account</Value>
             <Line Name="Line5">
               <Top>7.49499cm</Top>
               <Height>0cm</Height>
-              <Width>19.91517cm</Width>
+              <Width>19.75cm</Width>
               <ZIndex>8</ZIndex>
               <Style>
                 <Border>
@@ -1792,7 +1793,7 @@ IIF(Fields!ShipToCountry.Value = "", "", VbCrLf &amp; Space(20) &amp; Fields!Shi
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Fields!InvoiceAccount.Value</Value>
+                      <Value>=Fields!BilltoCustNo.Value</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -1805,7 +1806,7 @@ IIF(Fields!ShipToCountry.Value = "", "", VbCrLf &amp; Space(20) &amp; Fields!Shi
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Fields!BilltoCustNo.Value</Value>
+                      <Value>=Fields!SellToCustomerNo.Value</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -1985,9 +1986,9 @@ Customer Account</Value>
               </Paragraphs>
               <rd:DefaultName>Textbox37</rd:DefaultName>
               <Top>14.83208cm</Top>
-              <Left>16.08581cm</Left>
+              <Left>15.64669cm</Left>
               <Height>0.6cm</Height>
-              <Width>1.22791cm</Width>
+              <Width>1.58765cm</Width>
               <ZIndex>22</ZIndex>
               <Style>
                 <Border>
@@ -2020,10 +2021,10 @@ Customer Account</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox37</rd:DefaultName>
-              <Top>14.83096cm</Top>
-              <Left>0.99935in</Left>
+              <Top>14.83222cm</Top>
+              <Left>0.65416in</Left>
               <Height>0.6cm</Height>
-              <Width>2.32514cm</Width>
+              <Width>2.34232cm</Width>
               <ZIndex>23</ZIndex>
               <Style>
                 <Border>
@@ -2057,9 +2058,9 @@ Customer Account</Value>
               </Paragraphs>
               <rd:DefaultName>Textbox37</rd:DefaultName>
               <Top>14.83096cm</Top>
-              <Left>4.85202cm</Left>
+              <Left>4.02505cm</Left>
               <Height>0.6cm</Height>
-              <Width>6.8353cm</Width>
+              <Width>6.96414cm</Width>
               <ZIndex>24</ZIndex>
               <Style>
                 <Border>
@@ -2093,9 +2094,9 @@ Customer Account</Value>
               </Paragraphs>
               <rd:DefaultName>Textbox37</rd:DefaultName>
               <Top>14.83166cm</Top>
-              <Left>11.7226cm</Left>
+              <Left>10.98919cm</Left>
               <Height>0.6cm</Height>
-              <Width>1.40015cm</Width>
+              <Width>1.47102cm</Width>
               <ZIndex>25</ZIndex>
               <Style>
                 <Border>
@@ -2129,9 +2130,9 @@ Customer Account</Value>
               </Paragraphs>
               <rd:DefaultName>Textbox37</rd:DefaultName>
               <Top>14.83194cm</Top>
-              <Left>14.7137cm</Left>
+              <Left>13.98061cm</Left>
               <Height>0.6cm</Height>
-              <Width>1.37211cm</Width>
+              <Width>1.6308cm</Width>
               <ZIndex>26</ZIndex>
               <Style>
                 <Border>
@@ -2165,9 +2166,9 @@ Customer Account</Value>
               </Paragraphs>
               <rd:DefaultName>Textbox37</rd:DefaultName>
               <Top>14.8318cm</Top>
-              <Left>13.15803cm</Left>
+              <Left>12.46021cm</Left>
               <Height>0.6cm</Height>
-              <Width>1.5204cm</Width>
+              <Width>1.49923cm</Width>
               <ZIndex>27</ZIndex>
               <Style>
                 <Border>
@@ -2201,9 +2202,9 @@ Customer Account</Value>
               </Paragraphs>
               <rd:DefaultName>Textbox37</rd:DefaultName>
               <Top>14.83124cm</Top>
-              <Left>17.35544cm</Left>
+              <Left>17.23434cm</Left>
               <Height>0.6cm</Height>
-              <Width>2.0386cm</Width>
+              <Width>2.3cm</Width>
               <ZIndex>28</ZIndex>
               <Style>
                 <Border>
@@ -2236,16 +2237,56 @@ Customer Account</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox37</rd:DefaultName>
-              <Top>14.77714cm</Top>
+              <Top>14.83222cm</Top>
               <Left>0in</Left>
-              <Height>0.61938cm</Height>
-              <Width>2.5cm</Width>
+              <Height>0.5643cm</Height>
+              <Width>1.64039cm</Width>
               <ZIndex>29</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
                 <VerticalAlign>Top</VerticalAlign>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox9">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>ABN: </Value>
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value>=Fields!ABN_Value.Value</Value>
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                        <FontWeight>Normal</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox9</rd:DefaultName>
+              <Top>9.59556cm</Top>
+              <Left>2.47299cm</Left>
+              <Height>0.51533cm</Height>
+              <Width>5.34578cm</Width>
+              <ZIndex>30</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -2419,7 +2460,7 @@ Gross Total (AUD) :
               </Paragraphs>
               <Top>0.03528cm</Top>
               <Height>0.6cm</Height>
-              <Width>19.39404cm</Width>
+              <Width>19.53434cm</Width>
               <ZIndex>2</ZIndex>
               <Visibility>
                 <Hidden>=IIF(Globals!PageNumber = Globals!TotalPages, False, True)</Hidden>
@@ -2439,7 +2480,7 @@ Gross Total (AUD) :
               <Top>0.07056cm</Top>
               <Left>0.03387cm</Left>
               <Height>3.56073cm</Height>
-              <Width>19.36017cm</Width>
+              <Width>19.50047cm</Width>
               <ZIndex>3</ZIndex>
               <Visibility>
                 <Hidden>=iif(Globals!OverallPageNumber&lt;&gt;Globals!OverallTotalPages,False,True)</Hidden>
@@ -2503,10 +2544,58 @@ Gross Total (AUD) :
                       </TextRuns>
                       <Style />
                     </Paragraph>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value />
+                          <Style>
+                            <FontStyle>Normal</FontStyle>
+                            <FontFamily>Calibri</FontFamily>
+                            <FontSize>9pt</FontSize>
+                            <FontWeight>Normal</FontWeight>
+                            <TextDecoration>None</TextDecoration>
+                            <Color>#000000</Color>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value />
+                          <Style>
+                            <FontStyle>Normal</FontStyle>
+                            <FontFamily>Calibri</FontFamily>
+                            <FontSize>9pt</FontSize>
+                            <FontWeight>Normal</FontWeight>
+                            <TextDecoration>None</TextDecoration>
+                            <Color>#000000</Color>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value />
+                          <Style>
+                            <FontStyle>Normal</FontStyle>
+                            <FontFamily>Calibri</FontFamily>
+                            <FontSize>9pt</FontSize>
+                            <FontWeight>Normal</FontWeight>
+                            <TextDecoration>None</TextDecoration>
+                            <Color>#000000</Color>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>Textbox2</rd:DefaultName>
                   <Top>0.17871cm</Top>
-                  <Left>13.6156cm</Left>
+                  <Left>13.58032cm</Left>
                   <Height>2.62181cm</Height>
                   <Width>5.77829cm</Width>
                   <Style>
@@ -2626,14 +2715,27 @@ Gross Total (AUD) :
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Fields!CompInfoHomePage.Value</Value>
+                      <Value>=Fields!CompanyInfo_City.Value</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
-                        <FontWeight>Normal</FontWeight>
-                        <TextDecoration>None</TextDecoration>
-                        <Color>#000000</Color>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value xml:space="preserve"> </Value>
+                      <Style>
+                        <FontStyle>Normal</FontStyle>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value>=Fields!CompInfoPostCode.Value</Value>
+                      <Style>
+                        <FontStyle>Normal</FontStyle>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2716,7 +2818,7 @@ Gross Total (AUD) :
               <Top>0.67056cm</Top>
               <Left>15.5277cm</Left>
               <Height>2.48708cm</Height>
-              <Width>3.89462cm</Width>
+              <Width>4.00664cm</Width>
               <ZIndex>7</ZIndex>
               <Visibility>
                 <Hidden>=IIF(Globals!PageNumber = Globals!TotalPages, False, True)</Hidden>
@@ -3393,8 +3495,14 @@ SttTByo7B1StPLXW3rQGZTGdJO0BWdnnRGNdhtHjv2jM3wD4tz0N+wdr7f/c85ygGGOafXUKAO8GFvcF
         <Field Name="Truck_Rego">
           <DataField>Truck_Rego</DataField>
         </Field>
+        <Field Name="ABN_Value">
+          <DataField>ABN_Value</DataField>
+        </Field>
         <Field Name="PickCode">
           <DataField>PickCode</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
         </Field>
       </Fields>
       <Query>

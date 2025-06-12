@@ -46,7 +46,7 @@ reportextension 50851 DelivDocExt extends "PF Delivery Docket"
     }
     var
         CompanInfo: Record "Company Information";
-        AREmail: Code[50];
+        AREmail: Text[100];
 
     trigger OnPreReport()
     begin

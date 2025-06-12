@@ -22,6 +22,7 @@
             "environmentType": "Sandbox",
             "environmentName": "Sandbox07",
             "tenant": "98557e69-928a-49b9-a0d4-321deb1d6fac",
+            "schemaUpdateMode": "ForceSync",
             "startupObjectId": 5742,
             "startupObjectType": "Page",
             "breakOnError": "All",
