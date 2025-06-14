@@ -1,20 +1,20 @@
 {
     "version": "0.2.0",
     "configurations": [
-        {
-            "name": "Microsoft cloud sandbox",
-            "request": "launch",
-            "type": "al",
-            "environmentType": "Sandbox",
-            "environmentName": "d360",
-            "tenant": "7fd34f04-299a-4a7e-99ba-41f02718ef2f",
-            "startupObjectId": 5742,
-            "startupObjectType": "Page",
-            "breakOnError": "All",
-            "launchBrowser": true,
-            "enableLongRunningSqlStatements": true,
-            "enableSqlInformationDebugger": true
-        },
+        // {
+        //     "name": "Microsoft cloud sandbox",
+        //     "request": "launch",
+        //     "type": "al",
+        //     "environmentType": "Sandbox",
+        //     "environmentName": "d360",
+        //     "tenant": "7fd34f04-299a-4a7e-99ba-41f02718ef2f",
+        //     "startupObjectId": 5742,
+        //     "startupObjectType": "Page",
+        //     "breakOnError": "All",
+        //     "launchBrowser": true,
+        //     "enableLongRunningSqlStatements": true,
+        //     "enableSqlInformationDebugger": true
+        // },
         {
             "name": "Storata",
             "request": "launch",

@@ -7,10 +7,10 @@ reportextension 50856 PFCredNoteExt extends "PF Posted Sales Credit Memo"
             column(ABN_Value; GetABN())
             {
             }
-            column(SDN;SDN)
+            column(SDN; SDN)
             {
             }
-            column(Truck_Rego;"Truck Rego")
+            column(Truck_Rego; "Truck Rego")
             {
             }
         }
@@ -24,7 +24,7 @@ reportextension 50856 PFCredNoteExt extends "PF Posted Sales Credit Memo"
         }
     }
     local procedure GetABN(): Text
-    var     
+    var
         CompanyInfo: Record "Company Information";
         ABNValue: Code[20];
         ABN: Code[20];

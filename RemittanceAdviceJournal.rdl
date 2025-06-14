@@ -9,7 +9,7 @@
       <am:Name>MSRB</am:Name>
       <am:Version>15.0.20283.0</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2025-06-11T09:14:28.1752572Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-06-14T12:44:47.1923367Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -30,7 +30,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>17.96209cm</Width>
+                  <Width>18.27475cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -54,13 +54,13 @@
                                     <Width>2.55712cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>2.06641cm</Width>
+                                    <Width>3.1512cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
                                     <Width>2.9105cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>2.71776cm</Width>
+                                    <Width>1.94563cm</Width>
                                   </TablixColumn>
                                 </TablixColumns>
                                 <TablixRows>
@@ -1181,37 +1181,11 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                               <PaddingLeft>2pt</PaddingLeft>
                                             </Style>
                                           </Textbox>
-                                          <ColSpan>2</ColSpan>
+                                          <ColSpan>4</ColSpan>
                                         </CellContents>
                                       </TablixCell>
                                       <TablixCell />
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox160">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style />
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Left</TextAlign>
-                                                </Style>
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox160</rd:DefaultName>
-                                            <Style>
-                                              <VerticalAlign>Middle</VerticalAlign>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                            </Style>
-                                          </Textbox>
-                                          <ColSpan>2</ColSpan>
-                                        </CellContents>
-                                      </TablixCell>
+                                      <TablixCell />
                                       <TablixCell />
                                     </TablixCells>
                                   </TablixRow>
@@ -1647,7 +1621,7 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style>
-                                                  <TextAlign>Left</TextAlign>
+                                                  <TextAlign>Right</TextAlign>
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
@@ -2127,7 +2101,9 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>
-                                                <Style />
+                                                <Style>
+                                                  <TextAlign>Right</TextAlign>
+                                                </Style>
                                               </Paragraph>
                                             </Paragraphs>
                                             <ZIndex>10</ZIndex>
@@ -2135,9 +2111,10 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                               <Border>
                                                 <Style>None</Style>
                                               </Border>
-                                              <VerticalAlign>Middle</VerticalAlign>
-                                              <PaddingLeft>0.075cm</PaddingLeft>
-                                              <PaddingRight>0.075cm</PaddingRight>
+                                              <VerticalAlign>Bottom</VerticalAlign>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>6pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
                                             </Style>
                                           </Textbox>
                                         </CellContents>
@@ -2187,15 +2164,19 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style>
-                                                  <TextAlign>Left</TextAlign>
+                                                  <TextAlign>Right</TextAlign>
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
                                             <ZIndex>11</ZIndex>
                                             <Style>
-                                              <VerticalAlign>Middle</VerticalAlign>
-                                              <PaddingLeft>0.075cm</PaddingLeft>
-                                              <PaddingRight>0.075cm</PaddingRight>
+                                              <Border>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <VerticalAlign>Bottom</VerticalAlign>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>6pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
                                             </Style>
                                           </Textbox>
                                         </CellContents>
@@ -3193,7 +3174,7 @@ Sum(Fields!AppliedVendLedgEntryTempRemainingAmt.Value)</Value>
                               </TablixRowHierarchy>
                               <DataSetName>DataSet_Result</DataSetName>
                               <Height>8.33cm</Height>
-                              <Width>17.96209cm</Width>
+                              <Width>18.27475cm</Width>
                               <Style />
                             </Tablix>
                           </ReportItems>
@@ -3242,14 +3223,14 @@ Sum(Fields!AppliedVendLedgEntryTempRemainingAmt.Value)</Value>
             </Filters>
             <Left>0.0023cm</Left>
             <Height>8.33cm</Height>
-            <Width>17.96209cm</Width>
+            <Width>18.27475cm</Width>
             <Style />
           </Tablix>
         </ReportItems>
         <Height>8.33cm</Height>
         <Style />
       </Body>
-      <Width>17.96439cm</Width>
+      <Width>18.33481cm</Width>
       <Page>
         <PageHeader>
           <Height>4.34519cm</Height>
@@ -3462,7 +3443,7 @@ Sum(Fields!AppliedVendLedgEntryTempRemainingAmt.Value)</Value>
               <Top>2.72242cm</Top>
               <Left>10.65293cm</Left>
               <Height>1.62277cm</Height>
-              <Width>7.30662cm</Width>
+              <Width>7.62412cm</Width>
               <ZIndex>2</ZIndex>
               <Style>
                 <VerticalAlign>Top</VerticalAlign>
@@ -3605,7 +3586,7 @@ Sum(Fields!AppliedVendLedgEntryTempRemainingAmt.Value)</Value>
               <Source>Embedded</Source>
               <Value>Egg</Value>
               <Sizing>FitProportional</Sizing>
-              <Left>14.23705cm</Left>
+              <Left>14.55455cm</Left>
               <Height>1.97cm</Height>
               <Width>3.65cm</Width>
               <Style>
