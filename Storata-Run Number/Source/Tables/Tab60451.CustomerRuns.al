@@ -25,15 +25,18 @@ table 60451 "Customer Runs"
         field(5; "Run Date"; Date)
         {
             Caption = 'Run Date';
+            Editable = false;
         }
         field(6; "Call Day"; Option)
         {
             Caption = 'Call Day';
+            Editable = false;
             OptionMembers = " ",Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday;
         }
         field(7; "Call Date"; Date)
         {
             Caption = 'Call Date';
+            Editable = false;
         }
     }
     keys
