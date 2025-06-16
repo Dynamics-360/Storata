@@ -33,7 +33,7 @@ table 60450 Runs
             Caption = 'Calender';
             OptionMembers = " ","NSW 24/5","GEN 24/7","VIC 24/5","QLD 24/5","SA 24/5","ACT 24/5";
         }
-        field(7; "Lead Time"; Decimal)
+        field(7; "Lead Time"; Integer)
         {
             Caption = 'Lead Time';
         }
