@@ -56,4 +56,6 @@ reportextension 50855 RemiAdvEntries extends "Remittance Advice - Entries"
         exit(FirstPart + ' ' + SecondPart + ' ' + ThirdPart + ' ' + ForthPart);
 
     end;
+
+
 }

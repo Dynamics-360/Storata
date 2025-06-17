@@ -13,6 +13,9 @@ reportextension 50854 SalesInvExt extends "PF Posted Sales Invoice"
             column(ABN_Value; GetABN())
             {
             }
+            column(Sell_to_Customer_Name; "Sell-to Customer Name")
+            {
+            }
         }
         add("Sales Invoice Line")
         {

@@ -13,6 +13,21 @@ reportextension 50856 PFCredNoteExt extends "PF Posted Sales Credit Memo"
             column(Truck_Rego; "Truck Rego")
             {
             }
+            column(Sell_to_Customer_Name; "Sell-to Customer Name")
+            {
+
+            }
+        }
+        add("Sales Cr.Memo Line")
+        {
+            column(AmountNegative; -Amount)
+            {
+
+            }
+            column(Unit_Price_Negative; -"Unit Price")
+            {
+
+            }
         }
     }
     rendering

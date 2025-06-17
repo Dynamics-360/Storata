@@ -9,7 +9,7 @@
       <am:Name>MSRB</am:Name>
       <am:Version>15.0.20283.0</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2025-06-17T06:52:43.3813401Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-06-17T06:56:18.2738631Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -76,7 +76,7 @@
                                     <Width>4.55877cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>3.39737cm</Width>
+                                    <Width>2.88035cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
                                     <Width>0.07938cm</Width>
@@ -103,7 +103,7 @@
                                     <Width>1.97706cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>1.31534cm</Width>
+                                    <Width>1.79226cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
                                     <Width>2.9543cm</Width>
@@ -3075,7 +3075,7 @@ IIF(Fields!PayToVendorFaxNo.Value ="","","  Fax : " &amp; Fields!PayToVendorFaxN
                               <KeepTogether>true</KeepTogether>
                               <DataSetName>DataSet_Result</DataSetName>
                               <Height>8.55989cm</Height>
-                              <Width>19.14944cm</Width>
+                              <Width>19.10934cm</Width>
                               <ZIndex>1</ZIndex>
                               <Style>
                                 <Border>

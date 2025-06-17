@@ -9,7 +9,7 @@
       <am:Name>MSRB</am:Name>
       <am:Version>15.0.20283.0</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2025-06-10T08:20:04.3403580Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-06-16T07:37:38.0019016Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -103,7 +103,6 @@
                               </TablixRowHierarchy>
                               <DataSetName>DataSet_Result</DataSetName>
                               <Top>0.04388in</Top>
-                              <Left>0in</Left>
                               <Height>0.21528in</Height>
                               <Width>0.18027in</Width>
                               <Style>
@@ -540,7 +539,6 @@
                               </TablixRowHierarchy>
                               <DataSetName>DataSet_Result</DataSetName>
                               <Top>0.04388in</Top>
-                              <Left>0in</Left>
                               <Height>0.24861in</Height>
                               <Width>7.7015in</Width>
                               <ZIndex>1</ZIndex>
@@ -584,7 +582,6 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
-            <Top>0in</Top>
             <Left>0.06265in</Left>
             <Height>0.29249in</Height>
             <Width>7.7015in</Width>
@@ -1605,7 +1602,7 @@ Invoice Account</Value>
               <Top>6.29477cm</Top>
               <Left>0.02828cm</Left>
               <Height>0.6cm</Height>
-              <Width>3.64415cm</Width>
+              <Width>6.50165cm</Width>
               <ZIndex>14</ZIndex>
               <Style>
                 <Border>
@@ -1647,7 +1644,7 @@ Invoice Account</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Print Name                                  Sign Here                              Date</Value>
+                      <Value>Print Name                                                                     Sign Here                                                   Date</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -1663,7 +1660,7 @@ Invoice Account</Value>
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>5.12867cm</Top>
               <Height>1.13082cm</Height>
-              <Width>10.2292cm</Width>
+              <Width>16.2617cm</Width>
               <ZIndex>15</ZIndex>
               <Style>
                 <Border>
@@ -1701,10 +1698,10 @@ Invoice Account</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox27</rd:DefaultName>
-              <Top>6.27603cm</Top>
-              <Left>6.87799cm</Left>
+              <Top>6.28128cm</Top>
+              <Left>11.32299cm</Left>
               <Height>0.61874cm</Height>
-              <Width>3.35121cm</Width>
+              <Width>4.93871cm</Width>
               <ZIndex>17</ZIndex>
               <Style>
                 <Border>
@@ -1740,9 +1737,9 @@ Invoice Account</Value>
               </Paragraphs>
               <rd:DefaultName>Textbox27</rd:DefaultName>
               <Top>6.29477cm</Top>
-              <Left>3.67243cm</Left>
+              <Left>6.52993cm</Left>
               <Height>0.6cm</Height>
-              <Width>3.20556cm</Width>
+              <Width>4.79306cm</Width>
               <ZIndex>18</ZIndex>
               <Style>
                 <Border>
@@ -1782,9 +1779,9 @@ Invoice Account</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox45</rd:DefaultName>
-              <Top>6.9353cm</Top>
+              <Top>6.96533cm</Top>
               <Height>0.45212cm</Height>
-              <Width>10.2292cm</Width>
+              <Width>16.2617cm</Width>
               <ZIndex>19</ZIndex>
               <Style>
                 <Border>
@@ -1880,7 +1877,6 @@ Amount</Value>
                     </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>Textbox51</rd:DefaultName>
-                  <Top>0in</Top>
                   <Left>2.10109in</Left>
                   <Height>0.38956in</Height>
                   <Width>1.6934in</Width>
@@ -2681,6 +2677,7 @@ Amount</Value>
                 <Border>
                   <Style>None</Style>
                 </Border>
+                <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
               </Style>
             </Textbox>
             <Textbox Name="Textbox39">
@@ -2900,8 +2897,6 @@ Amount</Value>
                     </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>Textbox32</rd:DefaultName>
-                  <Top>0in</Top>
-                  <Left>0in</Left>
                   <Height>0.25in</Height>
                   <Width>2.49079in</Width>
                   <Style>
@@ -2947,7 +2942,6 @@ Amount</Value>
                   </Paragraphs>
                   <rd:DefaultName>Textbox32</rd:DefaultName>
                   <Top>0.26389in</Top>
-                  <Left>0in</Left>
                   <Height>0.25in</Height>
                   <Width>2.49079in</Width>
                   <ZIndex>1</ZIndex>
@@ -2986,7 +2980,6 @@ Amount</Value>
                   </Paragraphs>
                   <rd:DefaultName>Textbox32</rd:DefaultName>
                   <Top>0.51389in</Top>
-                  <Left>0in</Left>
                   <Height>0.25in</Height>
                   <Width>2.49079in</Width>
                   <ZIndex>2</ZIndex>
@@ -3025,7 +3018,6 @@ Amount</Value>
                   </Paragraphs>
                   <rd:DefaultName>Textbox32</rd:DefaultName>
                   <Top>0.76389in</Top>
-                  <Left>0in</Left>
                   <Height>0.2361in</Height>
                   <Width>2.49079in</Width>
                   <ZIndex>3</ZIndex>
