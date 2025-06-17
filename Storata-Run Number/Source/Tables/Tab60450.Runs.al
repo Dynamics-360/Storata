@@ -19,9 +19,10 @@ table 60450 Runs
         {
             Caption = 'Description';
         }
-        field(4; "Description 2"; Text[200])
+        field(4; "Warehouse Name"; Text[100])
         {
-            Caption = 'Description 2';
+            Caption = 'Warehouse Name';
+            Editable = false;
         }
         field(5; Weekdays; Option)
         {
@@ -40,11 +41,6 @@ table 60450 Runs
         field(8; Inactive; Boolean)
         {
             Caption = 'Inactive';
-        }
-        field(9; "Call Day"; Option)
-        {
-            Caption = 'Call Day';
-            OptionMembers = ,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday;
         }
     }
     keys

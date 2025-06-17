@@ -38,6 +38,16 @@ table 60451 "Customer Runs"
             Caption = 'Call Date';
             Editable = false;
         }
+        field(8; "Customer Name"; Text[100])
+        {
+            Caption = 'Customer Name';
+            Editable = false;
+        }
+        field(9; "Customer State"; Text[30])
+        {
+            Caption = 'Customer State';
+            Editable = false;
+        }
     }
     keys
     {
