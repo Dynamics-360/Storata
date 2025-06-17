@@ -19,13 +19,13 @@ page 60454 "Run Numbers List"
                 {
                     ToolTip = 'Specifies the value of the Warehouse field.', Comment = '%';
                 }
+                field("Warehouse Name"; Rec."Warehouse Name")
+                {
+                    ToolTip = 'Specifies the value of the Warehouse Name field.', Comment = '%';
+                }
                 field(Description; Rec.Description)
                 {
                     ToolTip = 'Specifies the value of the Description field.', Comment = '%';
-                }
-                field("Description 2"; Rec."Description 2")
-                {
-                    ToolTip = 'Specifies the value of the Description 2 field.', Comment = '%';
                 }
                 field(Weekdays; Rec.Weekdays)
                 {
@@ -42,10 +42,6 @@ page 60454 "Run Numbers List"
                 field(Inactive; Rec.Inactive)
                 {
                     ToolTip = 'Specifies the value of the Inactive field.', Comment = '%';
-                }
-                field("Call Day"; Rec."Call Day")
-                {
-                    ToolTip = 'Specifies the value of the Call Day field.', Comment = '%';
                 }
             }
         }

@@ -47,24 +47,4 @@ page 60451 "Customer Runs"
             }
         }
     }
-    actions
-    {
-        area(Processing)
-        {
-            action("Update Date")
-            {
-                ApplicationArea = All;
-                Promoted = true;
-                PromotedCategory = Process;
-
-                trigger OnAction()
-                var
-                    UpdateCall: Codeunit "Update Calls";
-                begin
-                    UpdateCall.CalcUpdateCalls(Rec);
-                end;
-            }
-        }
-    }
-
 }

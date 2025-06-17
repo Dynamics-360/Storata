@@ -20,14 +20,23 @@ page 60450 "Run Numbers"
                 field(Warehouse; Rec.Warehouse)
                 {
                     ToolTip = 'Specifies the value of the Warehouse field.', Comment = '%';
+                    trigger OnValidate()
+                    var
+                        Location: Record Location;
+                    begin
+                        if Location.Get(Rec.Warehouse) then begin
+                            Rec."Warehouse Name" := Location.Name;
+                            Rec.Modify();
+                        end;
+                    end;
+                }
+                field("Warehouse Name"; Rec."Warehouse Name")
+                {
+                    ToolTip = 'Specifies the value of the Warehouse Name field.', Comment = '%';
                 }
                 field(Description; Rec.Description)
                 {
                     ToolTip = 'Specifies the value of the Description field.', Comment = '%';
-                }
-                field("Description 2"; Rec."Description 2")
-                {
-                    ToolTip = 'Specifies the value of the Description 2 field.', Comment = '%';
                 }
                 field(Weekdays; Rec.Weekdays)
                 {
@@ -40,10 +49,6 @@ page 60450 "Run Numbers"
                 field("Lead Time"; Rec."Lead Time")
                 {
                     ToolTip = 'Specifies the value of the Lead Time field.', Comment = '%';
-                }
-                field("Call Day"; Rec."Call Day")
-                {
-                    ToolTip = 'Specifies the value of the Call Day field.', Comment = '%';
                 }
                 field(Inactive; Rec.Inactive)
                 {

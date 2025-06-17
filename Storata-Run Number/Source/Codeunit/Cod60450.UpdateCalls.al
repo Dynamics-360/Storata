@@ -2,12 +2,13 @@ codeunit 60450 "Update Calls"
 {
     trigger OnRun()
     begin
-
+        CalcUpdateCalls();
     end;
 
-    procedure CalcUpdateCalls(CustRuns: Record "Customer Runs")
+    procedure CalcUpdateCalls()
     var
         RunsRec: Record Runs;
+        CustRuns: Record "Customer Runs";
     begin
         CustRuns.Reset();
         if CustRuns.FindFirst() then begin
@@ -21,6 +22,23 @@ codeunit 60450 "Update Calls"
             until CustRuns.Next() = 0;
         end;
     end;
+
+    // procedure CalcUpdateCalls(CustRuns: Record "Customer Runs")
+    // var
+    //     RunsRec: Record Runs;
+    // begin
+    //     CustRuns.Reset();
+    //     if CustRuns.FindFirst() then begin
+    //         repeat
+    //             if CustRuns."Run Day" <> 0 then begin
+    //                 CustRuns.Validate("Run Date", GetNextWeekdayDate(WorkDate(), CustRuns."Run Day"));
+    //                 CustRuns.Validate("Call Date", GetCallDate(CustRuns, WorkDate(), CustRuns."Run Day"));
+    //                 CustRuns.Validate("Call Day", Date2DWY(CustRuns."Call Date", 1));
+    //                 CustRuns.Modify();
+    //             end;
+    //         until CustRuns.Next() = 0;
+    //     end;
+    // end;
 
     local procedure GetNextWeekdayDate(CurrentDate: Date; WeekdayOption: Integer): Date
     var
@@ -58,13 +76,18 @@ codeunit 60450 "Update Calls"
 
             Holidays.Reset();
             Holidays.SetRange(Date, CurrentDate, CallDate);
-            if Holidays.FindSet() then
-                H_Count := Holidays.Count;
+            if Holidays.FindSet() then begin
+                repeat
+                    if Holidays.Date >= CallDate then
+                        CallDate := CallDate - 1
+                until Holidays.Next() = 0;
+            end;
+            // H_Count := Holidays.Count;
 
-            if H_Count > 0 then
-                exit(CallDate - H_Count)
-            else
-                exit(CallDate)
+            // if H_Count > 0 then
+            //     exit(CallDate - H_Count)
+            // else
+            exit(CallDate)
         end;
     end;
 }
