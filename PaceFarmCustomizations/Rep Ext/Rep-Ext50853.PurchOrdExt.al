@@ -13,6 +13,10 @@ reportextension 50853 PurchOrdExt extends "PF Purchase Order"
             column(VAT_Identifier; "Purchase Line"."VAT Identifier")
             {
             }
+            column(ItemReference; "Purchase Line"."Item Reference No.")
+            {
+
+            }
         }
     }
     rendering
@@ -21,6 +25,11 @@ reportextension 50853 PurchOrdExt extends "PF Purchase Order"
         {
             Type = RDLC;
             LayoutFile = './PFPurchaseOrder.rdl';
+        }
+        layout("PurchOrder02-D360")
+        {
+            Type = RDLC;
+            LayoutFile = './PFPurchaseOrder02.rdl';
         }
     }
     local procedure GetABN(): Text

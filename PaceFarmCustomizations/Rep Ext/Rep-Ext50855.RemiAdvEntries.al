@@ -29,6 +29,7 @@ reportextension 50855 RemiAdvEntries extends "Remittance Advice - Entries"
         {
             Type = RDLC;
             LayoutFile = './RemitAdvEntries.rdl';
+
         }
     }
     var
@@ -56,4 +57,6 @@ reportextension 50855 RemiAdvEntries extends "Remittance Advice - Entries"
         exit(FirstPart + ' ' + SecondPart + ' ' + ThirdPart + ' ' + ForthPart);
 
     end;
+
+
 }
