@@ -2,7 +2,7 @@
   "id": "a494f6a4-e463-47d2-b949-b71dabc7b934",
   "name": "PaceExten",
   "publisher": "D360",
-  "version": "1.0.0.6",
+  "version": "1.0.0.7",
   "brief": "",
   "description": "",
   "privacyStatement": "",
@@ -13,9 +13,9 @@
   "dependencies": [
     {
       "id": "88888888-2025-0003-0005-838886613317",
-  "name": "Storata - PF Purchase Process",
-  "publisher": "Storata",
-  "version": "25.5.3.15"
+      "name": "Storata - PF Purchase Process",
+      "publisher": "Storata",
+      "version": "25.5.3.15"
     }
   ],
   "screenshots": [],

@@ -9,7 +9,7 @@
       <am:Name>MSRB</am:Name>
       <am:Version>15.0.20283.0</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2025-06-11T10:02:32.5040919Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-06-17T09:15:12.7013768Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -92,16 +92,16 @@
                                     <Width>1.8cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>1.53914cm</Width>
+                                    <Width>1.8831cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>1.75485cm</Width>
+                                    <Width>0.88536cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>0.14061cm</Width>
+                                    <Width>0.07938cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>2.28717cm</Width>
+                                    <Width>2.87393cm</Width>
                                   </TablixColumn>
                                 </TablixColumns>
                                 <TablixRows>
@@ -186,7 +186,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=Code.BlankZero(Fields!Qty_Line.Value)</Value>
+                                                    <Value>="-" &amp; Code.BlankZero(Fields!Qty_Line.Value)</Value>
                                                     <Style>
                                                       <FontFamily>Calibri</FontFamily>
                                                       <FontSize>9pt</FontSize>
@@ -257,11 +257,12 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=Fields!UnitPrice_Line.Value</Value>
+                                                    <Value>=Fields!Unit_Price_Negative.Value</Value>
                                                     <Style>
                                                       <FontFamily>Calibri</FontFamily>
                                                       <FontSize>9pt</FontSize>
-                                                      <Format>'$' #,0.00;('$' #,0.00);''</Format>
+                                                      <Format>'$' #,0.00;-'$' #,0.00;''</Format>
+                                                      <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>
@@ -330,7 +331,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=Fields!GSTAmount.Value</Value>
+                                                    <Value />
                                                     <Style>
                                                       <FontFamily>Calibri</FontFamily>
                                                       <FontSize>9pt</FontSize>
@@ -405,11 +406,11 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=Fields!Amount.Value</Value>
+                                                    <Value>=Fields!AmountNegative.Value</Value>
                                                     <Style>
                                                       <FontFamily>Calibri</FontFamily>
                                                       <FontSize>9pt</FontSize>
-                                                      <Format>'$' #,0.00;('$' #,0.00);''</Format>
+                                                      <Format>'$' #,0.00;-'$' #,0.00;'-'</Format>
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>
@@ -570,11 +571,11 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>="$ " &amp; FormatNumber(SUM(Fields!Amount.Value),2) &amp; VbCrLf &amp;
+                                                    <Value>="-$ " &amp; FormatNumber(SUM(Fields!Amount.Value),2) &amp; VbCrLf &amp;
 
 "$ 0.00" &amp; VbCrLf &amp;
 "$ " &amp; FormatNumber(SUM(Fields!GSTAmount.Value),2) &amp; VbCrLf &amp;
-"$ " &amp; FormatNumber(SUM(Fields!AmountIncludingVAT.Value),2)</Value>
+"-$ " &amp; FormatNumber(SUM(Fields!AmountIncludingVAT.Value),2)</Value>
                                                     <Style>
                                                       <FontFamily>Calibri</FontFamily>
                                                       <Format>'$' #,0.00;('$' #,0.00);''</Format>
@@ -716,7 +717,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
         <Height>1.0198cm</Height>
         <Style />
       </Body>
-      <Width>19.30631cm</Width>
+      <Width>19.35923cm</Width>
       <Page>
         <PageHeader>
           <Height>15.14874cm</Height>
@@ -743,10 +744,10 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox37</rd:DefaultName>
-              <Top>14.51346cm</Top>
+              <Top>13.56096cm</Top>
               <Left>13.58032cm</Left>
               <Height>0.6cm</Height>
-              <Width>1.54336cm</Width>
+              <Width>1.77496cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -778,8 +779,8 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox37</rd:DefaultName>
-              <Top>14.51346cm</Top>
-              <Left>0.01918in</Left>
+              <Top>13.5345cm</Top>
+              <Left>0.0296in</Left>
               <Height>0.6cm</Height>
               <Width>2.58189cm</Width>
               <ZIndex>1</ZIndex>
@@ -814,8 +815,8 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox37</rd:DefaultName>
-              <Top>14.46222cm</Top>
-              <Left>2.63061cm</Left>
+              <Top>13.56096cm</Top>
+              <Left>2.70116cm</Left>
               <Height>0.6cm</Height>
               <Width>6.00355cm</Width>
               <ZIndex>2</ZIndex>
@@ -850,10 +851,10 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox37</rd:DefaultName>
-              <Top>14.51346cm</Top>
-              <Left>8.81055cm</Left>
+              <Top>13.5345cm</Top>
+              <Left>8.72515cm</Left>
               <Height>0.6cm</Height>
-              <Width>1.43279cm</Width>
+              <Width>1.51819cm</Width>
               <ZIndex>3</ZIndex>
               <Style>
                 <Border>
@@ -886,47 +887,11 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox37</rd:DefaultName>
-              <Top>14.51346cm</Top>
+              <Top>13.56096cm</Top>
               <Left>11.78454cm</Left>
               <Height>0.6cm</Height>
               <Width>1.79578cm</Width>
               <ZIndex>4</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <VerticalAlign>Middle</VerticalAlign>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox41">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>GST</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox37</rd:DefaultName>
-              <Top>14.5311cm</Top>
-              <Left>15.12368cm</Left>
-              <Height>0.6cm</Height>
-              <Width>1.75485cm</Width>
-              <ZIndex>5</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -958,11 +923,11 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox37</rd:DefaultName>
-              <Top>14.51346cm</Top>
+              <Top>13.56096cm</Top>
               <Left>10.24334cm</Left>
               <Height>0.6cm</Height>
               <Width>1.5412cm</Width>
-              <ZIndex>6</ZIndex>
+              <ZIndex>5</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -998,7 +963,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
               <Left>0.04242cm</Left>
               <Height>0.98972cm</Height>
               <Width>8.10799cm</Width>
-              <ZIndex>7</ZIndex>
+              <ZIndex>6</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1019,7 +984,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
               <Left>0.03361in</Left>
               <Height>51.54356pt</Height>
               <Width>111.393pt</Width>
-              <ZIndex>8</ZIndex>
+              <ZIndex>7</ZIndex>
               <DataElementOutput>NoOutput</DataElementOutput>
               <Style>
                 <Border />
@@ -1062,7 +1027,7 @@ Invoice Account</Value>
               <Left>0.04242cm</Left>
               <Height>2.7693cm</Height>
               <Width>2.33141cm</Width>
-              <ZIndex>9</ZIndex>
+              <ZIndex>8</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1091,7 +1056,7 @@ Invoice Account</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Fields!BillToName.Value</Value>
+                      <Value>=Fields!Sell_to_Customer_Name.Value</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -1158,7 +1123,7 @@ Invoice Account</Value>
               <Left>2.37384cm</Left>
               <Height>2.7693cm</Height>
               <Width>8.33123cm</Width>
-              <ZIndex>10</ZIndex>
+              <ZIndex>9</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1191,7 +1156,7 @@ Invoice Account</Value>
               <Left>0.04242cm</Left>
               <Height>0.92326cm</Height>
               <Width>5.26221cm</Width>
-              <ZIndex>11</ZIndex>
+              <ZIndex>10</ZIndex>
               <Style>
                 <Border>
                   <Color>LightGrey</Color>
@@ -1217,11 +1182,11 @@ Invoice Account</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox27</rd:DefaultName>
-              <Top>6.22596cm</Top>
+              <Top>6.24775cm</Top>
               <Left>0.04242cm</Left>
               <Height>0.61874cm</Height>
-              <Width>3.35121cm</Width>
-              <ZIndex>12</ZIndex>
+              <Width>6.49975cm</Width>
+              <ZIndex>11</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1262,7 +1227,7 @@ Invoice Account</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Print name                          Sign here                              Date</Value>
+                      <Value>Print name                                                                       Sign here                                                      Date</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -1279,8 +1244,8 @@ Invoice Account</Value>
               <Top>5.05986cm</Top>
               <Left>0.01414cm</Left>
               <Height>1.13082cm</Height>
-              <Width>8.10799cm</Width>
-              <ZIndex>13</ZIndex>
+              <Width>16.56475cm</Width>
+              <ZIndex>12</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1297,7 +1262,7 @@ Invoice Account</Value>
               <Left>0.01414cm</Left>
               <Height>0cm</Height>
               <Width>19.29217cm</Width>
-              <ZIndex>14</ZIndex>
+              <ZIndex>13</ZIndex>
               <Style>
                 <Border>
                   <Style>Dashed</Style>
@@ -1318,11 +1283,11 @@ Invoice Account</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox27</rd:DefaultName>
-              <Top>6.20722cm</Top>
-              <Left>6.89213cm</Left>
-              <Height>0.61874cm</Height>
-              <Width>3.35121cm</Width>
-              <ZIndex>15</ZIndex>
+              <Top>6.21247cm</Top>
+              <Left>11.48143cm</Left>
+              <Height>0.65402cm</Height>
+              <Width>5.09746cm</Width>
+              <ZIndex>14</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1356,11 +1321,11 @@ Invoice Account</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox27</rd:DefaultName>
-              <Top>6.22596cm</Top>
-              <Left>3.36907cm</Left>
+              <Top>6.24775cm</Top>
+              <Left>6.54217cm</Left>
               <Height>0.61874cm</Height>
-              <Width>3.35121cm</Width>
-              <ZIndex>16</ZIndex>
+              <Width>4.93208cm</Width>
+              <ZIndex>15</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1402,8 +1367,8 @@ Invoice Account</Value>
               <Top>6.86649cm</Top>
               <Left>0.01414cm</Left>
               <Height>0.45212cm</Height>
-              <Width>8.10799cm</Width>
-              <ZIndex>17</ZIndex>
+              <Width>16.56475cm</Width>
+              <ZIndex>16</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1475,7 +1440,7 @@ Amount</Value>
               <Left>13.87946cm</Left>
               <Height>3.86895cm</Height>
               <Width>2.8175cm</Width>
-              <ZIndex>18</ZIndex>
+              <ZIndex>17</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1590,7 +1555,7 @@ Amount</Value>
               <Left>16.6672cm</Left>
               <Height>3.86895cm</Height>
               <Width>2.63911cm</Width>
-              <ZIndex>19</ZIndex>
+              <ZIndex>18</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1625,7 +1590,7 @@ Amount</Value>
               <Left>6.90501cm</Left>
               <Height>0.98972cm</Height>
               <Width>2.98174cm</Width>
-              <ZIndex>20</ZIndex>
+              <ZIndex>19</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1698,9 +1663,9 @@ Payment Due </Value>
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>8.23486cm</Top>
               <Left>11.51334cm</Left>
-              <Height>2.80003cm</Height>
+              <Height>2.72975cm</Height>
               <Width>2.59382cm</Width>
-              <ZIndex>21</ZIndex>
+              <ZIndex>20</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1800,9 +1765,9 @@ Payment Due </Value>
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>8.23486cm</Top>
               <Left>14.10716cm</Left>
-              <Height>2.80003cm</Height>
+              <Height>2.72975cm</Height>
               <Width>5.19915cm</Width>
-              <ZIndex>22</ZIndex>
+              <ZIndex>21</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1834,11 +1799,11 @@ Payment Due </Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox37</rd:DefaultName>
-              <Top>14.54874cm</Top>
-              <Left>16.87853cm</Left>
+              <Top>13.59624cm</Top>
+              <Left>15.39056cm</Left>
               <Height>0.6cm</Height>
-              <Width>2.42778cm</Width>
-              <ZIndex>23</ZIndex>
+              <Width>3.91575cm</Width>
+              <ZIndex>22</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1874,7 +1839,7 @@ Payment Due </Value>
               <Left>11.51334cm</Left>
               <Height>0.74333cm</Height>
               <Width>6.4144cm</Width>
-              <ZIndex>24</ZIndex>
+              <ZIndex>23</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1906,7 +1871,7 @@ Payment Due </Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Space(20) &amp; Fields!BillToName.Value &amp; " " &amp; Fields!BillToName2.Value</Value>
+                      <Value>=Fields!BillToName.Value &amp; " " &amp; Fields!BillToName2.Value</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -1921,7 +1886,57 @@ Payment Due </Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value xml:space="preserve">                    </Value>
+                      <Value>=Fields!BillToAddress.Value &amp; 
+IIF(Fields!BillToAddress2.Value="","", VbCrLf &amp; Fields!BillToAddress2.Value) &amp;
+IIF(Fields!ShipToCity.Value="","", VbCrLf &amp; Fields!ShipToCity.Value) &amp;
+IIF(Fields!BillToCounty.Value = "","", "," &amp; Fields!BillToCounty.Value) &amp; 
+IIF(Fields!BillToPostCode.Value = "","", " " &amp; Fields!BillToPostCode.Value) &amp; 
+IIF(Fields!BillToCountry.Value="","", VbCrLf &amp; Fields!BillToCountry.Value) &amp; 
+IIF(Fields!BillToContact.Value="","",VbCrLf &amp; "Attn : " &amp; Fields!BillToContact.Value)</Value>
+                      <Style>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value xml:space="preserve"> </Value>
+                      <Style>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value xml:space="preserve">   </Value>
+                      <Style>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>="Invoice Account      " &amp;First(Fields!BilltoCustNo.Value, "DataSet_Result") &amp; "            Sales Order  " &amp;First(Fields!SalesOrderNo.Value, "DataSet_Result") &amp; VbCrLf &amp; "Customer Account  " &amp;First(Fields!SellToCustomerNo.Value, "DataSet_Result")</Value>
+                      <Style>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value xml:space="preserve">         </Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -1935,11 +1950,11 @@ Payment Due </Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox8</rd:DefaultName>
-              <Top>11.34347cm</Top>
+              <Top>10.78822cm</Top>
               <Left>0.02626cm</Left>
-              <Height>3.11875cm</Height>
+              <Height>2.33177cm</Height>
               <Width>11.30669cm</Width>
-              <ZIndex>25</ZIndex>
+              <ZIndex>24</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1969,7 +1984,7 @@ Payment Due </Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Space(20) &amp; Fields!ShipToName.Value &amp; " " &amp; Fields!ShipToName2.Value</Value>
+                      <Value>=Fields!ShipToName.Value &amp; " " &amp; Fields!ShipToName2.Value</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -1984,12 +1999,26 @@ Payment Due </Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Space(20) &amp; Fields!ShipToAddress.Value &amp; 
-IIF(Fields!ShipToAddress2.Value = "", "", VbCrLf &amp; Space(20) &amp; Fields!ShipToAddress2.Value) &amp; 
-IIF(Fields!ShipToCity.Value="","", VbCrLf &amp; Space(20) &amp; Fields!ShipToCity.Value) &amp;
+                      <Value>=Fields!ShipToAddress.Value &amp; 
+IIF(Fields!ShipToAddress2.Value = "", "", VbCrLf &amp;  Fields!ShipToAddress2.Value) &amp; 
+IIF(Fields!ShipToCity.Value="","", VbCrLf &amp;  Fields!ShipToCity.Value) &amp;
 IIF(Fields!ShipToCounty.Value = "","", "," &amp; Fields!ShipToCounty.Value) &amp; 
 IIF(Fields!ShipToPostCode.Value = "","", " " &amp; Fields!ShipToPostCode.Value) &amp; 
-IIF(Fields!ShipToCountry.Value = "", "", VbCrLf &amp; Space(20) &amp; Fields!ShipToCountry.Value)</Value>
+IIF(Fields!ShipToCountry.Value = "", "", VbCrLf &amp;  Fields!ShipToCountry.Value)</Value>
+                      <Style>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value />
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -2016,215 +2045,20 @@ IIF(Fields!ShipToCountry.Value = "", "", VbCrLf &amp; Space(20) &amp; Fields!Shi
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox8</rd:DefaultName>
-              <Top>11.28211cm</Top>
+              <Top>10.96461cm</Top>
               <Left>11.50934cm</Left>
-              <Height>3.0509cm</Height>
+              <Height>2.15538cm</Height>
               <Width>7.79697cm</Width>
-              <ZIndex>26</ZIndex>
+              <ZIndex>25</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
+                <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
                 <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox3">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=First(Fields!BillToAddress.Value, "DataSet_Result")</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>9pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox3</rd:DefaultName>
-              <Top>12.12004cm</Top>
-              <Left>1.56cm</Left>
-              <Height>0.43067cm</Height>
-              <Width>8.65121cm</Width>
-              <ZIndex>27</ZIndex>
-              <Visibility>
-                <Hidden>=iif(Fields!BillToAddress.Value="",True,False)</Hidden>
-              </Visibility>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox5">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=First(Fields!BillToAddress2.Value, "DataSet_Result")</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>9pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox3</rd:DefaultName>
-              <Top>12.58598cm</Top>
-              <Left>1.56cm</Left>
-              <Height>0.43067cm</Height>
-              <Width>8.65121cm</Width>
-              <ZIndex>28</ZIndex>
-              <Visibility>
-                <Hidden>=iif(Fields!BillToAddress2.Value="",True,False)</Hidden>
-              </Visibility>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox6">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Fields!ShipToCity.Value</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>9pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox3</rd:DefaultName>
-              <Top>13.05193cm</Top>
-              <Left>1.56cm</Left>
-              <Height>0.43067cm</Height>
-              <Width>1.343cm</Width>
-              <ZIndex>29</ZIndex>
-              <Visibility>
-                <Hidden>=iif(Fields!BillToCity.Value="",True,False)</Hidden>
-              </Visibility>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox7">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>="," &amp; Fields!BillToCounty.Value</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>9pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox3</rd:DefaultName>
-              <Top>13.05193cm</Top>
-              <Left>2.93828cm</Left>
-              <Height>0.43067cm</Height>
-              <Width>0.94923cm</Width>
-              <ZIndex>30</ZIndex>
-              <Visibility>
-                <Hidden>=iif(Fields!BillToCounty.Value="",True,False)</Hidden>
-              </Visibility>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox13">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Fields!BillToPostCode.Value</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>9pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox3</rd:DefaultName>
-              <Top>13.05193cm</Top>
-              <Left>3.71819cm</Left>
-              <Height>0.43067cm</Height>
-              <Width>1.40529cm</Width>
-              <ZIndex>31</ZIndex>
-              <Visibility>
-                <Hidden>=iif(Fields!BillToPostCode.Value="",True,False)</Hidden>
-              </Visibility>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox15">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Fields!BillToCountry.Value</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>9pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox3</rd:DefaultName>
-              <Top>13.4826cm</Top>
-              <Left>1.56cm</Left>
-              <Height>0.43067cm</Height>
-              <Width>1.8015cm</Width>
-              <ZIndex>32</ZIndex>
-              <Visibility>
-                <Hidden>=iif(Fields!BillToCountry.Value="",True,False)</Hidden>
-              </Visibility>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
               </Style>
             </Textbox>
             <Textbox Name="Textbox17">
@@ -2256,7 +2090,7 @@ IIF(Fields!ShipToCountry.Value = "", "", VbCrLf &amp; Space(20) &amp; Fields!Shi
               <Left>2.37384cm</Left>
               <Height>0.51533cm</Height>
               <Width>5.34578cm</Width>
-              <ZIndex>33</ZIndex>
+              <ZIndex>26</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -2497,11 +2331,45 @@ Gross Total (AUD) :
                       </TextRuns>
                       <Style />
                     </Paragraph>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value />
+                          <Style>
+                            <FontStyle>Normal</FontStyle>
+                            <FontFamily>Calibri</FontFamily>
+                            <FontSize>9pt</FontSize>
+                            <FontWeight>Normal</FontWeight>
+                            <TextDecoration>None</TextDecoration>
+                            <Color>#000000</Color>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>="Page No " &amp; Globals!PageNumber</Value>
+                          <Style>
+                            <FontStyle>Normal</FontStyle>
+                            <FontFamily>Calibri</FontFamily>
+                            <FontSize>9pt</FontSize>
+                            <FontWeight>Normal</FontWeight>
+                            <TextDecoration>None</TextDecoration>
+                            <Color>#000000</Color>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style>
+                        <TextAlign>Right</TextAlign>
+                      </Style>
+                    </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>Textbox2</rd:DefaultName>
-                  <Top>0.14235cm</Top>
+                  <Top>0.0718cm</Top>
                   <Left>13.58454cm</Left>
-                  <Height>2.65817cm</Height>
+                  <Height>2.72872cm</Height>
                   <Width>5.72177cm</Width>
                   <Style>
                     <Border>
@@ -2531,7 +2399,7 @@ Gross Total (AUD) :
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Sydney (Head Office)                                                                                                                                                                        </Value>
+                      <Value>Sydney (Head Office)                                                                                                                                      </Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Calibri</FontFamily>
@@ -2541,29 +2409,31 @@ Gross Total (AUD) :
                         <Color>#000000</Color>
                       </Style>
                     </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
                     <TextRun>
-                      <Value xml:space="preserve"> </Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>6pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                        <TextDecoration>None</TextDecoration>
-                        <Color>#000000</Color>
-                      </Style>
-                    </TextRun>
-                    <TextRun>
-                      <Value xml:space="preserve">
-</Value>
+                      <Value />
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
+                        <FontWeight>Normal</FontWeight>
                         <TextDecoration>None</TextDecoration>
                         <Color>#000000</Color>
                       </Style>
                     </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
                     <TextRun>
                       <Value>=Fields!CompInfoAddress.Value</Value>
                       <Style>
@@ -2606,42 +2476,6 @@ Gross Total (AUD) :
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Fields!CompInfoHomePage.Value</Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <FontWeight>Normal</FontWeight>
-                        <TextDecoration>None</TextDecoration>
-                        <Color>#000000</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value />
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>4pt</FontSize>
-                        <FontWeight>Normal</FontWeight>
-                        <TextDecoration>None</TextDecoration>
-                        <Color>#000000</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
                       <Value>Tel: 02 9830 9800                                                                                 </Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
@@ -2659,15 +2493,15 @@ Gross Total (AUD) :
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>4.57cm</Top>
-              <Height>2.65817cm</Height>
+              <Top>4.49945cm</Top>
+              <Height>2.72872cm</Height>
               <Width>13.58032cm</Width>
               <ZIndex>6</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
-                <VerticalAlign>Bottom</VerticalAlign>
+                <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -3376,6 +3210,21 @@ SttTByo7B1StPLXW3rQGZTGdJO0BWdnnRGNdhtHjv2jM3wD4tz0N+wdr7f/c85ygGGOafXUKAO8GFvcF
         </Field>
         <Field Name="Truck_Rego">
           <DataField>Truck_Rego</DataField>
+        </Field>
+        <Field Name="Sell_to_Customer_Name">
+          <DataField>Sell_to_Customer_Name</DataField>
+        </Field>
+        <Field Name="AmountNegative">
+          <DataField>AmountNegative</DataField>
+        </Field>
+        <Field Name="AmountNegativeFormat">
+          <DataField>AmountNegativeFormat</DataField>
+        </Field>
+        <Field Name="Unit_Price_Negative">
+          <DataField>Unit_Price_Negative</DataField>
+        </Field>
+        <Field Name="Unit_Price_NegativeFormat">
+          <DataField>Unit_Price_NegativeFormat</DataField>
         </Field>
       </Fields>
       <Query>

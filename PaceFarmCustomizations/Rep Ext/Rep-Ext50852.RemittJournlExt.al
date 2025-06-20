@@ -32,6 +32,11 @@ reportextension 50852 RemittJournlExt extends "Remittance Advice - Journal"
             Type = RDLC;
             LayoutFile = './RemittanceAdviceJournal.rdl';
         }
+        layout("RemitJnlLeftAll-D360")
+        {
+            Type = RDLC;
+            LayoutFile = './RemittanceAdviceJournalLeftAllign.rdl';
+        }
     }
     var
         VendorRec: record Vendor;
