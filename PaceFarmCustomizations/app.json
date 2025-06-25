@@ -16,6 +16,12 @@
       "name": "Storata - PF Purchase Process",
       "publisher": "Storata",
       "version": "25.5.3.15"
+    },
+     {
+      "id": "84e1fb61-51e5-41f2-9fc1-0b92d85fe134",
+      "name": "Storata-Run Number",
+      "publisher": "Default Publisher",
+      "version": "1.0.0.0"
     }
   ],
   "screenshots": [],
