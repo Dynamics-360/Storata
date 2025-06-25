@@ -9,7 +9,7 @@
       <am:Name>MSRB</am:Name>
       <am:Version>15.0.20283.0</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2025-06-19T11:14:37.1904116Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-06-25T10:37:35.7328555Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -743,7 +743,9 @@
                                                 <TextRuns>
                                                   <TextRun>
                                                     <Value>=Fields!VendorName.Value &amp; " " &amp; Fields!VendorName2.Value</Value>
-                                                    <Style />
+                                                    <Style>
+                                                      <FontWeight>Bold</FontWeight>
+                                                    </Style>
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style>
@@ -2681,14 +2683,19 @@
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>
-                                                <Style />
+                                                <Style>
+                                                  <TextAlign>Right</TextAlign>
+                                                </Style>
                                               </Paragraph>
                                             </Paragraphs>
                                             <rd:DefaultName>Textbox195</rd:DefaultName>
                                             <Style>
-                                              <VerticalAlign>Middle</VerticalAlign>
-                                              <PaddingLeft>0.075cm</PaddingLeft>
-                                              <PaddingRight>0.045cm</PaddingRight>
+                                              <Border>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <VerticalAlign>Bottom</VerticalAlign>
+                                              <PaddingLeft>0.045cm</PaddingLeft>
+                                              <PaddingRight>0.075cm</PaddingRight>
                                             </Style>
                                           </Textbox>
                                           <ColSpan>2</ColSpan>
@@ -2750,8 +2757,11 @@
                                             </Paragraphs>
                                             <ZIndex>19</ZIndex>
                                             <Style>
-                                              <VerticalAlign>Middle</VerticalAlign>
-                                              <PaddingLeft>0.075cm</PaddingLeft>
+                                              <Border>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <VerticalAlign>Bottom</VerticalAlign>
+                                              <PaddingLeft>0.045cm</PaddingLeft>
                                               <PaddingRight>0.045cm</PaddingRight>
                                             </Style>
                                           </Textbox>
