@@ -1,24 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:am="http://schemas.microsoft.com/sqlserver/reporting/authoringmetadata">
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>fd505926-3103-4752-83e4-01e282217546</rd:ReportID>
   <am:AuthoringMetadata>
     <am:CreatedBy>
       <am:Name>MSRB</am:Name>
       <am:Version>15.0.20283.0</am:Version>
     </am:CreatedBy>
     <am:UpdatedBy>
-      <am:Name>MSRB</am:Name>
-      <am:Version>15.0.20283.0</am:Version>
+      <am:Name>PBIRB</am:Name>
+      <am:Version>15.7.1814.616</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2025-06-17T09:42:50.0572396Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-06-25T12:05:52.8184486Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="DataSource">
+      <rd:SecurityType>None</rd:SecurityType>
       <ConnectionProperties>
         <DataProvider>SQL</DataProvider>
         <ConnectString />
       </ConnectionProperties>
-      <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>a24b5d36-8820-4337-90b3-728b61e78f32</rd:DataSourceID>
     </DataSource>
   </DataSources>
@@ -57,7 +59,7 @@
                   <Width>0.07938cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.22062cm</Width>
+                  <Width>2.43628cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -67,6 +69,7 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="PickCode">
+                          <rd:DefaultName>PickCode</rd:DefaultName>
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -85,7 +88,6 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>PickCode</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -103,6 +105,7 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Sequence">
+                          <rd:DefaultName>Sequence</rd:DefaultName>
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -121,7 +124,6 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Sequence</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -139,6 +141,7 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Desc_Line">
+                          <rd:DefaultName>Desc_Line</rd:DefaultName>
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -155,7 +158,6 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Desc_Line</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -175,6 +177,7 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Quantity">
+                          <rd:DefaultName>Quantity</rd:DefaultName>
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -194,7 +197,6 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Quantity</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -212,6 +214,7 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="UOMCode">
+                          <rd:DefaultName>UOMCode</rd:DefaultName>
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -230,7 +233,6 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>UOMCode</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -248,6 +250,7 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="UnitPrice">
+                          <rd:DefaultName>UnitPrice</rd:DefaultName>
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -267,7 +270,6 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>UnitPrice</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -285,6 +287,7 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="LineDiscount">
+                          <rd:DefaultName>LineDiscount</rd:DefaultName>
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -294,10 +297,10 @@
                                   <Value>=Code.BlankZero(Fields!LineDiscountPercentage_Line.Value) &amp;
 IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                                   <Style>
+                                    <rd:FormatSymbolCulture>af-NA</rd:FormatSymbolCulture>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>9pt</FontSize>
                                     <Format>'$' #,0.00;('$' #,0.00);''</Format>
-                                    <rd:FormatSymbolCulture>af-NA</rd:FormatSymbolCulture>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -306,7 +309,6 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>LineDiscount</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -324,6 +326,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="OrderNoBarcodeText">
+                          <rd:DefaultName>OrderNoBarcodeText</rd:DefaultName>
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -343,7 +346,6 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>OrderNoBarcodeText</rd:DefaultName>
                           <Visibility>
                             <Hidden>true</Hidden>
                           </Visibility>
@@ -364,6 +366,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="GSTAmount">
+                          <rd:DefaultName>GSTAmount</rd:DefaultName>
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -383,8 +386,8 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>GSTAmount</rd:DefaultName>
                           <Style>
+                            <rd:FormatSymbolCulture>en-AU</rd:FormatSymbolCulture>
                             <Border>
                               <Color>LightGrey</Color>
                               <Style>None</Style>
@@ -394,7 +397,6 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
-                            <rd:FormatSymbolCulture>en-AU</rd:FormatSymbolCulture>
                           </Style>
                         </Textbox>
                       </CellContents>
@@ -407,6 +409,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox10">
+                          <rd:DefaultName>Textbox10</rd:DefaultName>
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -426,7 +429,6 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox10</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -443,6 +445,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox23">
+                          <rd:DefaultName>Textbox23</rd:DefaultName>
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -462,7 +465,6 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox23</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -486,6 +488,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox19">
+                          <rd:DefaultName>Textbox19</rd:DefaultName>
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -505,7 +508,6 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox19</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -522,6 +524,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox81">
+                          <rd:DefaultName>Textbox81</rd:DefaultName>
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -541,7 +544,6 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox81</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -612,6 +614,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox13">
+                          <rd:DefaultName>Textbox13</rd:DefaultName>
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -630,7 +633,6 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox13</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -646,6 +648,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox3">
+                          <rd:DefaultName>Textbox3</rd:DefaultName>
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -664,7 +667,6 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox3</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -684,6 +686,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox8">
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -702,7 +705,6 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox8</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -721,6 +723,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox5">
+                          <rd:DefaultName>Textbox5</rd:DefaultName>
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -739,7 +742,6 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox5</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -850,7 +852,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
             <DataSetName>DataSet_Result</DataSetName>
             <Top>0.00014cm</Top>
             <Height>1.92855cm</Height>
-            <Width>19.53434cm</Width>
+            <Width>19.75cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -861,7 +863,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
         <Height>1.92883cm</Height>
         <Style />
       </Body>
-      <Width>19.91517cm</Width>
+      <Width>19.94163cm</Width>
       <Page>
         <PageHeader>
           <Height>15.43222cm</Height>
@@ -869,6 +871,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
             <Textbox Name="Textbox1">
+              <rd:DefaultName>Textbox1</rd:DefaultName>
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
@@ -888,7 +891,6 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
               <Left>0.02828cm</Left>
               <Height>0.98972cm</Height>
               <Width>8.10799cm</Width>
@@ -919,6 +921,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
               </Style>
             </Image>
             <Textbox Name="Textbox14">
+              <rd:DefaultName>Textbox8</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -970,7 +973,6 @@ IIF(Fields!BillToContact.Value="","",VbCrLf &amp; "Attn : " &amp; Fields!BillToC
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox8</rd:DefaultName>
               <Top>11.07722cm</Top>
               <Left>0.02828cm</Left>
               <Height>2.48374cm</Height>
@@ -987,6 +989,7 @@ IIF(Fields!BillToContact.Value="","",VbCrLf &amp; "Attn : " &amp; Fields!BillToC
               </Style>
             </Textbox>
             <Textbox Name="Textbox231">
+              <rd:DefaultName>Textbox231</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -1007,7 +1010,7 @@ Sales Order </Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Customer Req
+                      <Value>Customer Account
 Invoice Account</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
@@ -1017,12 +1020,23 @@ Invoice Account</Value>
                   </TextRuns>
                   <Style />
                 </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Order Taken By</Value>
+                      <Style>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox231</rd:DefaultName>
               <Top>0.98972cm</Top>
               <Left>0.02828cm</Left>
-              <Height>2.7693cm</Height>
-              <Width>2.33141cm</Width>
+              <Height>3.14688cm</Height>
+              <Width>3.15096cm</Width>
               <ZIndex>3</ZIndex>
               <Style>
                 <Border>
@@ -1035,6 +1049,7 @@ Invoice Account</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox234">
+              <rd:DefaultName>Textbox231</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -1090,7 +1105,7 @@ Invoice Account</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Fields!ExtDocNo.Value</Value>
+                      <Value>=Fields!SellToCustomerNo.Value</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -1113,11 +1128,22 @@ Invoice Account</Value>
                   </TextRuns>
                   <Style />
                 </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Fields!OrderTakenBy.Value</Value>
+                      <Style>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox231</rd:DefaultName>
               <Top>0.98972cm</Top>
-              <Left>2.3597cm</Left>
-              <Height>2.7693cm</Height>
+              <Left>3.17924cm</Left>
+              <Height>3.14688cm</Height>
               <Width>8.38187cm</Width>
               <ZIndex>4</ZIndex>
               <Style>
@@ -1131,6 +1157,7 @@ Invoice Account</Value>
               </Style>
             </Textbox>
             <Textbox Name="Barcode">
+              <rd:DefaultName>Barcode</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -1146,8 +1173,7 @@ Invoice Account</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Barcode</rd:DefaultName>
-              <Top>3.93541cm</Top>
+              <Top>4.1366cm</Top>
               <Left>0.02828cm</Left>
               <Height>0.92326cm</Height>
               <Width>5.26221cm</Width>
@@ -1164,6 +1190,7 @@ Invoice Account</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox27">
+              <rd:DefaultName>Textbox27</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -1176,7 +1203,6 @@ Invoice Account</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox27</rd:DefaultName>
               <Top>6.22596cm</Top>
               <Left>0.02828cm</Left>
               <Height>0.6cm</Height>
@@ -1202,6 +1228,7 @@ Invoice Account</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox4">
+              <rd:DefaultName>Textbox1</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -1235,7 +1262,6 @@ Invoice Account</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>5.05986cm</Top>
               <Height>1.13082cm</Height>
               <Width>16.60697cm</Width>
@@ -1263,6 +1289,7 @@ Invoice Account</Value>
               </Style>
             </Line>
             <Textbox Name="Textbox28">
+              <rd:DefaultName>Textbox27</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -1275,7 +1302,6 @@ Invoice Account</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox27</rd:DefaultName>
               <Top>6.21247cm</Top>
               <Left>11.56111cm</Left>
               <Height>0.61874cm</Height>
@@ -1301,6 +1327,7 @@ Invoice Account</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox29">
+              <rd:DefaultName>Textbox27</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -1313,7 +1340,6 @@ Invoice Account</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox27</rd:DefaultName>
               <Top>6.22596cm</Top>
               <Left>6.58284cm</Left>
               <Height>0.6cm</Height>
@@ -1339,6 +1365,7 @@ Invoice Account</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox68">
+              <rd:DefaultName>Textbox45</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -1356,7 +1383,6 @@ Invoice Account</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox45</rd:DefaultName>
               <Top>6.86649cm</Top>
               <Height>0.45212cm</Height>
               <Width>16.60697cm</Width>
@@ -1372,14 +1398,14 @@ Invoice Account</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox233">
+              <rd:DefaultName>Textbox231</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Customer Ref
-Customer Account Order Taken By
-Run No.</Value>
+                      <Value>Customer Req
+Customer Account Run No.</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -1415,7 +1441,6 @@ Amount</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox231</rd:DefaultName>
               <Top>0.98972cm</Top>
               <Left>13.87215cm</Left>
               <Height>3.2773cm</Height>
@@ -1432,12 +1457,13 @@ Amount</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox236">
+              <rd:DefaultName>Textbox231</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Fields!SellToCustomerNo.Value</Value>
+                      <Value />
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -1450,18 +1476,6 @@ Amount</Value>
                   <TextRuns>
                     <TextRun>
                       <Value>=Fields!SellToCustomerNo.Value</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>9pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Fields!OrderTakenBy.Value</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -1499,8 +1513,10 @@ Amount</Value>
                     <TextRun>
                       <Value />
                       <Style>
+                        <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
                         <FontFamily>Calibri</FontFamily>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
+                        <Format>'$' #,0.00;'$' -#,0.00;''</Format>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1513,10 +1529,10 @@ Amount</Value>
                     <TextRun>
                       <Value>=Fields!TotalAmountIncludingVAT.Value</Value>
                       <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>8pt</FontSize>
-                        <Format>'$' #,0.00;'$' -#,0.00;''</Format>
                         <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <Format>'$' #,0.00;'$' -#,0.00;''</Format>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1538,7 +1554,6 @@ Amount</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox231</rd:DefaultName>
               <Top>0.98972cm</Top>
               <Left>16.60697cm</Left>
               <Height>3.2773cm</Height>
@@ -1555,6 +1570,7 @@ Amount</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox18">
+              <rd:DefaultName>Textbox1</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -1611,7 +1627,6 @@ Invoice No.</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>8.19959cm</Top>
               <Left>11.61517cm</Left>
               <Height>2.7718cm</Height>
@@ -1629,6 +1644,7 @@ Invoice No.</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox26">
+              <rd:DefaultName>Textbox1</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -1675,7 +1691,7 @@ Invoice No.</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Fields!SellToCustomerNo.Value</Value>
+                      <Value />
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                       </Style>
@@ -1713,7 +1729,6 @@ Invoice No.</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>8.20055cm</Top>
               <Left>14.18198cm</Left>
               <Height>2.77084cm</Height>
@@ -1731,6 +1746,7 @@ Invoice No.</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox32">
+              <rd:DefaultName>Textbox8</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -1781,7 +1797,6 @@ IIF(Fields!ShipToCountry.Value = "", "", VbCrLf &amp; Fields!ShipToCountry.Value
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox8</rd:DefaultName>
               <Top>11.07722cm</Top>
               <Left>11.58108cm</Left>
               <Height>2.4794cm</Height>
@@ -1798,6 +1813,7 @@ IIF(Fields!ShipToCountry.Value = "", "", VbCrLf &amp; Fields!ShipToCountry.Value
               </Style>
             </Textbox>
             <Textbox Name="Textbox237">
+              <rd:DefaultName>Textbox231</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -1826,9 +1842,8 @@ IIF(Fields!ShipToCountry.Value = "", "", VbCrLf &amp; Fields!ShipToCountry.Value
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox231</rd:DefaultName>
               <Top>13.61569cm</Top>
-              <Left>2.61647cm</Left>
+              <Left>3.25147cm</Left>
               <Height>0.9691cm</Height>
               <Width>3.69525cm</Width>
               <ZIndex>17</ZIndex>
@@ -1843,6 +1858,7 @@ IIF(Fields!ShipToCountry.Value = "", "", VbCrLf &amp; Fields!ShipToCountry.Value
               </Style>
             </Textbox>
             <Textbox Name="Textbox238">
+              <rd:DefaultName>Textbox231</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -1859,10 +1875,9 @@ Customer Account</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox231</rd:DefaultName>
               <Top>13.61569cm</Top>
               <Height>0.98506cm</Height>
-              <Width>2.61648cm</Width>
+              <Width>3.25147cm</Width>
               <ZIndex>18</ZIndex>
               <Style>
                 <Border>
@@ -1875,6 +1890,7 @@ Customer Account</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox239">
+              <rd:DefaultName>Textbox231</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -1891,7 +1907,6 @@ Customer Account</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox231</rd:DefaultName>
               <Top>13.66951cm</Top>
               <Left>9.56765cm</Left>
               <Height>0.9691cm</Height>
@@ -1908,6 +1923,7 @@ Customer Account</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox240">
+              <rd:DefaultName>Textbox231</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -1923,7 +1939,6 @@ Customer Account</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox231</rd:DefaultName>
               <Top>13.66951cm</Top>
               <Left>7.58618cm</Left>
               <Height>0.98506cm</Height>
@@ -1940,6 +1955,7 @@ Customer Account</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox21">
+              <rd:DefaultName>Textbox1</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -1958,7 +1974,6 @@ Customer Account</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>7.53027cm</Top>
               <Left>11.61517cm</Left>
               <Height>0.66932cm</Height>
@@ -1976,6 +1991,7 @@ Customer Account</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox44">
+              <rd:DefaultName>Textbox37</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -1994,7 +2010,6 @@ Customer Account</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox37</rd:DefaultName>
               <Top>14.83208cm</Top>
               <Left>15.64669cm</Left>
               <Height>0.6cm</Height>
@@ -2012,6 +2027,7 @@ Customer Account</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox37">
+              <rd:DefaultName>Textbox37</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -2030,7 +2046,6 @@ Customer Account</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox37</rd:DefaultName>
               <Top>14.83222cm</Top>
               <Left>0.65416in</Left>
               <Height>0.6cm</Height>
@@ -2048,6 +2063,7 @@ Customer Account</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox38">
+              <rd:DefaultName>Textbox37</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -2066,7 +2082,6 @@ Customer Account</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox37</rd:DefaultName>
               <Top>14.83096cm</Top>
               <Left>4.02505cm</Left>
               <Height>0.6cm</Height>
@@ -2084,6 +2099,7 @@ Customer Account</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox39">
+              <rd:DefaultName>Textbox37</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -2102,7 +2118,6 @@ Customer Account</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox37</rd:DefaultName>
               <Top>14.83166cm</Top>
               <Left>10.98919cm</Left>
               <Height>0.6cm</Height>
@@ -2120,6 +2135,7 @@ Customer Account</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox40">
+              <rd:DefaultName>Textbox37</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -2138,7 +2154,6 @@ Customer Account</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox37</rd:DefaultName>
               <Top>14.83194cm</Top>
               <Left>13.98061cm</Left>
               <Height>0.6cm</Height>
@@ -2156,6 +2171,7 @@ Customer Account</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox42">
+              <rd:DefaultName>Textbox37</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -2174,7 +2190,6 @@ Customer Account</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox37</rd:DefaultName>
               <Top>14.8318cm</Top>
               <Left>12.46021cm</Left>
               <Height>0.6cm</Height>
@@ -2192,12 +2207,13 @@ Customer Account</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox69">
+              <rd:DefaultName>Textbox37</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Amount</Value>
+                      <Value>Amount Incl Disc</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -2210,11 +2226,10 @@ Customer Account</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox37</rd:DefaultName>
               <Top>14.83124cm</Top>
               <Left>17.23434cm</Left>
               <Height>0.6cm</Height>
-              <Width>2.3cm</Width>
+              <Width>2.51566cm</Width>
               <ZIndex>28</ZIndex>
               <Style>
                 <Border>
@@ -2228,6 +2243,7 @@ Customer Account</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox41">
+              <rd:DefaultName>Textbox37</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -2246,7 +2262,6 @@ Customer Account</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox37</rd:DefaultName>
               <Top>14.83222cm</Top>
               <Height>0.5643cm</Height>
               <Width>1.64039cm</Width>
@@ -2263,6 +2278,7 @@ Customer Account</Value>
               </Style>
             </Textbox>
             <Textbox Name="Textbox9">
+              <rd:DefaultName>Textbox9</rd:DefaultName>
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
@@ -2286,9 +2302,7 @@ Customer Account</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox9</rd:DefaultName>
-              <Top>9.59556cm</Top>
-              <Left>2.47299cm</Left>
+              <Top>9.91306cm</Top>
               <Height>0.51533cm</Height>
               <Width>5.34578cm</Width>
               <ZIndex>30</ZIndex>
@@ -2303,7 +2317,7 @@ Customer Account</Value>
               </Style>
             </Textbox>
             <Line Name="Line1">
-              <Top>3.21606cm</Top>
+              <Top>2.89856cm</Top>
               <Left>16.66748cm</Left>
               <Height>0cm</Height>
               <Width>2.86686cm</Width>
@@ -2322,18 +2336,19 @@ Customer Account</Value>
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>8.79589cm</Height>
+          <Height>8.63714cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
             <Textbox Name="Textbox6">
+              <rd:DefaultName>Textbox3</rd:DefaultName>
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>***PLEASE ***PLEASE SUBMIT ALL CLAIMS THROUGH TO CLAIMS@PACEFARM.COM ***</Value>
+                      <Value>***PLEASE SUBMIT ALL CLAIMS THROUGH TO CLAIMS@PACEFARM.COM ***</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>8pt</FontSize>
@@ -2392,7 +2407,6 @@ CREDIT CARD (1.5% surcharge applies) | To pay by Visa or Mastercard, phone 1300 
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox3</rd:DefaultName>
               <Top>0.635cm</Top>
               <Height>2.48708cm</Height>
               <Width>11.30669cm</Width>
@@ -2410,6 +2424,7 @@ CREDIT CARD (1.5% surcharge applies) | To pay by Visa or Mastercard, phone 1300 
               </Style>
             </Textbox>
             <Textbox Name="Textbox11">
+              <rd:DefaultName>Textbox11</rd:DefaultName>
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
@@ -2418,7 +2433,7 @@ CREDIT CARD (1.5% surcharge applies) | To pay by Visa or Mastercard, phone 1300 
                     <TextRun>
                       <Value>Net Total : 
 Miscellaneous Charges : 
-Goods And Services Tax : 
+GST : 
 Gross Total (AUD) : 
 </Value>
                       <Style>
@@ -2432,7 +2447,6 @@ Gross Total (AUD) :
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox11</rd:DefaultName>
               <Top>0.635cm</Top>
               <Left>11.38051cm</Left>
               <Height>2.48708cm</Height>
@@ -2481,7 +2495,7 @@ Gross Total (AUD) :
               </Paragraphs>
               <Top>0.03528cm</Top>
               <Height>0.6cm</Height>
-              <Width>19.53434cm</Width>
+              <Width>19.75cm</Width>
               <ZIndex>2</ZIndex>
               <Visibility>
                 <Hidden>=IIF(Globals!PageNumber = Globals!TotalPages, False, True)</Hidden>
@@ -2499,9 +2513,9 @@ Gross Total (AUD) :
             <Rectangle Name="Rectangle1">
               <KeepTogether>true</KeepTogether>
               <Top>0.07056cm</Top>
-              <Left>0.03387cm</Left>
-              <Height>3.56073cm</Height>
-              <Width>19.50047cm</Width>
+              <Left>0.03457cm</Left>
+              <Height>3.49017cm</Height>
+              <Width>19.71543cm</Width>
               <ZIndex>3</ZIndex>
               <Visibility>
                 <Hidden>=iif(Globals!OverallPageNumber&lt;&gt;Globals!OverallTotalPages,False,True)</Hidden>
@@ -2515,6 +2529,7 @@ Gross Total (AUD) :
             <Rectangle Name="Rectangle2">
               <ReportItems>
                 <Textbox Name="Textbox2">
+                  <rd:DefaultName>Textbox2</rd:DefaultName>
                   <CanGrow>true</CanGrow>
                   <KeepTogether>true</KeepTogether>
                   <Paragraphs>
@@ -2600,7 +2615,7 @@ Gross Total (AUD) :
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value>="Page No " &amp; Globals!PageNumber</Value>
+                          <Value />
                           <Style>
                             <FontStyle>Normal</FontStyle>
                             <FontFamily>Calibri</FontFamily>
@@ -2632,11 +2647,10 @@ Gross Total (AUD) :
                       <Style />
                     </Paragraph>
                   </Paragraphs>
-                  <rd:DefaultName>Textbox2</rd:DefaultName>
                   <Top>0.17871cm</Top>
                   <Left>13.58032cm</Left>
                   <Height>2.62181cm</Height>
-                  <Width>5.77829cm</Width>
+                  <Width>6.16968cm</Width>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -2651,7 +2665,7 @@ Gross Total (AUD) :
               <KeepTogether>true</KeepTogether>
               <Top>5.59074cm</Top>
               <Height>2.99116cm</Height>
-              <Width>19.42232cm</Width>
+              <Width>19.75cm</Width>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border>
@@ -2674,6 +2688,7 @@ Gross Total (AUD) :
               </Style>
             </Image>
             <Textbox Name="Textbox7">
+              <rd:DefaultName>Textbox1</rd:DefaultName>
               <CanGrow>true</CanGrow>
               <Paragraphs>
                 <Paragraph>
@@ -2819,7 +2834,6 @@ Gross Total (AUD) :
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>5.76945cm</Top>
               <Height>2.62181cm</Height>
               <Width>13.58032cm</Width>
@@ -2857,11 +2871,48 @@ Gross Total (AUD) :
               <Top>0.67056cm</Top>
               <Left>15.5277cm</Left>
               <Height>2.48708cm</Height>
-              <Width>4.00664cm</Width>
+              <Width>4.2223cm</Width>
               <ZIndex>7</ZIndex>
               <Visibility>
                 <Hidden>=IIF(Globals!PageNumber = Globals!TotalPages, False, True)</Hidden>
               </Visibility>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox12">
+              <rd:DefaultName>Textbox12</rd:DefaultName>
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>="Page " &amp; Globals!PageNumber &amp; "/" &amp; Globals!OverallTotalPages</Value>
+                      <Style>
+                        <FontStyle>Normal</FontStyle>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <FontWeight>Normal</FontWeight>
+                        <TextDecoration>None</TextDecoration>
+                        <Color>#000000</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>4.92018cm</Top>
+              <Left>13.58032cm</Left>
+              <Height>0.6cm</Height>
+              <Width>6.16968cm</Width>
+              <ZIndex>8</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -3046,8 +3097,6 @@ SttTByo7B1StPLXW3rQGZTGdJO0BWdnnRGNdhtHjv2jM3wD4tz0N+wdr7f/c85ygGGOafXUKAO8GFvcF
   </EmbeddedImages>
   <Language>=User!Language</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
-  <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>fd505926-3103-4752-83e4-01e282217546</rd:ReportID>
   <DataSets>
     <DataSet Name="DataSet_Result">
       <Fields>
