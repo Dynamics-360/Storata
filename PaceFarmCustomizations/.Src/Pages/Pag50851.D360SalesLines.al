@@ -1,10 +1,10 @@
-page 50851 "Import Sales Lines"
+page 50851 "50851_PagImportSalesLines"
 {
     ApplicationArea = All;
     Caption = 'Import Sales Lines';
     PageType = ListPart;
     MultipleNewLines = true;
-    SourceTable = "Import Sales Lines";
+    SourceTable = "50851_TabImportSalesLines";
 
     layout
     {
@@ -28,14 +28,37 @@ page 50851 "Import Sales Lines"
                 {
                     ToolTip = 'Specifies the value of the Quantity field.', Comment = '%';
                 }
-                field(Warehouse; Rec.Warehouse)
+                field(Location; Rec.Location)
                 {
-                    ToolTip = 'Specifies the value of the Warehouse field.', Comment = '%';
+                    ToolTip = 'Specifies the value of the Location field.', Comment = '%';
                 }
                 field(Created; Rec.Created)
                 {
                     ToolTip = 'Specifies the value of the Created field.', Comment = '%';
                 }
+            }
+        }
+    }
+    actions
+    {
+        area(Processing)
+        {
+            action("Delete")
+            {
+                ApplicationArea = All;
+                Image = Delete;
+                Promoted = true;
+                PromotedOnly = true;
+                PromotedCategory = Process;
+
+                trigger OnAction()
+                var
+                    ImportLinesRec: Record "50851_TabImportSalesLines";
+                begin
+                    CurrPage.SetSelectionFilter(ImportLinesRec);
+                    if ImportLinesRec.FindSet() then
+                        ImportLinesRec.DeleteAll();
+                end;
             }
         }
     }

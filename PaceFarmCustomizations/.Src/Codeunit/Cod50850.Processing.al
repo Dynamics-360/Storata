@@ -1,29 +1,37 @@
 codeunit 50850 Processing
 {
 
-    procedure ProcessData(var ImportHeader: Record "Import Sales Header")
+    procedure CreateSalesHead(var ImportHeader: Record "50850_TabImportSalesHeader")
     begin
-        if ImportHeader.Count > 1 then begin
+        if ImportHeader.FindSet() then begin
             repeat
-                if not CreateOrder(ImportHeader) then begin
-                    ImportHeader."Error Description" := GetLastErrorText;
+                if not CreateOrderHeader(ImportHeader) then begin
                     ImportHeader.Created := false;
+                    ImportHeader."Error Description" := GetLastErrorText;
                     ImportHeader.Modify();
                 end;
             until ImportHeader.Next() = 0;
-        end else begin
-            if not CreateOrder(ImportHeader) then begin
-                ImportHeader."Error Description" := GetLastErrorText;
-                ImportHeader.Created := false;
-                ImportHeader.Modify();
-            end;
         end;
     end;
 
+    procedure CreateSalesLines(var ImportLines: Record "50851_TabImportSalesLines")
+    begin
+        if ImportLines.FindSet() then begin
+            repeat
+                if not InsertOrderLines(ImportLines) then begin
+                    ImportLines.Created := false;
+                    ImportLines."Error Description" := GetLastErrorText;
+                    ImportLines.Modify();
+                end;
+            until ImportLines.Next() = 0;
+        end;
+
+    end;
+
     [TryFunction]
-    local procedure CreateOrder(ImportHead: Record "Import Sales Header")
+    local procedure CreateOrderHeader(ImportHead: Record "50850_TabImportSalesHeader")
     var
-        ImportSalesLines: Record "Import Sales Lines";
+        ImportSalesLines: Record "50851_TabImportSalesLines";
         SalesHeader: Record "Sales Header";
         Location: Record Location;
         NoSeries: Record "No. Series";
@@ -43,14 +51,14 @@ codeunit 50850 Processing
 
         SalesHeader.Reset();
         if SalesHeader.Get(SalesHeader."Document Type"::Order, ImportHead."Order No.") then
-            Error('Pace order no %1 already exist.', ImportHead."Order No.");
+            Error('Sales Order no %1 already exist.', ImportHead."Order No.");
 
         SalesHeader.Init();
         SalesHeader."No." := ImportHead."Order No.";
         SalesHeader.Validate("Document Type", SalesHeader."Document Type"::Order);
         SalesHeader.Validate("Sell-to Customer No.", ImportHead."Customer No.");
         SalesHeader.Validate("External Document No.", ImportHead."Order Reference");
-        SalesHeader.Validate("Location Code", ImportHead.Warehouse);
+        SalesHeader.Validate("Location Code", ImportHead.Location);
         SalesHeader.Validate("Shipment Method Code", ImportHead."Delivery Mode");
         SalesHeader.Validate("Run No.", ImportHead."Run Number");
         SalesHeader.Validate("Requested Delivery Date", ImportHead."Req. Receipt Date");
@@ -58,44 +66,51 @@ codeunit 50850 Processing
         if SalesHeader.Insert() then begin
             ImportHead.Created := true;
             ImportHead.Modify();
-            ImportSalesLines.Reset();
-            ImportSalesLines.SetRange("Order No.", ImportHead."Order No.");
-            ImportSalesLines.SetRange(Created, false);
-            if ImportSalesLines.FindSet() then
-                CreateLines(SalesHeader, ImportSalesLines);
+            // ImportSalesLines.Reset();
+            // ImportSalesLines.SetRange("Order No.", ImportHead."Order No.");
+            // ImportSalesLines.SetRange(Created, false);
+            // if ImportSalesLines.FindSet() then
+            //     CreateLines(SalesHeader, ImportSalesLines);
         end
         else
             Error(GetLastErrorText);
-
-        if ImportHead.Created then
-            ImportHead.Delete(true);
     end;
 
-    local procedure CreateLines(SalesHead: Record "Sales Header"; var ImportSalesLines: Record "Import Sales Lines")
+    [TryFunction]
+    local procedure InsertOrderLines(var ImportSalesLines: Record "50851_TabImportSalesLines")
     var
         SalesLine: Record "Sales Line";
+        SalesHead: Record "Sales Header";
     begin
-        repeat
-            Clear(SalesLine);
-            SalesLine.init();
-            SalesLine.Validate("Document Type", SalesHead."Document Type");
-            SalesLine.Validate("Document No.", SalesHead."No.");
-            SalesLine."Line No." := ImportSalesLines."Line No.";
-            SalesLine.Validate(Type, SalesLine.Type::Item);
-            SalesLine.Validate("No.", ImportSalesLines."Item No.");
-            SalesLine.Validate(Quantity, ImportSalesLines.Quantity);
-            SalesLine.Validate("Location Code", ImportSalesLines.Warehouse);
-            if SalesLine.Insert() then begin
-                ImportSalesLines.Created := true;
-                ImportSalesLines.Modify();
-            end;
-        until ImportSalesLines.Next() = 0;
+        SalesHead.Reset();
+        SalesHead.SetRange("Document Type", SalesHead."Document Type"::Order);
+        SalesHead.SetRange("No.", ImportSalesLines."Order No.");
+        if SalesHead.FindFirst() then
+            Error('Sales Header %1 not created for this line', ImportSalesLines."Order No.");
+
+        if ImportSalesLines.FindSet() then begin
+            repeat
+                Clear(SalesLine);
+                SalesLine.init();
+                SalesLine.Validate("Document Type", SalesLine."Document Type");
+                SalesLine.Validate("Document No.", ImportSalesLines."Order No.");
+                SalesLine."Line No." := ImportSalesLines."Line No.";
+                SalesLine.Validate(Type, SalesLine.Type::Item);
+                SalesLine.Validate("No.", ImportSalesLines."Item No.");
+                SalesLine.Validate(Quantity, ImportSalesLines.Quantity);
+                SalesLine.Validate("Location Code", ImportSalesLines.Location);
+                if SalesLine.Insert() then begin
+                    ImportSalesLines.Created := true;
+                    ImportSalesLines.Modify();
+                end;
+            until ImportSalesLines.Next() = 0;
+        end;
     end;
 
     procedure ImportDataFromExcel()
     var
-        ImportHeadRec: Record "Import Sales Header";
-        ImportLineRec: Record "Import Sales Lines";
+        ImportHeadRec: Record "50850_TabImportSalesHeader";
+        ImportLineRec: Record "50851_TabImportSalesLines";
         ShipDate: Text;
         RecpDate: Text;
     begin
@@ -140,7 +155,7 @@ codeunit 50850 Processing
             ImportHeadRec."Order No." := GetValueAtIndex(RowNo, 1);
             ImportHeadRec."Customer No." := GetValueAtIndex(RowNo, 2);
             ImportHeadRec."Order Reference" := GetValueAtIndex(RowNo, 3);
-            ImportHeadRec.Warehouse := GetValueAtIndex(RowNo, 4);
+            ImportHeadRec.Location := GetValueAtIndex(RowNo, 4);
             ImportHeadRec."Delivery Mode" := GetValueAtIndex(RowNo, 5);
             ImportHeadRec."Run Number" := GetValueAtIndex(RowNo, 6);
             ShipDate := GetValueAtIndex(RowNo, 7);
@@ -180,7 +195,7 @@ codeunit 50850 Processing
             ImportLineRec."Order No." := GetValueAtIndex(RowNo, 2);
             ImportLineRec."Item No." := GetValueAtIndex(RowNo, 3);
             Evaluate(ImportLineRec.Quantity, GetValueAtIndex(RowNo, 4));
-            ImportLineRec.Warehouse := GetValueAtIndex(RowNo, 5);
+            ImportLineRec.Location := GetValueAtIndex(RowNo, 5);
             ImportLineRec.Insert();
         end;
         Message('Import Completed');

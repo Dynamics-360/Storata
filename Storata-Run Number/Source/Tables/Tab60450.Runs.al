@@ -27,7 +27,7 @@ table 60450 Runs
         field(5; Weekdays; Option)
         {
             Caption = 'Weekdays';
-            OptionMembers = " ",Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday;
+            OptionMembers = " ",Monday,Tuesday,Wednesday,Thursday,Friday;
         }
         field(6; Calender; Option)
         {

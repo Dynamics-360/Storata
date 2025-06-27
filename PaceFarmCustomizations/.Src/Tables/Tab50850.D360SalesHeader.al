@@ -1,4 +1,4 @@
-table 50850 "Import Sales Header"
+table 50850 "50850_TabImportSalesHeader"
 {
     Caption = 'Import Sales Header';
     DataClassification = ToBeClassified;
@@ -12,14 +12,16 @@ table 50850 "Import Sales Header"
         field(2; "Customer No."; Code[20])
         {
             Caption = 'Customer No.';
+            TableRelation = Customer;
         }
         field(3; "Order Reference"; Text[50])
         {
             Caption = 'Order Reference';
         }
-        field(4; Warehouse; Code[20])
+        field(4; Location; Code[10])
         {
-            Caption = 'Warehouse';
+            Caption = 'Location';
+            TableRelation = Location;
         }
         field(5; "Delivery Mode"; Text[50])
         {
@@ -28,6 +30,7 @@ table 50850 "Import Sales Header"
         field(6; "Run Number"; Code[20])
         {
             Caption = 'Run Number';
+            TableRelation = Runs;
         }
         field(7; "Shipping Date"; Date)
         {
@@ -57,7 +60,7 @@ table 50850 "Import Sales Header"
     }
     trigger OnDelete()
     var
-        ImportSalLines: Record "Import Sales Lines";
+        ImportSalLines: Record "50851_TabImportSalesLines";
     begin
         ImportSalLines.Reset();
         ImportSalLines.SetRange("Order No.", Rec."Order No.");

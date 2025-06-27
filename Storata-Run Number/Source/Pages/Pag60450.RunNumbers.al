@@ -5,6 +5,7 @@ page 60450 "Run Numbers"
     PageType = List;
     SourceTable = Runs;
     MultipleNewLines = true;
+    AutoSplitKey = false;
     UsageCategory = Administration;
 
     layout

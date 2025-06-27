@@ -4,7 +4,7 @@ page 50850 D360_SalesHeaer
     Caption = 'Import Sales Data';
     PageType = Worksheet;
     MultipleNewLines = true;
-    SourceTable = "Import Sales Header";
+    SourceTable = "50850_TabImportSalesHeader";
     UsageCategory = Lists;
     AutoSplitKey = false;
     SaveValues = true;
@@ -27,9 +27,9 @@ page 50850 D360_SalesHeaer
                 {
                     ToolTip = 'Specifies the value of the Order Reference field.', Comment = '%';
                 }
-                field(Warehouse; Rec.Warehouse)
+                field(Location; Rec.Location)
                 {
-                    ToolTip = 'Specifies the value of the Warehouse field.', Comment = '%';
+                    ToolTip = 'Specifies the value of the Location field.', Comment = '%';
                 }
                 field("Delivery Mode"; Rec."Delivery Mode")
                 {
@@ -60,11 +60,9 @@ page 50850 D360_SalesHeaer
                 }
 
             }
-            part(D360SalesLines; "Import Sales Lines")
+            part(D360SalesLines; "50851_PagImportSalesLines")
             {
                 ApplicationArea = All;
-                SubPageLink = "Order No." = field("Order No.");
-                UpdatePropagation = Both;
             }
         }
     }
@@ -72,7 +70,7 @@ page 50850 D360_SalesHeaer
     {
         area(Processing)
         {
-            action("Create Order")
+            action("Create Header")
             {
                 ApplicationArea = All;
                 Image = MakeOrder;
@@ -82,12 +80,13 @@ page 50850 D360_SalesHeaer
 
                 trigger OnAction()
                 var
-                    ImportHeaderRec: Record "Import Sales Header";
+                    ImportHeaderRec: Record "50850_TabImportSalesHeader";
                     Process: Codeunit Processing;
                 begin
                     CurrPage.SetSelectionFilter(ImportHeaderRec);
+                    ImportHeaderRec.SetRange(Created, false);
                     if ImportHeaderRec.FindSet() then begin
-                        Process.ProcessData(ImportHeaderRec);
+                        Process.CreateSalesHead(ImportHeaderRec);
                         CurrPage.Update();
                     end;
                 end;
@@ -106,6 +105,23 @@ page 50850 D360_SalesHeaer
                 begin
                     Process.ImportDataFromExcel();
                     CurrPage.Update();
+                end;
+            }
+            action("Delete")
+            {
+                ApplicationArea = All;
+                Image = Delete;
+                Promoted = true;
+                PromotedOnly = true;
+                PromotedCategory = Process;
+
+                trigger OnAction()
+                var
+                    ImportHeadRec: Record "50850_TabImportSalesHeader";
+                begin
+                    CurrPage.SetSelectionFilter(ImportHeadRec);
+                    if ImportHeadRec.FindSet() then
+                        ImportHeadRec.DeleteAll();
                 end;
             }
         }

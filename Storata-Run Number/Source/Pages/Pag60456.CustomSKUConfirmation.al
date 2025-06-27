@@ -1,10 +1,10 @@
-page 60452 "Customer SKU"
+page 60456 CustomerSKUBuffer
 {
     ApplicationArea = All;
-    PageType = ListPart;
-    AutoSplitKey = false;
-    MultipleNewLines = true;
-    SourceTable = "Customer SKU";
+    Caption = 'Custom SKU Confirmation';
+    PageType = List;
+    SourceTable = DefaultSKUBuffer;
+    UsageCategory = None;
 
     layout
     {
@@ -20,9 +20,9 @@ page 60452 "Customer SKU"
                 {
                     ToolTip = 'Specifies the value of the Description field.', Comment = '%';
                 }
-                field("Item UOM"; Rec."Item UOM")
+                field(Quantity; Rec.Quantity)
                 {
-                    ToolTip = 'Specifies the value of the Item UOM field.', Comment = '%';
+                    ToolTip = 'Specifies the value of the Quantity field.', Comment = '%';
                 }
             }
         }

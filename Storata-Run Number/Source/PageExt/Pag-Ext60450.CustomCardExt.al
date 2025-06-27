@@ -48,67 +48,114 @@ pageextension 60450 CustomCardExt extends "Customer Card"
                     PromotedCategory = Category11;
 
                     trigger OnAction()
-                    var
-                        SalesHead: Record "Sales Header";
-                        SalesLine: Record "Sales Line";
-                        CustomerSku: Record "Customer SKU";
-                        CustRun: Record "Customer Runs";
-                        SalesOrderPag: Page "Sales Order";
-                        LineNo: Integer;
-                        Count: Integer;
                     begin
-                        Count := 0;
-                        CustRun.Reset();
-                        CustRun.SetRange("Customer No.", Rec."No.");
-                        if CustRun.FindFirst() then begin
-                            repeat
-                                Clear(SalesHead);
-                                Clear(SalesLine);
-                                Clear(LineNo);
-                                SalesHead.Init();
-                                SalesHead.validate("Document Type", SalesHead."Document Type"::Order);
-                                SalesHead.Validate("Sell-to Customer No.", Rec."No.");
-                                SalesHead.Validate("Bill-to Customer No.", Rec."No.");
-                                SalesHead.validate("Document Date", Today);
-                                SalesHead.Validate("Run No.", CustRun."Run No");
-                                if SalesHead.Insert(true) then begin
-                                    Count += 1;
-                                    CustomerSku.Reset();
-                                    CustomerSku.SetRange("Customer No.", Rec."No.");
-                                    if CustomerSku.FindFirst() then begin
-                                        repeat
-                                            SalesLine.Init;
-                                            LineNo += 10000;
-                                            SalesLine.validate("Document Type", SalesLine."Document Type"::Order);
-                                            SalesLine.Validate("Document No.", SalesHead."No.");
-                                            SalesLine.validate("Line No.", LineNo);
-                                            SalesLine.Validate(Type, SalesLine.Type::Item);
-                                            SalesLine.Validate("No.", CustomerSku."Item No.");
-                                            SalesLine.Validate(Quantity, CustomerSku.Quantity);
-                                            SalesLine.Insert();
-                                        until CustomerSku.Next() = 0;
-                                    end;
-                                end;
-                            // Commit();
-                            until CustRun.Next() = 0;
-                        end;
-                        if Count > 0 then
-                            Message('%1 order created for Customer %2', Count, Rec."No.");
+                        CreateOrder();
                     end;
                 }
                 action("Update Run Date")
                 {
                     ApplicationArea = All;
                     Image = ChangeDate;
+                    Promoted = true;
+                    PromotedOnly = true;
+                    PromotedCategory = Category11;
+
                     trigger OnAction()
                     var
-                        UpdateCall: Codeunit "Update Calls";
+                        UpdateCallsDate: Codeunit "Update Calls";
+                        CallSheet: Report "Update Call Sheet";
                     begin
-                        UpdateCall.CalcUpdateCalls();
+                        UpdateCallsDate.CalcUpdateCalls();
+                        Commit();
+                        CallSheet.Run();
                     end;
                 }
 
             }
         }
     }
+    local procedure CreateOrder()
+    var
+        SalesHead: Record "Sales Header";
+        SalesLine: Record "Sales Line";
+        CustomerSku: Record "Customer SKU";
+        CustRun: Record "Customer Runs";
+        SalesLinesTemp: Record "Sales Line" temporary;
+        SalesOrderPag: Page "Sales Order";
+        Count: Integer;
+        LineNo: Integer;
+    begin
+        if not ShowDefaultSKU() then
+            exit;
+
+        Count := 0;
+        CustRun.Reset();
+        CustRun.SetRange("Customer No.", Rec."No.");
+        if CustRun.FindFirst() then begin
+            repeat
+                Clear(SalesHead);
+                Clear(SalesLine);
+                Clear(LineNo);
+                SalesHead.Init();
+                SalesHead.validate("Document Type", SalesHead."Document Type"::Order);
+                SalesHead.Validate("Sell-to Customer No.", Rec."No.");
+                SalesHead.Validate("Bill-to Customer No.", Rec."No.");
+                SalesHead.validate("Document Date", Today);
+                SalesHead.Validate("Run No.", CustRun."Run No");
+                if SalesHead.Insert(true) then begin
+                    Count += 1;
+                    SKUBuffer.Reset();
+                    SKUBuffer.SetFilter(Quantity, '>0');
+                    if SKUBuffer.FindFirst() then begin
+                        repeat
+                            SalesLine.Init;
+                            SalesLine.validate("Document Type", SalesLine."Document Type"::Order);
+                            SalesLine.Validate("Document No.", SalesHead."No.");
+                            LineNo += 10000;
+                            SalesLine.validate("Line No.", LineNo);
+                            SalesLine.Validate(Type, SalesLine.Type::Item);
+                            SalesLine.Validate("No.", SKUBuffer."Item No.");
+                            SalesLine.Validate(Quantity, SKUBuffer.Quantity);
+                            SalesLine.Validate("Run No.", CustRun."Run No");
+                            SalesLine.Insert();
+                        until SKUBuffer.Next() = 0;
+                    end;
+                end;
+            // Commit();
+            until CustRun.Next() = 0;
+        end;
+        if Count > 0 then
+            Message('%1 order created for Customer %2', Count, Rec."No.");
+    end;
+
+    local procedure ShowDefaultSKU(): Boolean
+    var
+        CustomerSku: Record "Customer SKU";
+        CustomSkUPag: Page CustomerSKUBuffer;
+    begin
+        SKUBuffer.DeleteAll();
+        CustomerSku.Reset();
+        CustomerSku.SetRange("Customer No.", Rec."No.");
+        if CustomerSku.FindSet() then begin
+            repeat
+                SKUBuffer.Init();
+                SKUBuffer."Item No." := CustomerSku."Item No.";
+                SKUBuffer.Desciption := CustomerSku.Desciption;
+                SKUBuffer.Insert();
+            until CustomerSku.Next() = 0;
+        end;
+        Commit();
+        if SKUBuffer.FindSet() then begin
+            CustomSkUPag.SetRecord(SKUBuffer);
+            CustomSkUPag.LookupMode(true);
+            CustomSkUPag.Editable(true);
+            if CustomSkUPag.RunModal() = Action::LookupOK then
+                exit(true)
+            else
+                exit(false);
+        end;
+    end;
+
+    var
+        SKUBuffer: Record DefaultSKUBuffer;
 }

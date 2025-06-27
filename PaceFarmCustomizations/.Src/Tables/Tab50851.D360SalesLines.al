@@ -1,4 +1,4 @@
-table 50851 "Import Sales Lines"
+table 50851 "50851_TabImportSalesLines"
 {
     Caption = 'Import Sales Lines';
     DataClassification = ToBeClassified;
@@ -8,6 +8,7 @@ table 50851 "Import Sales Lines"
         field(1; "Order No."; Code[20])
         {
             Caption = 'Order No.';
+            TableRelation = "50850_TabImportSalesHeader";
         }
         field(2; "Line No."; Integer)
         {
@@ -16,18 +17,25 @@ table 50851 "Import Sales Lines"
         field(3; "Item No."; Code[20])
         {
             Caption = 'Item No.';
+            TableRelation = Item;
         }
         field(4; Quantity; Decimal)
         {
             Caption = 'Quantity';
         }
-        field(5; Warehouse; Code[20])
+        field(5; Location; Code[10])
         {
-            Caption = 'Warehouse';
+            Caption = 'Location';
+            TableRelation = Location;
         }
         field(10; Created; Boolean)
         {
             Caption = 'Created';
+            Editable = false;
+        }
+        field(11; "Error Description"; Text[1020])
+        {
+            Caption = 'Error Description';
             Editable = false;
         }
 

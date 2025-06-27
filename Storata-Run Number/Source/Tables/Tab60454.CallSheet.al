@@ -1,20 +1,26 @@
-table 60451 "Customer Runs"
+table 60454 "Call Sheet"
 {
-    Caption = 'Customer Runs';
-    DataClassification = CustomerContent;
-    LookupPageId = "Customer Runs";
+    Caption = 'Call Sheet';
+    DataClassification = ToBeClassified;
 
     fields
     {
-        field(1; "Customer No."; Code[20])
+        field(1; ID; Integer)
+        {
+            Caption = 'ID';
+            AutoIncrement = true;
+        }
+        field(2; "Customer No."; Code[20])
         {
             Caption = 'Customer No.';
             TableRelation = Customer;
+            Editable = false;
         }
         field(3; "Run No"; Code[20])
         {
             Caption = 'Run No';
             TableRelation = Runs;
+            Editable = false;
         }
         field(4; "Run Day"; Option)
         {
@@ -52,7 +58,23 @@ table 60451 "Customer Runs"
         {
             Caption = 'Call Group';
         }
-        field(11; Holidays; Integer)
+        field(11; Comment; Text[250])
+        {
+            Caption = 'Comment';
+        }
+        field(12; Called; Boolean)
+        {
+            Caption = 'Called';
+        }
+        field(13; "Call Back"; Boolean)
+        {
+            Caption = 'Call Back';
+        }
+        field(14; Closed; Boolean)
+        {
+            Caption = 'Closed';
+        }
+        field(15; Holidays; Integer)
         {
             Caption = 'Holidays';
             Editable = false;
@@ -60,7 +82,7 @@ table 60451 "Customer Runs"
     }
     keys
     {
-        key(PK; "Customer No.", "Run No")
+        key(PK; ID)
         {
             Clustered = true;
         }
