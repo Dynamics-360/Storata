@@ -5,6 +5,7 @@ page 50851 "50851_PagImportSalesLines"
     PageType = ListPart;
     MultipleNewLines = true;
     SourceTable = "50851_TabImportSalesLines";
+    DeleteAllowed = false;
 
     layout
     {
@@ -36,6 +37,10 @@ page 50851 "50851_PagImportSalesLines"
                 {
                     ToolTip = 'Specifies the value of the Created field.', Comment = '%';
                 }
+                field("Error Description"; Rec."Error Description")
+                {
+                    ToolTip = 'Specifies the value of the Error Description field.', Comment = '%';
+                }
             }
         }
     }
@@ -43,7 +48,28 @@ page 50851 "50851_PagImportSalesLines"
     {
         area(Processing)
         {
-            action("Delete")
+            action("Process Lines")
+            {
+                ApplicationArea = All;
+                Image = Process;
+                // Promoted = true;
+                // PromotedOnly = true;
+                // PromotedCategory = Process;
+
+                trigger OnAction()
+                var
+                    ImportLinesRec: Record "50851_TabImportSalesLines";
+                    Process: Codeunit Processing;
+                begin
+                    ImportLinesRec.Reset();
+                    ImportLinesRec.SetRange(Created, false);
+                    if ImportLinesRec.FindSet() then begin
+                        Process.CreateSalesLines(ImportLinesRec);
+                        CurrPage.Update();
+                    end;
+                end;
+            }
+            action("Delete Created")
             {
                 ApplicationArea = All;
                 Image = Delete;
@@ -54,12 +80,19 @@ page 50851 "50851_PagImportSalesLines"
                 trigger OnAction()
                 var
                     ImportLinesRec: Record "50851_TabImportSalesLines";
+                    DeleteCreatedLbl: Text;
                 begin
-                    CurrPage.SetSelectionFilter(ImportLinesRec);
-                    if ImportLinesRec.FindSet() then
+                    ImportLinesRec.Reset();
+                    ImportLinesRec.SetRange(Created, true);
+                    DeleteCreatedLbl := StrSubstNo('Are you sure you want to delete %1 created lines.', ImportLinesRec.Count);
+                    if Confirm(DeleteCreatedLbl, true) then
                         ImportLinesRec.DeleteAll();
                 end;
             }
         }
     }
+    trigger OnOpenPage()
+    begin
+        Rec.SetRange(Created, false);
+    end;
 }

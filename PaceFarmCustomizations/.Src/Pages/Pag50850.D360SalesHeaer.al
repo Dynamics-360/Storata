@@ -8,6 +8,7 @@ page 50850 D360_SalesHeaer
     UsageCategory = Lists;
     AutoSplitKey = false;
     SaveValues = true;
+    DeleteAllowed = false;
 
     layout
     {
@@ -70,7 +71,7 @@ page 50850 D360_SalesHeaer
     {
         area(Processing)
         {
-            action("Create Header")
+            action("Process Header")
             {
                 ApplicationArea = All;
                 Image = MakeOrder;
@@ -91,23 +92,7 @@ page 50850 D360_SalesHeaer
                     end;
                 end;
             }
-            action("Import Excel")
-            {
-                ApplicationArea = All;
-                Image = Excel;
-                Promoted = true;
-                PromotedOnly = true;
-                PromotedCategory = Process;
-
-                trigger OnAction()
-                var
-                    Process: Codeunit Processing;
-                begin
-                    Process.ImportDataFromExcel();
-                    CurrPage.Update();
-                end;
-            }
-            action("Delete")
+            action("Delete Created")
             {
                 ApplicationArea = All;
                 Image = Delete;
@@ -118,12 +103,19 @@ page 50850 D360_SalesHeaer
                 trigger OnAction()
                 var
                     ImportHeadRec: Record "50850_TabImportSalesHeader";
+                    DeleteCreatedLbl: Text;
                 begin
-                    CurrPage.SetSelectionFilter(ImportHeadRec);
-                    if ImportHeadRec.FindSet() then
+                    ImportHeadRec.Reset();
+                    ImportHeadRec.SetRange(Created, true);
+                    DeleteCreatedLbl := StrSubstNo('Are you sure you want to delete %1 created lines.', ImportHeadRec.Count);
+                    if Confirm(DeleteCreatedLbl, true) then
                         ImportHeadRec.DeleteAll();
                 end;
             }
         }
     }
+    trigger OnOpenPage()
+    begin
+        Rec.SetRange(Created, false);
+    end;
 }
