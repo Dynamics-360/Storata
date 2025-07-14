@@ -2,7 +2,7 @@ reportextension 50857 TransferOrderExt extends "Transfer Order"
 {
     dataset
     {
-
+        // Add changes to dataitems and columns here
         modify("Transfer Line")
         {
             trigger OnAfterAfterGetRecord()

@@ -11,7 +11,7 @@
       <am:Name>PBIRB</am:Name>
       <am:Version>15.7.1814.616</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2025-06-25T12:25:38.5002483Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-07-10T13:18:19.1163723Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -2227,7 +2227,7 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                                 <Style>Double</Style>
                                               </BottomBorder>
                                               <VerticalAlign>Bottom</VerticalAlign>
-                                              <PaddingLeft>4pt</PaddingLeft>
+                                              <PaddingLeft>2pt</PaddingLeft>
                                               <PaddingRight>2pt</PaddingRight>
                                               <PaddingTop>2pt</PaddingTop>
                                             </Style>
@@ -2327,7 +2327,7 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style>
-                                                  <TextAlign>Left</TextAlign>
+                                                  <TextAlign>Right</TextAlign>
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
@@ -2400,7 +2400,7 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style>
-                                                  <TextAlign>Left</TextAlign>
+                                                  <TextAlign>Right</TextAlign>
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
@@ -2414,7 +2414,6 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                               </BottomBorder>
                                               <VerticalAlign>Bottom</VerticalAlign>
                                               <PaddingLeft>17pt</PaddingLeft>
-                                              <PaddingRight>1pt</PaddingRight>
                                               <PaddingTop>2pt</PaddingTop>
                                             </Style>
                                           </Textbox>
@@ -2861,7 +2860,7 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                                 <Style>None</Style>
                                               </Border>
                                               <VerticalAlign>Top</VerticalAlign>
-                                              <PaddingLeft>4pt</PaddingLeft>
+                                              <PaddingLeft>2pt</PaddingLeft>
                                               <PaddingRight>2pt</PaddingRight>
                                               <PaddingTop>2pt</PaddingTop>
                                             </Style>
@@ -2951,7 +2950,7 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style>
-                                                  <TextAlign>Left</TextAlign>
+                                                  <TextAlign>Right</TextAlign>
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
@@ -3016,7 +3015,7 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style>
-                                                  <TextAlign>Left</TextAlign>
+                                                  <TextAlign>Right</TextAlign>
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
@@ -3027,7 +3026,6 @@ Fields!VendorCity.Value &amp; " " &amp; Fields!VendorCounty.Value &amp; " " &amp
                                               </Border>
                                               <VerticalAlign>Top</VerticalAlign>
                                               <PaddingLeft>17pt</PaddingLeft>
-                                              <PaddingRight>1pt</PaddingRight>
                                               <PaddingTop>2pt</PaddingTop>
                                             </Style>
                                           </Textbox>
@@ -4604,9 +4602,9 @@ Sum(Fields!AppliedVendLedgEntryTempRemainingAmt.Value)</Value>
               <Value>=Fields!CompInfoPicture.Value</Value>
               <MIMEType>image/jpeg</MIMEType>
               <Sizing>FitProportional</Sizing>
-              <Top>0.01973in</Top>
+              <Top>0in</Top>
               <Left>6.06547in</Left>
-              <Height>2.53491cm</Height>
+              <Height>2.58502cm</Height>
               <Width>3.04945cm</Width>
               <Style>
                 <Border>
@@ -4779,9 +4777,8 @@ Sum(Fields!AppliedVendLedgEntryTempRemainingAmt.Value)</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>0.08218cm</Top>
               <Left>9.25837cm</Left>
-              <Height>2.51956cm</Height>
+              <Height>2.60174cm</Height>
               <Width>6.14792cm</Width>
               <ZIndex>2</ZIndex>
               <Style>

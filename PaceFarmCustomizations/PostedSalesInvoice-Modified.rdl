@@ -11,7 +11,7 @@
       <am:Name>PBIRB</am:Name>
       <am:Version>15.7.1814.616</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2025-06-27T06:16:59.6070191Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-07-08T06:36:20.2119795Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -59,7 +59,7 @@
                   <Width>0.07938cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.43628cm</Width>
+                  <Width>2.53812cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -852,7 +852,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
             <DataSetName>DataSet_Result</DataSetName>
             <Top>0.00014cm</Top>
             <Height>1.92855cm</Height>
-            <Width>19.75cm</Width>
+            <Width>19.85184cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -863,7 +863,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
         <Height>1.92883cm</Height>
         <Style />
       </Body>
-      <Width>19.94163cm</Width>
+      <Width>19.91517cm</Width>
       <Page>
         <PageHeader>
           <Height>15.43222cm</Height>
@@ -1067,7 +1067,7 @@ Invoice Account</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Fields!BillToName.Value</Value>
+                      <Value>=Fields!ShipToName.Value</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -1450,10 +1450,6 @@ Amount</Value>
                 <Border>
                   <Style>None</Style>
                 </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
             <Textbox Name="Textbox236">
@@ -1513,16 +1509,12 @@ Amount</Value>
                     <TextRun>
                       <Value />
                       <Style>
-                        <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
                         <FontFamily>Calibri</FontFamily>
-                        <FontSize>8pt</FontSize>
-                        <Format>'$' #,0.00;'$' -#,0.00;''</Format>
+                        <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
+                  <Style />
                 </Paragraph>
                 <Paragraph>
                   <TextRuns>
@@ -1563,10 +1555,6 @@ Amount</Value>
                 <Border>
                   <Style>None</Style>
                 </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
             <Textbox Name="Textbox18">
@@ -2229,7 +2217,7 @@ Customer Account</Value>
               <Top>14.83124cm</Top>
               <Left>17.23434cm</Left>
               <Height>0.6cm</Height>
-              <Width>2.51566cm</Width>
+              <Width>2.6175cm</Width>
               <ZIndex>28</ZIndex>
               <Style>
                 <Border>
@@ -2316,18 +2304,6 @@ Customer Account</Value>
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Line Name="Line1">
-              <Top>2.89856cm</Top>
-              <Left>16.66748cm</Left>
-              <Height>0cm</Height>
-              <Width>2.86686cm</Width>
-              <ZIndex>31</ZIndex>
-              <Style>
-                <Border>
-                  <Style>Solid</Style>
-                </Border>
-              </Style>
-            </Line>
           </ReportItems>
           <Style>
             <Border>
@@ -2336,7 +2312,7 @@ Customer Account</Value>
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>8.63714cm</Height>
+          <Height>9.19277cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -2513,9 +2489,8 @@ Gross Total (AUD) :
             <Rectangle Name="Rectangle1">
               <KeepTogether>true</KeepTogether>
               <Top>0.07056cm</Top>
-              <Left>0.03457cm</Left>
-              <Height>3.49017cm</Height>
-              <Width>19.71543cm</Width>
+              <Height>3.08708cm</Height>
+              <Width>19.88108cm</Width>
               <ZIndex>3</ZIndex>
               <Visibility>
                 <Hidden>=iif(Globals!OverallPageNumber&lt;&gt;Globals!OverallTotalPages,False,True)</Hidden>
@@ -2536,6 +2511,42 @@ Gross Total (AUD) :
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
+                          <Value>="Page " &amp; Globals!PageNumber &amp; "/" &amp; Globals!OverallTotalPages</Value>
+                          <Style>
+                            <FontStyle>Normal</FontStyle>
+                            <FontFamily>Calibri</FontFamily>
+                            <FontSize>9pt</FontSize>
+                            <FontWeight>Normal</FontWeight>
+                            <TextDecoration>None</TextDecoration>
+                            <Color>#000000</Color>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style>
+                        <TextAlign>Right</TextAlign>
+                      </Style>
+                    </Paragraph>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value />
+                          <Style>
+                            <FontStyle>Normal</FontStyle>
+                            <FontFamily>Calibri</FontFamily>
+                            <FontSize>9pt</FontSize>
+                            <FontWeight>Bold</FontWeight>
+                            <TextDecoration>None</TextDecoration>
+                            <Color>#000000</Color>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style>
+                        <TextAlign>Right</TextAlign>
+                      </Style>
+                    </Paragraph>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
                           <Value>Customer Information Service</Value>
                           <Style>
                             <FontStyle>Normal</FontStyle>
@@ -2547,7 +2558,9 @@ Gross Total (AUD) :
                           </Style>
                         </TextRun>
                       </TextRuns>
-                      <Style />
+                      <Style>
+                        <TextAlign>Right</TextAlign>
+                      </Style>
                     </Paragraph>
                     <Paragraph>
                       <TextRuns>
@@ -2562,7 +2575,9 @@ Gross Total (AUD) :
                           </Style>
                         </TextRun>
                       </TextRuns>
-                      <Style />
+                      <Style>
+                        <TextAlign>Right</TextAlign>
+                      </Style>
                     </Paragraph>
                     <Paragraph>
                       <TextRuns>
@@ -2578,7 +2593,9 @@ Gross Total (AUD) :
                           </Style>
                         </TextRun>
                       </TextRuns>
-                      <Style />
+                      <Style>
+                        <TextAlign>Right</TextAlign>
+                      </Style>
                     </Paragraph>
                     <Paragraph>
                       <TextRuns>
@@ -2594,7 +2611,9 @@ Gross Total (AUD) :
                           </Style>
                         </TextRun>
                       </TextRuns>
-                      <Style />
+                      <Style>
+                        <TextAlign>Right</TextAlign>
+                      </Style>
                     </Paragraph>
                     <Paragraph>
                       <TextRuns>
@@ -2610,7 +2629,9 @@ Gross Total (AUD) :
                           </Style>
                         </TextRun>
                       </TextRuns>
-                      <Style />
+                      <Style>
+                        <TextAlign>Right</TextAlign>
+                      </Style>
                     </Paragraph>
                     <Paragraph>
                       <TextRuns>
@@ -2647,10 +2668,9 @@ Gross Total (AUD) :
                       <Style />
                     </Paragraph>
                   </Paragraphs>
-                  <Top>0.17871cm</Top>
-                  <Left>13.58032cm</Left>
+                  <Left>13.60956cm</Left>
                   <Height>2.62181cm</Height>
-                  <Width>6.16968cm</Width>
+                  <Width>6.27152cm</Width>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -2663,9 +2683,9 @@ Gross Total (AUD) :
                 </Textbox>
               </ReportItems>
               <KeepTogether>true</KeepTogether>
-              <Top>5.59074cm</Top>
-              <Height>2.99116cm</Height>
-              <Width>19.75cm</Width>
+              <Top>6.40445cm</Top>
+              <Height>2.62181cm</Height>
+              <Width>19.91517cm</Width>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border>
@@ -2673,20 +2693,6 @@ Gross Total (AUD) :
                 </Border>
               </Style>
             </Rectangle>
-            <Image Name="EggLogo2">
-              <Source>Embedded</Source>
-              <Value>Egg</Value>
-              <Sizing>FitProportional</Sizing>
-              <Top>3.70184cm</Top>
-              <Height>44.04356pt</Height>
-              <Width>99.393pt</Width>
-              <ZIndex>5</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-              </Style>
-            </Image>
             <Textbox Name="Textbox7">
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <CanGrow>true</CanGrow>
@@ -2834,10 +2840,10 @@ Gross Total (AUD) :
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>5.76945cm</Top>
+              <Top>6.40445cm</Top>
               <Height>2.62181cm</Height>
               <Width>13.58032cm</Width>
-              <ZIndex>6</ZIndex>
+              <ZIndex>5</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -2871,8 +2877,8 @@ Gross Total (AUD) :
               <Top>0.67056cm</Top>
               <Left>15.5277cm</Left>
               <Height>2.48708cm</Height>
-              <Width>4.2223cm</Width>
-              <ZIndex>7</ZIndex>
+              <Width>4.32414cm</Width>
+              <ZIndex>6</ZIndex>
               <Visibility>
                 <Hidden>=IIF(Globals!PageNumber = Globals!TotalPages, False, True)</Hidden>
               </Visibility>
@@ -2886,43 +2892,34 @@ Gross Total (AUD) :
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Textbox Name="Textbox12">
-              <rd:DefaultName>Textbox12</rd:DefaultName>
-              <CanGrow>true</CanGrow>
+            <Rectangle Name="Rectangle3">
               <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>="Page " &amp; Globals!PageNumber &amp; "/" &amp; Globals!OverallTotalPages</Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <FontWeight>Normal</FontWeight>
-                        <TextDecoration>None</TextDecoration>
-                        <Color>#000000</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <Top>4.92018cm</Top>
-              <Left>13.58032cm</Left>
-              <Height>0.6cm</Height>
-              <Width>6.16968cm</Width>
+              <Top>3.41511cm</Top>
+              <Left>0.09673cm</Left>
+              <Height>2.30963cm</Height>
+              <Width>16.82147cm</Width>
+              <ZIndex>7</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Rectangle>
+            <Image Name="EggLogo2">
+              <Source>Embedded</Source>
+              <Value>Egg</Value>
+              <Sizing>FitProportional</Sizing>
+              <Top>4.15334cm</Top>
+              <Left>16.9182cm</Left>
+              <Height>44.04356pt</Height>
+              <Width>82.21169pt</Width>
               <ZIndex>8</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
               </Style>
-            </Textbox>
+            </Image>
           </ReportItems>
           <Style>
             <Border>
@@ -2934,7 +2931,8 @@ Gross Total (AUD) :
         <PageWidth>21cm</PageWidth>
         <InteractiveHeight>11in</InteractiveHeight>
         <InteractiveWidth>8.5in</InteractiveWidth>
-        <LeftMargin>0.8cm</LeftMargin>
+        <LeftMargin>0.5cm</LeftMargin>
+        <RightMargin>0.5cm</RightMargin>
         <TopMargin>1cm</TopMargin>
         <BottomMargin>0.5cm</BottomMargin>
         <ColumnSpacing>1.27cm</ColumnSpacing>
