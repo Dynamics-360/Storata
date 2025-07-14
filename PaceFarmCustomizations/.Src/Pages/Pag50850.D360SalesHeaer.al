@@ -84,7 +84,7 @@ page 50850 D360_SalesHeaer
                     ImportHeaderRec: Record "50850_TabImportSalesHeader";
                     Process: Codeunit Processing;
                 begin
-                    CurrPage.SetSelectionFilter(ImportHeaderRec);
+                    ImportHeaderRec.Reset();
                     ImportHeaderRec.SetRange(Created, false);
                     if ImportHeaderRec.FindSet() then begin
                         Process.CreateSalesHead(ImportHeaderRec);
