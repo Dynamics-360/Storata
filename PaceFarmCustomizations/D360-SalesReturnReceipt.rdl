@@ -11,7 +11,7 @@
       <am:Name>PBIRB</am:Name>
       <am:Version>15.7.1814.616</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2025-07-10T13:46:18.2015228Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-07-14T11:47:52.3896790Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -1684,7 +1684,7 @@ IIF(Fields!Line_Discount__.Value=0,"","%")</Value>
       <Width>19.39734cm</Width>
       <Page>
         <PageHeader>
-          <Height>16.59818cm</Height>
+          <Height>16.78339cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -2517,7 +2517,6 @@ Payment Due </Value>
                       <Value>=Fields!Posting_Date.Value</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
-                        <FontSize>9pt</FontSize>
                         <Format>d MMM yyyy</Format>
                       </Style>
                     </TextRun>
@@ -2532,7 +2531,6 @@ Payment Due </Value>
                       <Value>=Fields!No_ReturnRcptHeader.Value</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
-                        <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2546,7 +2544,6 @@ Payment Due </Value>
                       <Value>=Fields!External_Document_No_.Value</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
-                        <FontSize>9pt</FontSize>
                         <Format>d MMM yyyy</Format>
                       </Style>
                     </TextRun>
@@ -2858,7 +2855,7 @@ Payment Due </Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>15.21781cm</Top>
+              <Top>14.90031cm</Top>
               <Left>13.60146cm</Left>
               <Height>0.6cm</Height>
               <Width>1.77496cm</Width>
@@ -2894,7 +2891,7 @@ Payment Due </Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>15.21781cm</Top>
+              <Top>14.90031cm</Top>
               <Left>0in</Left>
               <Height>0.57354cm</Height>
               <Width>2.67821cm</Width>
@@ -2930,7 +2927,7 @@ Payment Due </Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>15.21781cm</Top>
+              <Top>14.90031cm</Top>
               <Left>2.67821cm</Left>
               <Height>0.57354cm</Height>
               <Width>6.04764cm</Width>
@@ -2966,7 +2963,7 @@ Payment Due </Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>15.21781cm</Top>
+              <Top>14.90031cm</Top>
               <Left>8.76113cm</Left>
               <Height>0.6cm</Height>
               <Width>1.51819cm</Width>
@@ -3002,7 +2999,7 @@ Payment Due </Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>15.21781cm</Top>
+              <Top>14.90031cm</Top>
               <Left>11.80568cm</Left>
               <Height>0.6cm</Height>
               <Width>1.79578cm</Width>
@@ -3038,7 +3035,7 @@ Payment Due </Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>15.21781cm</Top>
+              <Top>14.90031cm</Top>
               <Left>10.27932cm</Left>
               <Height>0.6cm</Height>
               <Width>1.52636cm</Width>
@@ -3074,7 +3071,7 @@ Payment Due </Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>15.21781cm</Top>
+              <Top>14.90031cm</Top>
               <Left>15.37642cm</Left>
               <Height>0.6cm</Height>
               <Width>3.98862cm</Width>
@@ -3292,7 +3289,7 @@ Payment Due </Value>
           <Style />
         </PageHeader>
         <PageFooter>
-          <Height>8.21595cm</Height>
+          <Height>7.5967cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -3475,7 +3472,7 @@ Payment Due </Value>
                 </Textbox>
               </ReportItems>
               <KeepTogether>true</KeepTogether>
-              <Top>4.9921cm</Top>
+              <Top>4.47868cm</Top>
               <Left>0.05873cm</Left>
               <Height>3.11802cm</Height>
               <Width>19.30631cm</Width>
@@ -3586,7 +3583,7 @@ Payment Due </Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>5.0639cm</Top>
+              <Top>4.55048cm</Top>
               <Left>0.05873cm</Left>
               <Height>3.04622cm</Height>
               <Width>13.58032cm</Width>

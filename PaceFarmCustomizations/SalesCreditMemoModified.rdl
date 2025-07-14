@@ -11,7 +11,7 @@
       <am:Name>PBIRB</am:Name>
       <am:Version>15.7.1814.616</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2025-07-10T14:00:12.6343346Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-07-14T11:54:28.2701468Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -195,7 +195,7 @@
                                                     <Style>
                                                       <FontFamily>Calibri</FontFamily>
                                                       <FontSize>9pt</FontSize>
-                                                      <Format>#,0;(#,0)</Format>
+                                                      <Format>#,0;(#,0);''</Format>
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>
@@ -277,6 +277,7 @@
                                               </Paragraph>
                                             </Paragraphs>
                                             <Style>
+                                              <rd:FormatSymbolCulture>en-AU</rd:FormatSymbolCulture>
                                               <Border>
                                                 <Color>LightGrey</Color>
                                                 <Style>None</Style>
@@ -415,7 +416,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                                                     <Style>
                                                       <FontFamily>Calibri</FontFamily>
                                                       <FontSize>9pt</FontSize>
-                                                      <Format>'$' #,0.00;-'$' #,0.00;'-'</Format>
+                                                      <Format>'$' #,0.00;-'$' #,0.00;''</Format>
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>

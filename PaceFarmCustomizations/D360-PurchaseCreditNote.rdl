@@ -11,7 +11,7 @@
       <am:Name>PBIRB</am:Name>
       <am:Version>15.7.1814.616</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2025-07-02T11:49:06.3451096Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-07-14T12:12:53.2613844Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -3043,7 +3043,6 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                       <Value>="ABN"</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
                         <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
@@ -3052,9 +3051,9 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                 </Paragraph>
               </Paragraphs>
               <Top>259pt</Top>
-              <Left>10.64677cm</Left>
+              <Left>11.28177cm</Left>
               <Height>11pt</Height>
-              <Width>3.88019cm</Width>
+              <Width>3.24519cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -3071,7 +3070,6 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                       <Value>="Phone No."</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
                         <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
@@ -3080,9 +3078,9 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                 </Paragraph>
               </Paragraphs>
               <Top>226pt</Top>
-              <Left>10.64677cm</Left>
+              <Left>11.28177cm</Left>
               <Height>11pt</Height>
-              <Width>3.88019cm</Width>
+              <Width>3.24519cm</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
@@ -3100,7 +3098,6 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                       <Value>=First(Fields!ABN_Value.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
                         <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
@@ -3131,7 +3128,6 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                       <Value>=First(Fields!CompanyInfoPhoneNo.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
                         <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
@@ -3473,7 +3469,6 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                       <Value>="Email"</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
                         <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
@@ -3482,9 +3477,9 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                 </Paragraph>
               </Paragraphs>
               <Top>248pt</Top>
-              <Left>10.64677cm</Left>
+              <Left>11.28177cm</Left>
               <Height>11pt</Height>
-              <Width>3.88019cm</Width>
+              <Width>3.24519cm</Width>
               <ZIndex>14</ZIndex>
               <Style>
                 <Border>
@@ -3502,7 +3497,6 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                       <Value>=First(Fields!CompanyInfoEmail.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
                         <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
@@ -3533,7 +3527,6 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                       <Value>="Home Page"</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
                         <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
@@ -3542,9 +3535,9 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                 </Paragraph>
               </Paragraphs>
               <Top>237pt</Top>
-              <Left>10.64677cm</Left>
+              <Left>11.28177cm</Left>
               <Height>11pt</Height>
-              <Width>3.88019cm</Width>
+              <Width>3.24519cm</Width>
               <ZIndex>16</ZIndex>
               <Style>
                 <Border>
@@ -3562,7 +3555,6 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                       <Value>=First(Fields!CompanyInfoHomePage.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
                         <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
@@ -3624,7 +3616,6 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                       <Value>="Back Order Accepted"</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
                         <FontSize>9pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
@@ -3656,7 +3647,6 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                       <Value>=First(Fields!Backorder_Accepted.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
                         <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
@@ -3764,7 +3754,6 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                       <Value>="Posting Date"</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
                         <FontSize>9pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
@@ -3794,7 +3783,6 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                       <Value>="Buy-from Vendor No."</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
                         <FontSize>9pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
@@ -3824,7 +3812,6 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                       <Value>=First(Fields!PostDate_PurchCrMemoHeader.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
                         <FontSize>9pt</FontSize>
                         <Format>d MMM yyyy</Format>
                       </Style>
@@ -3857,7 +3844,6 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                       <Value>=First(Fields!PaytoVendNo_PurchCrMemoHeader.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
                         <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
@@ -3889,7 +3875,6 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                       <Value>="Document Date"</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
                         <FontSize>9pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
@@ -3919,7 +3904,6 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                       <Value>=First(Fields!DocDate_PurchCrMemoHeader.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
                         <FontSize>9pt</FontSize>
                         <Format>d MMM yyyy</Format>
                       </Style>
@@ -3952,7 +3936,6 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                       <Value>="CR/Adj Note No."</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
                         <FontSize>9pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
@@ -3982,7 +3965,6 @@ Cstr(Fields!BuyFromVendorCaption.Value)
                       <Value>=First(Fields!No1_PurchCrMemoHeader.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
                         <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
