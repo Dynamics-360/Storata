@@ -11,7 +11,7 @@
       <am:Name>PBIRB</am:Name>
       <am:Version>15.7.1814.616</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2025-06-25T12:05:52.8184486Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-06-27T06:16:59.6070191Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -1463,7 +1463,7 @@ Amount</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value />
+                      <Value>=Fields!ExtDocNo.Value</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -1798,9 +1798,9 @@ IIF(Fields!ShipToCountry.Value = "", "", VbCrLf &amp; Fields!ShipToCountry.Value
                 </Paragraph>
               </Paragraphs>
               <Top>11.07722cm</Top>
-              <Left>11.58108cm</Left>
+              <Left>11.61517cm</Left>
               <Height>2.4794cm</Height>
-              <Width>8.3cm</Width>
+              <Width>8.26591cm</Width>
               <ZIndex>16</ZIndex>
               <Style>
                 <Border>
@@ -1907,8 +1907,8 @@ Customer Account</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>13.66951cm</Top>
-              <Left>9.56765cm</Left>
+              <Top>13.55662cm</Top>
+              <Left>13.57545cm</Left>
               <Height>0.9691cm</Height>
               <Width>3.02797cm</Width>
               <ZIndex>19</ZIndex>
@@ -1939,10 +1939,10 @@ Customer Account</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>13.66951cm</Top>
-              <Left>7.58618cm</Left>
+              <Top>13.55662cm</Top>
+              <Left>11.61517cm</Left>
               <Height>0.98506cm</Height>
-              <Width>1.98634cm</Width>
+              <Width>1.96515cm</Width>
               <ZIndex>20</ZIndex>
               <Style>
                 <Border>
