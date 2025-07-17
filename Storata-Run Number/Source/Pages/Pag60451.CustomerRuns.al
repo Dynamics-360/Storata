@@ -24,7 +24,6 @@ page 60451 "Customer Runs"
                     begin
                         if Run.Get(Rec."Run No") then
                             Rec."Run Day" := Run.Weekdays;
-
                     end;
                 }
                 field("Run Day"; Rec."Run Day")
@@ -40,9 +39,17 @@ page 60451 "Customer Runs"
                 {
                     ToolTip = 'Specifies the value of the Call Day field.', Comment = '%';
                 }
+                field("Call Group"; Rec."Call Group")
+                {
+                    ToolTip = 'Specifies the value of the Call Group field.', Comment = '%';
+                }
                 field("Call Date"; Rec."Call Date")
                 {
                     ToolTip = 'Specifies the value of the Call Date field.', Comment = '%';
+                }
+                field(Holidays; Rec.Holidays)
+                {
+                    ToolTip = 'Specifies the value of the Holidays field.', Comment = '%';
                 }
             }
         }

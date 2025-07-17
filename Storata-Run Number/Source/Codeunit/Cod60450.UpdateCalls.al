@@ -56,7 +56,7 @@ codeunit 60450 "Update Calls"
         exit(CurrentDate + DaysToAdd);
     end;
 
-    local procedure GetCallDate(CustRun: Record "Customer Runs"; CurrentDate: Date; WeekdayOption: Integer): Date
+    local procedure GetCallDate(var CustRun: Record "Customer Runs"; CurrentDate: Date; WeekdayOption: Integer): Date
     var
         Holidays: Record Holidays;
         Run: Record Runs;
@@ -77,16 +77,9 @@ codeunit 60450 "Update Calls"
             Holidays.Reset();
             Holidays.SetRange(Date, CurrentDate, CallDate);
             if Holidays.FindSet() then begin
-                repeat
-                    if Holidays.Date >= CallDate then
-                        CallDate := CallDate - 1
-                until Holidays.Next() = 0;
+                CustRun.Holidays := Holidays.Count;
+                CustRun.Modify();
             end;
-            // H_Count := Holidays.Count;
-
-            // if H_Count > 0 then
-            //     exit(CallDate - H_Count)
-            // else
             exit(CallDate)
         end;
     end;

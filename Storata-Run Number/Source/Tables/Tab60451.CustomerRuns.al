@@ -20,7 +20,7 @@ table 60451 "Customer Runs"
         {
             Caption = 'Run Day';
             Editable = false;
-            OptionMembers = " ",Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday;
+            OptionMembers = " ",Monday,Tuesday,Wednesday,Thursday,Friday;
         }
         field(5; "Run Date"; Date)
         {
@@ -31,7 +31,7 @@ table 60451 "Customer Runs"
         {
             Caption = 'Call Day';
             Editable = false;
-            OptionMembers = " ",Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday;
+            OptionMembers = " ",Monday,Tuesday,Wednesday,Thursday,Friday;
         }
         field(7; "Call Date"; Date)
         {
@@ -46,6 +46,15 @@ table 60451 "Customer Runs"
         field(9; "Customer State"; Text[30])
         {
             Caption = 'Customer State';
+            Editable = false;
+        }
+        field(10; "Call Group"; Code[10])
+        {
+            Caption = 'Call Group';
+        }
+        field(11; Holidays; Integer)
+        {
+            Caption = 'Holidays';
             Editable = false;
         }
     }

@@ -3,9 +3,9 @@ page 60453 "Call Sheet"
     ApplicationArea = All;
     Caption = 'Call Sheet';
     PageType = List;
-    SourceTable = "Customer Runs";
+    SourceTable = "Call Sheet";
     UsageCategory = Lists;
-    Editable = false;
+    Editable = true;
     InsertAllowed = false;
     DeleteAllowed = false;
 
@@ -43,9 +43,33 @@ page 60453 "Call Sheet"
                 {
                     ToolTip = 'Specifies the value of the Call Day field.', Comment = '%';
                 }
+                field("Call Group"; Rec."Call Group")
+                {
+                    ToolTip = 'Specifies the value of the Call Group field.', Comment = '%';
+                }
                 field("Call Date"; Rec."Call Date")
                 {
                     ToolTip = 'Specifies the value of the Call Date field.', Comment = '%';
+                }
+                field(Comment; Rec.Comment)
+                {
+                    ToolTip = 'Specifies the value of the Comment field.', Comment = '%';
+                }
+                field(Called; Rec.Called)
+                {
+                    ToolTip = 'Specifies the value of the Called field.', Comment = '%';
+                }
+                field("Call Back"; Rec."Call Back")
+                {
+                    ToolTip = 'Specifies the value of the Call Back field.', Comment = '%';
+                }
+                field(Closed; Rec.Closed)
+                {
+                    ToolTip = 'Specifies the value of the Closed field.', Comment = '%';
+                }
+                field(Holidays; Rec.Holidays)
+                {
+                    ToolTip = 'Specifies the value of the Holidays field.', Comment = '%';
                 }
             }
         }
@@ -108,7 +132,6 @@ page 60453 "Call Sheet"
                                 SalesLine.validate("Line No.", LineNo);
                                 SalesLine.Validate(Type, SalesLine.Type::Item);
                                 SalesLine.Validate("No.", CustomerSku."Item No.");
-                                SalesLine.Validate(Quantity, CustomerSku.Quantity);
                                 SalesLine.Insert();
                             until CustomerSku.Next() = 0;
                         end;
@@ -129,6 +152,90 @@ page 60453 "Call Sheet"
             Rec."Customer State" := Customer.County;
             Rec.Modify();
         end;
+    end;
+
+    local procedure CreateOrder()
+    var
+        SalesHead: Record "Sales Header";
+        SalesLine: Record "Sales Line";
+        CustomerSku: Record "Customer SKU";
+        CustRun: Record "Customer Runs";
+        SalesLinesTemp: Record "Sales Line" temporary;
+        SalesOrderPag: Page "Sales Order";
+        Count: Integer;
+        LineNo: Integer;
+    begin
+        if not ShowDefaultSKU() then
+            exit;
+
+        Count := 0;
+        Clear(SalesHead);
+        Clear(SalesLine);
+        Clear(LineNo);
+        SalesHead.Init();
+        SalesHead.validate("Document Type", SalesHead."Document Type"::Order);
+        SalesHead.Validate("Sell-to Customer No.", Rec."Customer No.");
+        SalesHead.Validate("Bill-to Customer No.", Rec."Customer No.");
+        SalesHead.validate("Document Date", Today);
+        SalesHead.Validate("Run No.", CustRun."Run No");
+        if SalesHead.Insert(true) then begin
+            Count += 1;
+            SKUBuffer.Reset();
+            SKUBuffer.SetFilter(Quantity, '>0');
+            if SKUBuffer.FindFirst() then begin
+                repeat
+                    SalesLine.Init;
+                    SalesLine.validate("Document Type", SalesLine."Document Type"::Order);
+                    SalesLine.Validate("Document No.", SalesHead."No.");
+                    LineNo += 10000;
+                    SalesLine.validate("Line No.", LineNo);
+                    SalesLine.Validate(Type, SalesLine.Type::Item);
+                    SalesLine.Validate("No.", SKUBuffer."Item No.");
+                    SalesLine.Validate(Quantity, SKUBuffer.Quantity);
+                    SalesLine.Validate("Run No.", CustRun."Run No");
+                    SalesLine.Insert();
+                until SKUBuffer.Next() = 0;
+            end;
+        end;
+        // Commit();
+        if Count > 0 then
+            Message('%1 order created for Customer %2', Count, Rec."Customer No.");
+    end;
+
+    local procedure ShowDefaultSKU(): Boolean
+    var
+        CustomerSku: Record "Customer SKU";
+        CustomSkUPag: Page CustomerSKUBuffer;
+    begin
+        SKUBuffer.DeleteAll();
+        CustomerSku.Reset();
+        CustomerSku.SetRange("Customer No.", Rec."Customer No.");
+        if CustomerSku.FindSet() then begin
+            repeat
+                SKUBuffer.Init();
+                SKUBuffer."Item No." := CustomerSku."Item No.";
+                SKUBuffer.Desciption := CustomerSku.Desciption;
+                SKUBuffer.Insert();
+            until CustomerSku.Next() = 0;
+        end;
+        Commit();
+        if SKUBuffer.FindSet() then begin
+            CustomSkUPag.SetRecord(SKUBuffer);
+            CustomSkUPag.LookupMode(true);
+            CustomSkUPag.Editable(true);
+            if CustomSkUPag.RunModal() = Action::LookupOK then
+                exit(true)
+            else
+                exit(false);
+        end;
+    end;
+
+    var
+        SKUBuffer: Record DefaultSKUBuffer;
+
+    trigger OnOpenPage()
+    begin
+        Rec.SetRange(Closed, false);
     end;
 
 }
