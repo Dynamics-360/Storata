@@ -1,7 +1,7 @@
 {
   "id": "84e1fb61-51e5-41f2-9fc1-0b92d85fe134",
-  "name": "Storata-Run Number",
-  "publisher": "Default Publisher",
+  "name": "Storata - PF Run Number",
+  "publisher": "Storata",
   "version": "1.0.0.0",
   "brief": "",
   "description": "",
@@ -21,9 +21,9 @@
     }
   ],
   "resourceExposurePolicy": {
-    "allowDebugging": true,
-    "allowDownloadingSource": true,
-    "includeSourceInSymbolFile": true
+    "allowDebugging": false,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": false
   },
   "runtime": "14.0",
   "features": [
