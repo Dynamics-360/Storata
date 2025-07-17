@@ -24,7 +24,7 @@ reportextension 50856 PFCredNoteExt extends "PF Posted Sales Credit Memo"
             {
 
             }
-            column(Unit_Price_Negative; -"Unit Price")
+            column(Unit_Price_Negative; "Unit Price")
             {
 
             }
