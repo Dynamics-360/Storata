@@ -11,7 +11,11 @@
       <am:Name>PBIRB</am:Name>
       <am:Version>15.7.1814.616</am:Version>
     </am:UpdatedBy>
+<<<<<<< Updated upstream
     <am:LastModifiedTimestamp>2025-07-14T11:54:28.2701468Z</am:LastModifiedTimestamp>
+=======
+    <am:LastModifiedTimestamp>2025-07-17T04:57:11.8829850Z</am:LastModifiedTimestamp>
+>>>>>>> Stashed changes
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -37,7 +41,7 @@
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>1.0198cm</Height>
+                  <Height>2.06076cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -137,7 +141,7 @@
                                                 <Style>None</Style>
                                               </Border>
                                               <VerticalAlign>Middle</VerticalAlign>
-                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingLeft>1pt</PaddingLeft>
                                               <PaddingRight>2pt</PaddingRight>
                                               <PaddingTop>2pt</PaddingTop>
                                               <PaddingBottom>2pt</PaddingBottom>
@@ -645,8 +649,11 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                                     <TablixMembers>
                                       <TablixMember>
                                         <Group Name="Details" />
+                                        <TablixMembers>
+                                          <TablixMember />
+                                        </TablixMembers>
                                         <Visibility>
-                                          <Hidden>=IIF(Fields!LineNo_Line.Value = 0,TRUE,FALSE)</Hidden>
+                                          <Hidden>=IIF(Fields!LineAmt_Line.Value = 0 And Fields!Qty_Line.Value = 0,true,false)</Hidden>
                                         </Visibility>
                                       </TablixMember>
                                       <TablixMember>
@@ -660,6 +667,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                                 </TablixMembers>
                               </TablixRowHierarchy>
                               <DataSetName>DataSet_Result</DataSetName>
+                              <Top>0.3175cm</Top>
                               <Height>1.0198cm</Height>
                               <Width>19.23743cm</Width>
                               <ZIndex>1</ZIndex>
@@ -670,8 +678,11 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                               </Style>
                             </Tablix>
                           </ReportItems>
-                          <KeepTogether>true</KeepTogether>
-                          <Style />
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
                         </Rectangle>
                       </CellContents>
                     </TablixCell>
@@ -710,22 +721,27 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
+            <RepeatRowHeaders>true</RepeatRowHeaders>
             <DataSetName>DataSet_Result</DataSetName>
             <Left>0.02712in</Left>
-            <Height>1.0198cm</Height>
+            <Height>2.06076cm</Height>
             <Width>19.23743cm</Width>
             <Style>
               <FontSize>9pt</FontSize>
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>1.0198cm</Height>
+        <Height>2.06076cm</Height>
         <Style />
       </Body>
       <Width>19.39451cm</Width>
       <Page>
         <PageHeader>
+<<<<<<< Updated upstream
           <Height>16.63041cm</Height>
+=======
+          <Height>14.60816cm</Height>
+>>>>>>> Stashed changes
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -749,7 +765,11 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
+<<<<<<< Updated upstream
               <Top>14.83096cm</Top>
+=======
+              <Top>13.97288cm</Top>
+>>>>>>> Stashed changes
               <Left>13.58032cm</Left>
               <Height>0.6cm</Height>
               <Width>1.77496cm</Width>
@@ -759,7 +779,6 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                 </Border>
                 <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
@@ -784,10 +803,17 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
+<<<<<<< Updated upstream
               <Top>14.8045cm</Top>
               <Left>0.0296in</Left>
               <Height>0.6cm</Height>
               <Width>2.52016cm</Width>
+=======
+              <Top>13.94642cm</Top>
+              <Left>0.0167in</Left>
+              <Height>0.6cm</Height>
+              <Width>2.55292cm</Width>
+>>>>>>> Stashed changes
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
@@ -820,7 +846,11 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
+<<<<<<< Updated upstream
               <Top>14.83096cm</Top>
+=======
+              <Top>13.97288cm</Top>
+>>>>>>> Stashed changes
               <Left>2.63062cm</Left>
               <Height>0.6cm</Height>
               <Width>6.07409cm</Width>
@@ -856,7 +886,11 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
+<<<<<<< Updated upstream
               <Top>14.8045cm</Top>
+=======
+              <Top>13.94642cm</Top>
+>>>>>>> Stashed changes
               <Left>8.72515cm</Left>
               <Height>0.6cm</Height>
               <Width>1.51819cm</Width>
@@ -892,7 +926,11 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
+<<<<<<< Updated upstream
               <Top>14.83096cm</Top>
+=======
+              <Top>13.97288cm</Top>
+>>>>>>> Stashed changes
               <Left>11.78454cm</Left>
               <Height>0.6cm</Height>
               <Width>1.79578cm</Width>
@@ -928,7 +966,11 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
+<<<<<<< Updated upstream
               <Top>14.83096cm</Top>
+=======
+              <Top>13.97288cm</Top>
+>>>>>>> Stashed changes
               <Left>10.24334cm</Left>
               <Height>0.6cm</Height>
               <Width>1.5412cm</Width>
@@ -1002,7 +1044,7 @@ IIF(Fields!LineDiscountPercentage_Line.Value=0,"","%")</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Invoice No. 
+                      <Value>Document No. 
 Customer 
 Date 
 Sales Order </Value>
@@ -1030,7 +1072,7 @@ Invoice Account</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Order Taken By</Value>
+                      <Value>Order taken by</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -1042,7 +1084,7 @@ Invoice Account</Value>
               </Paragraphs>
               <Top>0.98972cm</Top>
               <Left>0.04242cm</Left>
-              <Height>2.7693cm</Height>
+              <Height>2.94569cm</Height>
               <Width>3.28392cm</Width>
               <ZIndex>8</ZIndex>
               <Style>
@@ -1151,7 +1193,7 @@ Invoice Account</Value>
               </Paragraphs>
               <Top>0.98972cm</Top>
               <Left>3.32634cm</Left>
-              <Height>2.7693cm</Height>
+              <Height>2.94569cm</Height>
               <Width>8.33123cm</Width>
               <ZIndex>9</ZIndex>
               <Style>
@@ -1182,7 +1224,7 @@ Invoice Account</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>3.93541cm</Top>
+              <Top>4.00597cm</Top>
               <Left>0.04242cm</Left>
               <Height>0.92326cm</Height>
               <Width>5.26221cm</Width>
@@ -1623,7 +1665,20 @@ Amount</Value>
                   <TextRuns>
                     <TextRun>
                       <Value>Date 
-Invoice No. </Value>
+Document No. </Value>
+                      <Style>
+                        <FontFamily>Calibri</FontFamily>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Invoice No.</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                       </Style>
@@ -1676,7 +1731,7 @@ Payment Due </Value>
               </Paragraphs>
               <Top>8.23486cm</Top>
               <Left>11.51334cm</Left>
-              <Height>2.72975cm</Height>
+              <Height>3.18836cm</Height>
               <Width>2.59382cm</Width>
               <ZIndex>20</ZIndex>
               <Style>
@@ -1724,6 +1779,20 @@ Payment Due </Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
+                      <Value>=Fields!Applies_to_Doc__No_.Value</Value>
+                      <Style>
+                        <FontFamily>Calibri</FontFamily>
+                        <Format>d MMM yyyy</Format>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
                       <Value>=Fields!ExtDocNo.Value</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
@@ -1751,7 +1820,7 @@ Payment Due </Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Fields!PaymentTermsDescription.Value</Value>
+                      <Value>=Fields!Payment_Terms_Code.Value</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                       </Style>
@@ -1778,7 +1847,7 @@ Payment Due </Value>
               </Paragraphs>
               <Top>8.23486cm</Top>
               <Left>14.10716cm</Left>
-              <Height>2.72975cm</Height>
+              <Height>3.18836cm</Height>
               <Width>5.19915cm</Width>
               <ZIndex>21</ZIndex>
               <Style>
@@ -1799,7 +1868,7 @@ Payment Due </Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Amount</Value>
+                      <Value>Amount Incl. Disc</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -1812,7 +1881,11 @@ Payment Due </Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
+<<<<<<< Updated upstream
               <Top>14.86624cm</Top>
+=======
+              <Top>14.00816cm</Top>
+>>>>>>> Stashed changes
               <Left>15.39056cm</Left>
               <Height>0.6cm</Height>
               <Width>3.91575cm</Width>
@@ -1866,7 +1939,6 @@ Payment Due </Value>
             </Textbox>
             <Textbox Name="Textbox14">
               <rd:DefaultName>Textbox8</rd:DefaultName>
-              <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -1885,7 +1957,7 @@ Payment Due </Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Fields!BillToName.Value &amp; " " &amp; Fields!BillToName2.Value</Value>
+                      <Value>=Fields!BillToName.Value</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -1955,9 +2027,15 @@ IIF(Fields!BillToCountry.Value="","", VbCrLf &amp; Fields!BillToCountry.Value)</
                   </Style>
                 </Paragraph>
               </Paragraphs>
+<<<<<<< Updated upstream
               <Top>11.07044cm</Top>
               <Left>0.02626cm</Left>
               <Height>2.10163cm</Height>
+=======
+              <Top>10.28551cm</Top>
+              <Left>0.02626cm</Left>
+              <Height>2.05753cm</Height>
+>>>>>>> Stashed changes
               <Width>11.30669cm</Width>
               <ZIndex>24</ZIndex>
               <Style>
@@ -1967,6 +2045,7 @@ IIF(Fields!BillToCountry.Value="","", VbCrLf &amp; Fields!BillToCountry.Value)</
                 <VerticalAlign>Top</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
+<<<<<<< Updated upstream
                 <PaddingTop>2pt</PaddingTop>
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
@@ -2065,6 +2144,10 @@ IIF(Fields!ShipToCountry.Value = "", "", VbCrLf &amp;  Fields!ShipToCountry.Valu
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
                 <PaddingBottom>2pt</PaddingBottom>
+=======
+                <PaddingTop>0.5pt</PaddingTop>
+                <PaddingBottom>0.5pt</PaddingBottom>
+>>>>>>> Stashed changes
               </Style>
             </Textbox>
             <Textbox Name="Textbox17">
@@ -2096,7 +2179,7 @@ IIF(Fields!ShipToCountry.Value = "", "", VbCrLf &amp;  Fields!ShipToCountry.Valu
               <Left>0.08537cm</Left>
               <Height>0.51533cm</Height>
               <Width>5.34578cm</Width>
-              <ZIndex>26</ZIndex>
+              <ZIndex>25</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -2125,19 +2208,32 @@ IIF(Fields!ShipToCountry.Value = "", "", VbCrLf &amp;  Fields!ShipToCountry.Valu
                   <Style />
                 </Paragraph>
               </Paragraphs>
+<<<<<<< Updated upstream
               <Top>13.17207cm</Top>
               <Left>0.04242cm</Left>
               <Height>0.508cm</Height>
               <Width>3.00271cm</Width>
               <ZIndex>27</ZIndex>
+=======
+              <Top>12.37832cm</Top>
+              <Left>0.0303cm</Left>
+              <Height>0.508cm</Height>
+              <Width>3.00271cm</Width>
+              <ZIndex>26</ZIndex>
+>>>>>>> Stashed changes
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
+<<<<<<< Updated upstream
                 <PaddingTop>2pt</PaddingTop>
                 <PaddingBottom>2pt</PaddingBottom>
+=======
+                <PaddingTop>0.5pt</PaddingTop>
+                <PaddingBottom>0.5pt</PaddingBottom>
+>>>>>>> Stashed changes
               </Style>
             </Textbox>
             <Textbox Name="Textbox5">
@@ -2158,19 +2254,32 @@ IIF(Fields!ShipToCountry.Value = "", "", VbCrLf &amp;  Fields!ShipToCountry.Valu
                   <Style />
                 </Paragraph>
               </Paragraphs>
+<<<<<<< Updated upstream
               <Top>13.68007cm</Top>
               <Left>0.04242cm</Left>
               <Height>0.508cm</Height>
               <Width>3.00271cm</Width>
               <ZIndex>28</ZIndex>
+=======
+              <Top>12.88632cm</Top>
+              <Left>0.0303cm</Left>
+              <Height>0.508cm</Height>
+              <Width>3.00271cm</Width>
+              <ZIndex>27</ZIndex>
+>>>>>>> Stashed changes
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
+<<<<<<< Updated upstream
                 <PaddingTop>2pt</PaddingTop>
                 <PaddingBottom>2pt</PaddingBottom>
+=======
+                <PaddingTop>0.5pt</PaddingTop>
+                <PaddingBottom>0.5pt</PaddingBottom>
+>>>>>>> Stashed changes
               </Style>
             </Textbox>
             <Textbox Name="Textbox6">
@@ -2191,19 +2300,32 @@ IIF(Fields!ShipToCountry.Value = "", "", VbCrLf &amp;  Fields!ShipToCountry.Valu
                   <Style />
                 </Paragraph>
               </Paragraphs>
+<<<<<<< Updated upstream
               <Top>14.18807cm</Top>
               <Left>0.04242cm</Left>
               <Height>0.508cm</Height>
               <Width>2.98655cm</Width>
               <ZIndex>29</ZIndex>
+=======
+              <Top>13.39432cm</Top>
+              <Left>0.0303cm</Left>
+              <Height>0.508cm</Height>
+              <Width>2.98655cm</Width>
+              <ZIndex>28</ZIndex>
+>>>>>>> Stashed changes
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
+<<<<<<< Updated upstream
                 <PaddingTop>2pt</PaddingTop>
                 <PaddingBottom>2pt</PaddingBottom>
+=======
+                <PaddingTop>0.5pt</PaddingTop>
+                <PaddingBottom>0.5pt</PaddingBottom>
+>>>>>>> Stashed changes
               </Style>
             </Textbox>
             <Textbox Name="Textbox7">
@@ -2224,19 +2346,32 @@ IIF(Fields!ShipToCountry.Value = "", "", VbCrLf &amp;  Fields!ShipToCountry.Valu
                   <Style />
                 </Paragraph>
               </Paragraphs>
+<<<<<<< Updated upstream
               <Top>13.17207cm</Top>
               <Left>3.04513cm</Left>
               <Height>0.508cm</Height>
               <Width>3.95521cm</Width>
               <ZIndex>30</ZIndex>
+=======
+              <Top>12.37832cm</Top>
+              <Left>3.03301cm</Left>
+              <Height>0.508cm</Height>
+              <Width>3.95521cm</Width>
+              <ZIndex>29</ZIndex>
+>>>>>>> Stashed changes
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
+<<<<<<< Updated upstream
                 <PaddingTop>2pt</PaddingTop>
                 <PaddingBottom>2pt</PaddingBottom>
+=======
+                <PaddingTop>0.5pt</PaddingTop>
+                <PaddingBottom>0.5pt</PaddingBottom>
+>>>>>>> Stashed changes
               </Style>
             </Textbox>
             <Textbox Name="Textbox13">
@@ -2257,19 +2392,32 @@ IIF(Fields!ShipToCountry.Value = "", "", VbCrLf &amp;  Fields!ShipToCountry.Valu
                   <Style />
                 </Paragraph>
               </Paragraphs>
+<<<<<<< Updated upstream
               <Top>13.68007cm</Top>
               <Left>3.04513cm</Left>
               <Height>0.508cm</Height>
               <Width>3.95521cm</Width>
               <ZIndex>31</ZIndex>
+=======
+              <Top>12.88632cm</Top>
+              <Left>3.03301cm</Left>
+              <Height>0.508cm</Height>
+              <Width>3.95521cm</Width>
+              <ZIndex>30</ZIndex>
+>>>>>>> Stashed changes
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
+<<<<<<< Updated upstream
                 <PaddingTop>2pt</PaddingTop>
                 <PaddingBottom>2pt</PaddingBottom>
+=======
+                <PaddingTop>0.5pt</PaddingTop>
+                <PaddingBottom>0.5pt</PaddingBottom>
+>>>>>>> Stashed changes
               </Style>
             </Textbox>
             <Textbox Name="Textbox15">
@@ -2290,19 +2438,32 @@ IIF(Fields!ShipToCountry.Value = "", "", VbCrLf &amp;  Fields!ShipToCountry.Valu
                   <Style />
                 </Paragraph>
               </Paragraphs>
+<<<<<<< Updated upstream
               <Top>14.18807cm</Top>
               <Left>3.04513cm</Left>
               <Height>0.508cm</Height>
               <Width>3.95521cm</Width>
               <ZIndex>32</ZIndex>
+=======
+              <Top>13.39432cm</Top>
+              <Left>3.03301cm</Left>
+              <Height>0.508cm</Height>
+              <Width>3.95521cm</Width>
+              <ZIndex>31</ZIndex>
+>>>>>>> Stashed changes
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
+<<<<<<< Updated upstream
                 <PaddingTop>2pt</PaddingTop>
                 <PaddingBottom>2pt</PaddingBottom>
+=======
+                <PaddingTop>0.5pt</PaddingTop>
+                <PaddingBottom>0.5pt</PaddingBottom>
+>>>>>>> Stashed changes
               </Style>
             </Textbox>
           </ReportItems>
@@ -2313,7 +2474,11 @@ IIF(Fields!ShipToCountry.Value = "", "", VbCrLf &amp;  Fields!ShipToCountry.Valu
           </Style>
         </PageHeader>
         <PageFooter>
+<<<<<<< Updated upstream
           <Height>8.26004cm</Height>
+=======
+          <Height>7.94254cm</Height>
+>>>>>>> Stashed changes
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -2648,7 +2813,11 @@ Gross Total (AUD) :
                 </Textbox>
               </ReportItems>
               <KeepTogether>true</KeepTogether>
+<<<<<<< Updated upstream
               <Top>5.06265cm</Top>
+=======
+              <Top>4.74515cm</Top>
+>>>>>>> Stashed changes
               <Height>3.11802cm</Height>
               <Width>19.30631cm</Width>
               <ZIndex>5</ZIndex>
@@ -2758,7 +2927,11 @@ Gross Total (AUD) :
                   </Style>
                 </Paragraph>
               </Paragraphs>
+<<<<<<< Updated upstream
               <Top>5.13445cm</Top>
+=======
+              <Top>4.81695cm</Top>
+>>>>>>> Stashed changes
               <Height>3.04622cm</Height>
               <Width>13.58032cm</Width>
               <ZIndex>6</ZIndex>
@@ -3488,6 +3661,12 @@ SttTByo7B1StPLXW3rQGZTGdJO0BWdnnRGNdhtHjv2jM3wD4tz0N+wdr7f/c85ygGGOafXUKAO8GFvcF
         </Field>
         <Field Name="Sell_to_Customer_Name">
           <DataField>Sell_to_Customer_Name</DataField>
+        </Field>
+        <Field Name="Payment_Terms_Code">
+          <DataField>Payment_Terms_Code</DataField>
+        </Field>
+        <Field Name="Applies_to_Doc__No_">
+          <DataField>Applies_to_Doc__No_</DataField>
         </Field>
         <Field Name="AmountNegative">
           <DataField>AmountNegative</DataField>
