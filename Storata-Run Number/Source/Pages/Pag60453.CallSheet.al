@@ -7,7 +7,7 @@ page 60453 "Call Sheet"
     UsageCategory = Lists;
     Editable = true;
     InsertAllowed = false;
-    DeleteAllowed = false;
+    DeleteAllowed = true;
 
     layout
     {
@@ -105,42 +105,17 @@ page 60453 "Call Sheet"
 
                 trigger OnAction()
                 var
-                    SalesHead: Record "Sales Header";
-                    SalesLine: Record "Sales Line";
-                    CustomerSku: Record "Customer SKU";
-                    SalesOrderPag: Page "Sales Order";
-                    LineNo: Integer;
+                    Customer: Record Customer;
+                    CustRun: Record "Customer Runs";
+                    CallSheet: Record "Call Sheet";
+                    Run: Record "Runs";
+                    RunMgt: Codeunit "Run Number Mgt.";
                 begin
-                    Clear(SalesHead);
-                    Clear(SalesLine);
-                    Clear(LineNo);
-                    SalesHead.Init();
-                    SalesHead.validate("Document Type", SalesHead."Document Type"::Order);
-                    SalesHead.Validate("Sell-to Customer No.", Rec."Customer No.");
-                    SalesHead.Validate("Bill-to Customer No.", Rec."Customer No.");
-                    SalesHead.validate("Document Date", Today);
-                    SalesHead.Validate("Run No.", Rec."Run No");
-                    if SalesHead.Insert(true) then begin
-                        CustomerSku.Reset();
-                        CustomerSku.SetRange("Customer No.", Rec."Customer No.");
-                        if CustomerSku.FindFirst() then begin
-                            repeat
-                                SalesLine.Init;
-                                LineNo += 10000;
-                                SalesLine.validate("Document Type", SalesLine."Document Type"::Order);
-                                SalesLine.Validate("Document No.", SalesHead."No.");
-                                SalesLine.validate("Line No.", LineNo);
-                                SalesLine.Validate(Type, SalesLine.Type::Item);
-                                SalesLine.Validate("No.", CustomerSku."Item No.");
-                                SalesLine.Insert();
-                            until CustomerSku.Next() = 0;
-                        end;
-                    end;
-                    // Commit();
-                    Message('Order created for Customer %1', Rec."Customer No.");
+                    if Customer.Get(Rec."Customer No.") then
+                        if CustRun.Get(Rec."Customer No.", Rec."Run No") then
+                            RunMgt.CreateOrder(Customer, CustRun);
                 end;
             }
-
         }
     }
     trigger OnAfterGetRecord()
@@ -153,89 +128,4 @@ page 60453 "Call Sheet"
             Rec.Modify();
         end;
     end;
-
-    local procedure CreateOrder()
-    var
-        SalesHead: Record "Sales Header";
-        SalesLine: Record "Sales Line";
-        CustomerSku: Record "Customer SKU";
-        CustRun: Record "Customer Runs";
-        SalesLinesTemp: Record "Sales Line" temporary;
-        SalesOrderPag: Page "Sales Order";
-        Count: Integer;
-        LineNo: Integer;
-    begin
-        if not ShowDefaultSKU() then
-            exit;
-
-        Count := 0;
-        Clear(SalesHead);
-        Clear(SalesLine);
-        Clear(LineNo);
-        SalesHead.Init();
-        SalesHead.validate("Document Type", SalesHead."Document Type"::Order);
-        SalesHead.Validate("Sell-to Customer No.", Rec."Customer No.");
-        SalesHead.Validate("Bill-to Customer No.", Rec."Customer No.");
-        SalesHead.validate("Document Date", Today);
-        SalesHead.Validate("Run No.", CustRun."Run No");
-        if SalesHead.Insert(true) then begin
-            Count += 1;
-            SKUBuffer.Reset();
-            SKUBuffer.SetFilter(Quantity, '>0');
-            if SKUBuffer.FindFirst() then begin
-                repeat
-                    SalesLine.Init;
-                    SalesLine.validate("Document Type", SalesLine."Document Type"::Order);
-                    SalesLine.Validate("Document No.", SalesHead."No.");
-                    LineNo += 10000;
-                    SalesLine.validate("Line No.", LineNo);
-                    SalesLine.Validate(Type, SalesLine.Type::Item);
-                    SalesLine.Validate("No.", SKUBuffer."Item No.");
-                    SalesLine.Validate(Quantity, SKUBuffer.Quantity);
-                    SalesLine.Validate("Run No.", CustRun."Run No");
-                    SalesLine.Insert();
-                until SKUBuffer.Next() = 0;
-            end;
-        end;
-        // Commit();
-        if Count > 0 then
-            Message('%1 order created for Customer %2', Count, Rec."Customer No.");
-    end;
-
-    local procedure ShowDefaultSKU(): Boolean
-    var
-        CustomerSku: Record "Customer SKU";
-        CustomSkUPag: Page CustomerSKUBuffer;
-    begin
-        SKUBuffer.DeleteAll();
-        CustomerSku.Reset();
-        CustomerSku.SetRange("Customer No.", Rec."Customer No.");
-        if CustomerSku.FindSet() then begin
-            repeat
-                SKUBuffer.Init();
-                SKUBuffer."Item No." := CustomerSku."Item No.";
-                SKUBuffer.Desciption := CustomerSku.Desciption;
-                SKUBuffer.Insert();
-            until CustomerSku.Next() = 0;
-        end;
-        Commit();
-        if SKUBuffer.FindSet() then begin
-            CustomSkUPag.SetRecord(SKUBuffer);
-            CustomSkUPag.LookupMode(true);
-            CustomSkUPag.Editable(true);
-            if CustomSkUPag.RunModal() = Action::LookupOK then
-                exit(true)
-            else
-                exit(false);
-        end;
-    end;
-
-    var
-        SKUBuffer: Record DefaultSKUBuffer;
-
-    trigger OnOpenPage()
-    begin
-        Rec.SetRange(Closed, false);
-    end;
-
 }

@@ -27,4 +27,8 @@ page 60456 CustomerSKUBuffer
             }
         }
     }
+    trigger OnOpenPage()
+    begin
+        CurrPage.Editable(true);
+    end;
 }

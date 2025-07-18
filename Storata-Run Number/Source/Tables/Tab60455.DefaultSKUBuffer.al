@@ -2,6 +2,7 @@ table 60455 DefaultSKUBuffer
 {
     Caption = 'DefaultSKUBuffer';
     DataClassification = ToBeClassified;
+    TableType = Temporary;
 
     fields
     {
