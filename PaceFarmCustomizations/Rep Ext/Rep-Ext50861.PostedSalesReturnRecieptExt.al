@@ -35,7 +35,15 @@ reportextension 50861 PostedSalesReturnReciept extends "Sales - Return Receipt"
             {
 
             }
+            column(Applies_to_Doc__No_; "Applies-to Doc. No.")
+            {
+
+            }
             column(Posting_Date; "Posting Date")
+            {
+
+            }
+            column(Payment_Terms_Code; "Payment Terms Code")
             {
 
             }

@@ -50,6 +50,7 @@ reportextension 50859 PurchaseCreditNote extends "Purchase - Credit Memo"
             {
 
             }
+
             column(Backorder_Accepted; "Backorder Accepted")
             {
 

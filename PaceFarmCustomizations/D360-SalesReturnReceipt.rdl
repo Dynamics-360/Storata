@@ -11,11 +11,7 @@
       <am:Name>PBIRB</am:Name>
       <am:Version>15.7.1814.616</am:Version>
     </am:UpdatedBy>
-<<<<<<< Updated upstream
-    <am:LastModifiedTimestamp>2025-07-14T11:47:52.3896790Z</am:LastModifiedTimestamp>
-=======
-    <am:LastModifiedTimestamp>2025-07-16T11:57:26.7775990Z</am:LastModifiedTimestamp>
->>>>>>> Stashed changes
+    <am:LastModifiedTimestamp>2025-07-18T11:20:44.1350780Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -326,190 +322,6 @@
                     <TablixCell />
                     <TablixCell />
                     <TablixCell />
-                  </TablixCells>
-                </TablixRow>
-                <TablixRow>
-                  <Height>0.508cm</Height>
-                  <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="textbox36">
-                          <rd:DefaultName>textbox36</rd:DefaultName>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <ZIndex>23</ZIndex>
-                          <Style>
-                            <VerticalAlign>Top</VerticalAlign>
-                            <PaddingRight>5pt</PaddingRight>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="textbox64">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!Desc_ReturnReceiptLine.Value</Value>
-                                  <Style>
-                                    <FontStyle>Normal</FontStyle>
-                                    <FontFamily>Calibri</FontFamily>
-                                    <FontSize>9pt</FontSize>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Left</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <ZIndex>22</ZIndex>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <VerticalAlign>Top</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="textbox38">
-                          <rd:DefaultName>textbox38</rd:DefaultName>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <ZIndex>21</ZIndex>
-                          <Style>
-                            <VerticalAlign>Top</VerticalAlign>
-                            <PaddingLeft>5pt</PaddingLeft>
-                            <PaddingRight>5pt</PaddingRight>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="textbox39">
-                          <rd:DefaultName>textbox39</rd:DefaultName>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <ZIndex>20</ZIndex>
-                          <Style>
-                            <VerticalAlign>Top</VerticalAlign>
-                            <PaddingRight>5pt</PaddingRight>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox118">
-                          <rd:DefaultName>Textbox118</rd:DefaultName>
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <Style>
-                            <VerticalAlign>Top</VerticalAlign>
-                            <PaddingRight>5pt</PaddingRight>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox127">
-                          <rd:DefaultName>Textbox127</rd:DefaultName>
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <Style>
-                            <VerticalAlign>Top</VerticalAlign>
-                            <PaddingRight>5pt</PaddingRight>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox136">
-                          <rd:DefaultName>Textbox136</rd:DefaultName>
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <Style>
-                            <VerticalAlign>Top</VerticalAlign>
-                            <PaddingRight>5pt</PaddingRight>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -1616,17 +1428,6 @@ IIF(Fields!Line_Discount__.Value=0,"","%")</Value>
                   <TablixMembers>
                     <TablixMember>
                       <Visibility>
-<<<<<<< Updated upstream
-                        <Hidden>=iif(Fields!TypeInt.Value=0,false,true)</Hidden>
-=======
-                        <Hidden>true</Hidden>
->>>>>>> Stashed changes
-                      </Visibility>
-                      <KeepWithGroup>After</KeepWithGroup>
-                      <KeepTogether>true</KeepTogether>
-                    </TablixMember>
-                    <TablixMember>
-                      <Visibility>
                         <Hidden>=iif(Fields!TypeInt.Value = 1 and not(Fields!ShowInternalInfo.Value),false,true)</Hidden>
                       </Visibility>
                       <KeepWithGroup>After</KeepWithGroup>
@@ -1680,23 +1481,23 @@ IIF(Fields!Line_Discount__.Value=0,"","%")</Value>
               </Filter>
             </Filters>
             <Top>0pt</Top>
-            <Left>0pt</Left>
-            <Height>2.553cm</Height>
+            <Left>1.0004pt</Left>
+            <Height>2.045cm</Height>
             <Width>19.35682cm</Width>
-            <Style />
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
           </Tablix>
         </ReportItems>
-        <Height>2.553cm</Height>
+        <Height>2.045cm</Height>
         <Style />
       </Body>
-      <Width>19.39734cm</Width>
+      <Width>19.46613cm</Width>
       <Page>
         <PageHeader>
-<<<<<<< Updated upstream
-          <Height>16.78339cm</Height>
-=======
-          <Height>17.23318cm</Height>
->>>>>>> Stashed changes
+          <Height>15.54799cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -1721,7 +1522,7 @@ IIF(Fields!Line_Discount__.Value=0,"","%")</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Left>0.07689cm</Left>
+              <Left>0.11218cm</Left>
               <Height>0.98972cm</Height>
               <Width>8.10799cm</Width>
               <Style>
@@ -1742,11 +1543,7 @@ IIF(Fields!Line_Discount__.Value=0,"","%")</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-<<<<<<< Updated upstream
-                      <Value>Invoice No. 
-=======
                       <Value>Document No. 
->>>>>>> Stashed changes
 Customer 
 Date 
 Sales Return Order </Value>
@@ -1774,11 +1571,7 @@ Invoice Account</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-<<<<<<< Updated upstream
-                      <Value>Order Taken By</Value>
-=======
                       <Value>Order taken by</Value>
->>>>>>> Stashed changes
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -1789,7 +1582,7 @@ Invoice Account</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.98972cm</Top>
-              <Left>0.07689cm</Left>
+              <Left>0.11218cm</Left>
               <Height>3.0868cm</Height>
               <Width>3.60142cm</Width>
               <ZIndex>1</ZIndex>
@@ -1898,7 +1691,7 @@ Invoice Account</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.98972cm</Top>
-              <Left>3.67831cm</Left>
+              <Left>3.7136cm</Left>
               <Height>3.0868cm</Height>
               <Width>8.12737cm</Width>
               <ZIndex>2</ZIndex>
@@ -1927,7 +1720,7 @@ Invoice Account</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>6.36393cm</Top>
-              <Left>0.10517cm</Left>
+              <Left>0.14046cm</Left>
               <Height>0.61874cm</Height>
               <Width>6.49975cm</Width>
               <ZIndex>3</ZIndex>
@@ -1986,7 +1779,7 @@ Invoice Account</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>5.17604cm</Top>
-              <Left>0.07689cm</Left>
+              <Left>0.11218cm</Left>
               <Height>1.13082cm</Height>
               <Width>16.56475cm</Width>
               <ZIndex>4</ZIndex>
@@ -2016,7 +1809,7 @@ Invoice Account</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>6.32865cm</Top>
-              <Left>11.54418cm</Left>
+              <Left>11.57947cm</Left>
               <Height>0.65402cm</Height>
               <Width>5.09746cm</Width>
               <ZIndex>5</ZIndex>
@@ -2054,7 +1847,7 @@ Invoice Account</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>6.36393cm</Top>
-              <Left>6.60492cm</Left>
+              <Left>6.64021cm</Left>
               <Height>0.61874cm</Height>
               <Width>4.93208cm</Width>
               <ZIndex>6</ZIndex>
@@ -2097,7 +1890,7 @@ Invoice Account</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>6.98267cm</Top>
-              <Left>0.10517cm</Left>
+              <Left>0.14046cm</Left>
               <Height>0.45212cm</Height>
               <Width>16.56475cm</Width>
               <ZIndex>7</ZIndex>
@@ -2157,7 +1950,7 @@ Amount</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.98972cm</Top>
-              <Left>13.82414cm</Left>
+              <Left>13.85943cm</Left>
               <Height>3.86895cm</Height>
               <Width>2.8175cm</Width>
               <ZIndex>8</ZIndex>
@@ -2265,7 +2058,7 @@ Amount</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.98972cm</Top>
-              <Left>16.61187cm</Left>
+              <Left>16.64716cm</Left>
               <Height>3.86895cm</Height>
               <Width>2.63911cm</Width>
               <ZIndex>9</ZIndex>
@@ -2298,7 +2091,7 @@ Amount</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>4.1118cm</Top>
-              <Left>0.07689cm</Left>
+              <Left>0.11218cm</Left>
               <Height>0.92326cm</Height>
               <Width>6.10888cm</Width>
               <ZIndex>10</ZIndex>
@@ -2315,7 +2108,7 @@ Amount</Value>
             </Textbox>
             <Line Name="Line5">
               <Top>7.5759cm</Top>
-              <Left>0.0658cm</Left>
+              <Left>0.10109cm</Left>
               <Height>0cm</Height>
               <Width>19.29217cm</Width>
               <ZIndex>11</ZIndex>
@@ -2331,7 +2124,7 @@ Amount</Value>
               <MIMEType>image/bmp</MIMEType>
               <Sizing>FitProportional</Sizing>
               <Top>7.64646cm</Top>
-              <Left>0.02312in</Left>
+              <Left>0.03701in</Left>
               <Height>51.54356pt</Height>
               <Width>111.393pt</Width>
               <ZIndex>12</ZIndex>
@@ -2365,8 +2158,8 @@ Amount</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>9.4648cm</Top>
-              <Left>0.05259cm</Left>
+              <Top>9.64119cm</Top>
+              <Left>0.08788cm</Left>
               <Height>0.51533cm</Height>
               <Width>5.34578cm</Width>
               <ZIndex>13</ZIndex>
@@ -2401,7 +2194,7 @@ Amount</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>7.64646cm</Top>
-              <Left>6.96405cm</Left>
+              <Left>6.99934cm</Left>
               <Height>0.98972cm</Height>
               <Width>2.98174cm</Width>
               <ZIndex>14</ZIndex>
@@ -2437,7 +2230,7 @@ Amount</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>7.61118cm</Top>
-              <Left>11.45801cm</Left>
+              <Left>11.4933cm</Left>
               <Height>0.74333cm</Height>
               <Width>6.4144cm</Width>
               <ZIndex>15</ZIndex>
@@ -2460,24 +2253,7 @@ Amount</Value>
                   <TextRuns>
                     <TextRun>
                       <Value>Date 
-<<<<<<< Updated upstream
-Invoice No. </Value>
-=======
 Document No. </Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Invoice No.</Value>
->>>>>>> Stashed changes
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                       </Style>
@@ -2529,12 +2305,8 @@ Payment Due </Value>
                 </Paragraph>
               </Paragraphs>
               <Top>8.38979cm</Top>
-              <Left>11.45801cm</Left>
-<<<<<<< Updated upstream
-              <Height>2.72975cm</Height>
-=======
+              <Left>11.4933cm</Left>
               <Height>3.21488cm</Height>
->>>>>>> Stashed changes
               <Width>2.59382cm</Width>
               <ZIndex>16</ZIndex>
               <Style>
@@ -2582,23 +2354,6 @@ Payment Due </Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-<<<<<<< Updated upstream
-=======
-                      <Value>=Fields!Applies_to_Doc__No_.Value</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <Format>d MMM yyyy</Format>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
->>>>>>> Stashed changes
                       <Value>=Fields!External_Document_No_.Value</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
@@ -2627,11 +2382,7 @@ Payment Due </Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-<<<<<<< Updated upstream
-                      <Value>=Fields!Payment_Terms_Desc.Value</Value>
-=======
                       <Value>=Fields!Payment_Terms_Code.Value</Value>
->>>>>>> Stashed changes
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                       </Style>
@@ -2657,12 +2408,8 @@ Payment Due </Value>
                 </Paragraph>
               </Paragraphs>
               <Top>8.38979cm</Top>
-              <Left>14.05183cm</Left>
-<<<<<<< Updated upstream
-              <Height>2.72975cm</Height>
-=======
+              <Left>14.08712cm</Left>
               <Height>3.21488cm</Height>
->>>>>>> Stashed changes
               <Width>5.19915cm</Width>
               <ZIndex>17</ZIndex>
               <Style>
@@ -2678,7 +2425,6 @@ Payment Due </Value>
             </Textbox>
             <Textbox Name="Textbox15">
               <rd:DefaultName>Textbox8</rd:DefaultName>
-              <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -2782,13 +2528,9 @@ Payment Due </Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-<<<<<<< Updated upstream
-              <Top>11.0755cm</Top>
-=======
-              <Top>11.7105cm</Top>
->>>>>>> Stashed changes
-              <Left>0.05873cm</Left>
-              <Height>2.22594cm</Height>
+              <Top>10.57279cm</Top>
+              <Left>0.08788cm</Left>
+              <Height>1.96136cm</Height>
               <Width>10.80398cm</Width>
               <ZIndex>18</ZIndex>
               <Style>
@@ -2801,113 +2543,6 @@ Payment Due </Value>
                 <PaddingTop>2pt</PaddingTop>
               </Style>
             </Textbox>
-<<<<<<< Updated upstream
-            <Textbox Name="Textbox32">
-              <rd:DefaultName>Textbox8</rd:DefaultName>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Ship To</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <FontWeight>Normal</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Fields!ShipToAddr1.Value</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Fields!ShipToAddr2.Value</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>9pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Fields!ShipToAddr3.Value</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>9pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Fields!Ship_to_City.Value &amp; "," &amp; Fields!Ship_to_County.Value &amp; " " &amp; Fields!Ship_to_Post_Code.Value</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>9pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value />
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>9pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <Top>11.0755cm</Top>
-              <Left>11.45401cm</Left>
-              <Height>2.22594cm</Height>
-              <Width>7.79697cm</Width>
-              <ZIndex>19</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <VerticalAlign>Middle</VerticalAlign>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-              </Style>
-            </Textbox>
-=======
->>>>>>> Stashed changes
             <Textbox Name="Textbox44">
               <rd:DefaultName>Textbox37</rd:DefaultName>
               <KeepTogether>true</KeepTogether>
@@ -2928,19 +2563,11 @@ Payment Due </Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-<<<<<<< Updated upstream
-              <Top>14.90031cm</Top>
-              <Left>13.60146cm</Left>
-              <Height>0.6cm</Height>
-              <Width>1.77496cm</Width>
-              <ZIndex>20</ZIndex>
-=======
-              <Top>15.53531cm</Top>
-              <Left>13.60146cm</Left>
+              <Top>14.3cm</Top>
+              <Left>13.70255cm</Left>
               <Height>0.6cm</Height>
               <Width>1.77496cm</Width>
               <ZIndex>19</ZIndex>
->>>>>>> Stashed changes
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -2972,19 +2599,11 @@ Payment Due </Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-<<<<<<< Updated upstream
-              <Top>14.90031cm</Top>
-              <Left>0in</Left>
-              <Height>0.57354cm</Height>
-              <Width>2.67821cm</Width>
-              <ZIndex>21</ZIndex>
-=======
-              <Top>15.53531cm</Top>
-              <Left>0in</Left>
+              <Top>14.3cm</Top>
+              <Left>0.0398in</Left>
               <Height>0.57354cm</Height>
               <Width>2.67821cm</Width>
               <ZIndex>20</ZIndex>
->>>>>>> Stashed changes
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -3016,19 +2635,11 @@ Payment Due </Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-<<<<<<< Updated upstream
-              <Top>14.90031cm</Top>
-              <Left>2.67821cm</Left>
-              <Height>0.57354cm</Height>
-              <Width>6.04764cm</Width>
-              <ZIndex>22</ZIndex>
-=======
-              <Top>15.53531cm</Top>
-              <Left>2.67821cm</Left>
+              <Top>14.3cm</Top>
+              <Left>2.7793cm</Left>
               <Height>0.57354cm</Height>
               <Width>6.04764cm</Width>
               <ZIndex>21</ZIndex>
->>>>>>> Stashed changes
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -3060,19 +2671,11 @@ Payment Due </Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-<<<<<<< Updated upstream
-              <Top>14.90031cm</Top>
-              <Left>8.76113cm</Left>
-              <Height>0.6cm</Height>
-              <Width>1.51819cm</Width>
-              <ZIndex>23</ZIndex>
-=======
-              <Top>15.53531cm</Top>
-              <Left>8.76113cm</Left>
+              <Top>14.3cm</Top>
+              <Left>8.86222cm</Left>
               <Height>0.6cm</Height>
               <Width>1.51819cm</Width>
               <ZIndex>22</ZIndex>
->>>>>>> Stashed changes
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -3104,19 +2707,11 @@ Payment Due </Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-<<<<<<< Updated upstream
-              <Top>14.90031cm</Top>
-              <Left>11.80568cm</Left>
-              <Height>0.6cm</Height>
-              <Width>1.79578cm</Width>
-              <ZIndex>24</ZIndex>
-=======
-              <Top>15.53531cm</Top>
-              <Left>11.80568cm</Left>
+              <Top>14.3cm</Top>
+              <Left>11.90677cm</Left>
               <Height>0.6cm</Height>
               <Width>1.79578cm</Width>
               <ZIndex>23</ZIndex>
->>>>>>> Stashed changes
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -3148,19 +2743,11 @@ Payment Due </Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-<<<<<<< Updated upstream
-              <Top>14.90031cm</Top>
-              <Left>10.27932cm</Left>
-              <Height>0.6cm</Height>
-              <Width>1.52636cm</Width>
-              <ZIndex>25</ZIndex>
-=======
-              <Top>15.53531cm</Top>
-              <Left>10.27932cm</Left>
+              <Top>14.3cm</Top>
+              <Left>10.38041cm</Left>
               <Height>0.6cm</Height>
               <Width>1.52636cm</Width>
               <ZIndex>24</ZIndex>
->>>>>>> Stashed changes
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -3192,19 +2779,11 @@ Payment Due </Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-<<<<<<< Updated upstream
-              <Top>14.90031cm</Top>
-              <Left>15.37642cm</Left>
-              <Height>0.6cm</Height>
-              <Width>3.98862cm</Width>
-              <ZIndex>26</ZIndex>
-=======
-              <Top>15.53531cm</Top>
-              <Left>15.37642cm</Left>
+              <Top>14.3cm</Top>
+              <Left>15.47751cm</Left>
               <Height>0.6cm</Height>
               <Width>3.98862cm</Width>
               <ZIndex>25</ZIndex>
->>>>>>> Stashed changes
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -3234,30 +2813,17 @@ Payment Due </Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-<<<<<<< Updated upstream
-              <Top>13.30144cm</Top>
-              <Left>0.05259cm</Left>
-              <Height>0.508cm</Height>
-              <Width>3.00271cm</Width>
-              <ZIndex>27</ZIndex>
-=======
-              <Top>13.93644cm</Top>
-              <Left>0.05259cm</Left>
-              <Height>0.508cm</Height>
+              <Top>12.71054cm</Top>
+              <Left>0.11218cm</Left>
+              <Height>0.36689cm</Height>
               <Width>3.00271cm</Width>
               <ZIndex>26</ZIndex>
->>>>>>> Stashed changes
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
-<<<<<<< Updated upstream
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-=======
->>>>>>> Stashed changes
               </Style>
             </Textbox>
             <Textbox Name="Textbox5">
@@ -3278,30 +2844,17 @@ Payment Due </Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-<<<<<<< Updated upstream
-              <Top>13.80944cm</Top>
-              <Left>0.05259cm</Left>
-              <Height>0.508cm</Height>
-              <Width>3.00271cm</Width>
-              <ZIndex>28</ZIndex>
-=======
-              <Top>14.44444cm</Top>
-              <Left>0.05259cm</Left>
-              <Height>0.508cm</Height>
+              <Top>13.14798cm</Top>
+              <Left>0.11218cm</Left>
+              <Height>0.36689cm</Height>
               <Width>3.00271cm</Width>
               <ZIndex>27</ZIndex>
->>>>>>> Stashed changes
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
-<<<<<<< Updated upstream
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-=======
->>>>>>> Stashed changes
               </Style>
             </Textbox>
             <Textbox Name="Textbox6">
@@ -3322,30 +2875,17 @@ Payment Due </Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-<<<<<<< Updated upstream
-              <Top>14.31744cm</Top>
-              <Left>0.05259cm</Left>
-              <Height>0.508cm</Height>
-              <Width>2.98655cm</Width>
-              <ZIndex>29</ZIndex>
-=======
-              <Top>14.95244cm</Top>
-              <Left>0.05259cm</Left>
-              <Height>0.508cm</Height>
+              <Top>13.62071cm</Top>
+              <Left>0.11218cm</Left>
+              <Height>0.36cm</Height>
               <Width>2.98655cm</Width>
               <ZIndex>28</ZIndex>
->>>>>>> Stashed changes
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
-<<<<<<< Updated upstream
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-=======
->>>>>>> Stashed changes
               </Style>
             </Textbox>
             <Textbox Name="Textbox7">
@@ -3366,30 +2906,17 @@ Payment Due </Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-<<<<<<< Updated upstream
-              <Top>13.30144cm</Top>
-              <Left>3.07442cm</Left>
-              <Height>0.508cm</Height>
-              <Width>3.95521cm</Width>
-              <ZIndex>30</ZIndex>
-=======
-              <Top>13.93644cm</Top>
-              <Left>3.07442cm</Left>
-              <Height>0.508cm</Height>
+              <Top>12.71054cm</Top>
+              <Left>3.13401cm</Left>
+              <Height>0.36689cm</Height>
               <Width>3.95521cm</Width>
               <ZIndex>29</ZIndex>
->>>>>>> Stashed changes
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
-<<<<<<< Updated upstream
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-=======
->>>>>>> Stashed changes
               </Style>
             </Textbox>
             <Textbox Name="Textbox13">
@@ -3410,30 +2937,17 @@ Payment Due </Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-<<<<<<< Updated upstream
-              <Top>13.80944cm</Top>
-              <Left>3.07442cm</Left>
-              <Height>0.508cm</Height>
-              <Width>3.95521cm</Width>
-              <ZIndex>31</ZIndex>
-=======
-              <Top>14.44444cm</Top>
-              <Left>3.07442cm</Left>
-              <Height>0.508cm</Height>
+              <Top>13.14798cm</Top>
+              <Left>3.13401cm</Left>
+              <Height>0.36689cm</Height>
               <Width>3.95521cm</Width>
               <ZIndex>30</ZIndex>
->>>>>>> Stashed changes
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
-<<<<<<< Updated upstream
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-=======
->>>>>>> Stashed changes
               </Style>
             </Textbox>
             <Textbox Name="Textbox20">
@@ -3454,30 +2968,17 @@ Payment Due </Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-<<<<<<< Updated upstream
-              <Top>14.31744cm</Top>
-              <Left>3.07442cm</Left>
-              <Height>0.508cm</Height>
-              <Width>3.95521cm</Width>
-              <ZIndex>32</ZIndex>
-=======
-              <Top>14.95244cm</Top>
-              <Left>3.07442cm</Left>
-              <Height>0.508cm</Height>
+              <Top>13.62071cm</Top>
+              <Left>3.13401cm</Left>
+              <Height>0.36cm</Height>
               <Width>3.95521cm</Width>
               <ZIndex>31</ZIndex>
->>>>>>> Stashed changes
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
-<<<<<<< Updated upstream
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-=======
->>>>>>> Stashed changes
               </Style>
             </Textbox>
           </ReportItems>
@@ -3493,7 +2994,7 @@ Payment Due </Value>
               <Value>Egg</Value>
               <Sizing>FitProportional</Sizing>
               <Top>2.59103cm</Top>
-              <Left>15.87892cm</Left>
+              <Left>15.91421cm</Left>
               <Height>51.54356pt</Height>
               <Width>99.73467pt</Width>
               <Style>
@@ -3668,7 +3169,7 @@ Payment Due </Value>
               </ReportItems>
               <KeepTogether>true</KeepTogether>
               <Top>4.47868cm</Top>
-              <Left>0.05873cm</Left>
+              <Left>0.09402cm</Left>
               <Height>3.11802cm</Height>
               <Width>19.30631cm</Width>
               <ZIndex>1</ZIndex>
@@ -3779,7 +3280,7 @@ Payment Due </Value>
                 </Paragraph>
               </Paragraphs>
               <Top>4.55048cm</Top>
-              <Left>0.05873cm</Left>
+              <Left>0.09402cm</Left>
               <Height>3.04622cm</Height>
               <Width>13.58032cm</Width>
               <ZIndex>2</ZIndex>
@@ -3814,8 +3315,8 @@ Payment Due </Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>0.12159cm</Top>
-              <Left>0.05259cm</Left>
+              <Top>0.14111cm</Top>
+              <Left>0.06758cm</Left>
               <Height>0.6cm</Height>
               <Width>19.23958cm</Width>
               <ZIndex>3</ZIndex>
@@ -3853,7 +3354,7 @@ Payment Due </Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.72131cm</Top>
-              <Left>0.05259cm</Left>
+              <Left>0.08788cm</Left>
               <Height>1.86972cm</Height>
               <Width>11.22923cm</Width>
               <ZIndex>4</ZIndex>
@@ -3892,7 +3393,7 @@ Gross Total (AUD) :
                 </Paragraph>
               </Paragraphs>
               <Top>0.72131cm</Top>
-              <Left>11.28182cm</Left>
+              <Left>11.31711cm</Left>
               <Height>1.86972cm</Height>
               <Width>4.11191cm</Width>
               <ZIndex>5</ZIndex>
@@ -3987,7 +3488,7 @@ Gross Total (AUD) :
                 </Paragraph>
               </Paragraphs>
               <Top>0.72131cm</Top>
-              <Left>15.39373cm</Left>
+              <Left>15.42902cm</Left>
               <Height>1.86972cm</Height>
               <Width>3.97131cm</Width>
               <ZIndex>6</ZIndex>
@@ -4007,7 +3508,7 @@ Gross Total (AUD) :
             <Rectangle Name="Rectangle1">
               <KeepTogether>true</KeepTogether>
               <Top>2.59103cm</Top>
-              <Left>0.05259cm</Left>
+              <Left>0.08788cm</Left>
               <Height>1.81834cm</Height>
               <Width>15.78581cm</Width>
               <ZIndex>7</ZIndex>
@@ -4438,11 +3939,6 @@ SttTByo7B1StPLXW3rQGZTGdJO0BWdnnRGNdhtHjv2jM3wD4tz0N+wdr7f/c85ygGGOafXUKAO8GFvcF
         <Field Name="Sell_to_Customer_Name">
           <DataField>Sell_to_Customer_Name</DataField>
         </Field>
-<<<<<<< Updated upstream
-        <Field Name="Posting_Date">
-          <DataField>Posting_Date</DataField>
-        </Field>
-=======
         <Field Name="Applies_to_Doc__No_">
           <DataField>Applies_to_Doc__No_</DataField>
         </Field>
@@ -4452,7 +3948,6 @@ SttTByo7B1StPLXW3rQGZTGdJO0BWdnnRGNdhtHjv2jM3wD4tz0N+wdr7f/c85ygGGOafXUKAO8GFvcF
         <Field Name="Payment_Terms_Code">
           <DataField>Payment_Terms_Code</DataField>
         </Field>
->>>>>>> Stashed changes
         <Field Name="Return_Order_No_">
           <DataField>Return_Order_No_</DataField>
         </Field>
