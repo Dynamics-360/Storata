@@ -38,10 +38,10 @@ reportextension 50851 DelivDocExt extends "PF Delivery Docket"
     }
     rendering
     {
-        layout("DocketDeliv-D360")
+        layout("Delivery Docket - D360")
         {
             Type = RDLC;
-            LayoutFile = './RepPFDeliveryDocket.rdl';
+            LayoutFile = './Rep Ext/Layouts/50851_PFDeliveryDocket.rdl';
         }
     }
     var

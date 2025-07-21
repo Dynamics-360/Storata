@@ -1,4 +1,4 @@
-codeunit 50851 EventSubs
+codeunit 50851 PFEventSubs
 {
     Permissions = tabledata "Return Receipt Header" = RIMD;
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", OnAfterPostSalesDoc, '', false, false)]

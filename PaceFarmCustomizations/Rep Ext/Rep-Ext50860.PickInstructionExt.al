@@ -110,10 +110,10 @@ reportextension 50860 PickInstruction extends "Pick Instruction"
 
     rendering
     {
-        layout(D360PickInstruction)
+        layout("Pick Instruction - D360")
         {
             Type = RDLC;
-            LayoutFile = 'D360-PickInstruction.rdl';
+            LayoutFile = './Rep Ext/Layouts/50860_PFPickInstruction.rdl';
         }
     }
     var

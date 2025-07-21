@@ -164,7 +164,7 @@ reportextension 50861 PostedSalesReturnReciept extends "Sales - Return Receipt"
         layout(D360SalesReturnReciept)
         {
             Type = RDLC;
-            LayoutFile = 'D360-SalesReturnReceipt.rdl';
+            LayoutFile = './Rep Ext/Layouts/50861_PFSalesReturnReceipt.rdl';
         }
     }
     var

@@ -25,10 +25,10 @@ reportextension 50857 TransferOrderExt extends "Transfer Order"
 
     rendering
     {
-        layout(D360TransferOrder)
+        layout("Transfer Order - D360")
         {
             Type = RDLC;
-            LayoutFile = 'D360TransferOrder.rdl';
+            LayoutFile = './Rep Ext/Layouts/50857_PFTransferOrder.rdl';
         }
     }
     var

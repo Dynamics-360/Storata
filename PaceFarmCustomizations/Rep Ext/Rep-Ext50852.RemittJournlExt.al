@@ -27,15 +27,15 @@ reportextension 50852 RemittJournlExt extends "Remittance Advice - Journal"
     }
     rendering
     {
-        layout("RemitJnl-D360")
+        // layout("RemitJnl-D360")
+        // {
+        //     Type = RDLC;
+        //     LayoutFile = './RemittanceAdviceJournal.rdl';
+        // }
+        layout("Remittance Journal - D360")
         {
             Type = RDLC;
-            LayoutFile = './RemittanceAdviceJournal.rdl';
-        }
-        layout("RemitJnlLeftAll-D360")
-        {
-            Type = RDLC;
-            LayoutFile = './RemittanceAdviceJournalLeftAllign.rdl';
+            LayoutFile = './Rep Ext/Layouts/50852_PFRemittanceJnl.rdl';
         }
     }
     var
