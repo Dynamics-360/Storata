@@ -1,7 +1,7 @@
 page 60456 CustomerSKUBuffer
 {
     ApplicationArea = All;
-    Caption = 'Custom SKU Confirmation';
+    Caption = 'Customer SKU Confirmation';
     PageType = List;
     SourceTable = DefaultSKUBuffer;
     UsageCategory = None;

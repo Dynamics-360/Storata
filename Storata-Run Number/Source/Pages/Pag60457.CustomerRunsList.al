@@ -1,12 +1,11 @@
-page 60451 "Customer Runs"
+page 60457 "Customer Runs List"
 {
     ApplicationArea = All;
-    PageType = ListPart;
-    MultipleNewLines = true;
+    Caption = 'Customer Runs';
+    PageType = List;
     SourceTable = "Customer Runs";
-    DelayedInsert = true;
-    AutoSplitKey = false;
-
+    Editable = true;
+    UsageCategory = Administration;
 
     layout
     {
@@ -14,22 +13,21 @@ page 60451 "Customer Runs"
         {
             repeater(General)
             {
+                field("Customer No."; Rec."Customer No.")
+                {
+                    ToolTip = 'Specifies the value of the Customer No. field.', Comment = '%';
+                }
+                field("Drop No"; Rec."Drop No")
+                {
+                    ToolTip = 'Show the value of the Drop No. field.', Comment = '%';
+                }
                 field("Run No"; Rec."Run No")
                 {
                     ToolTip = 'Specifies the value of the Run No field.', Comment = '%';
-
-                    trigger OnValidate()
-                    var
-                        Run: Record Runs;
-                    begin
-                        if Run.Get(Rec."Run No") then
-                            Rec."Run Day" := Run.Weekdays;
-                    end;
                 }
                 field("Run Day"; Rec."Run Day")
                 {
                     ToolTip = 'Specifies the value of the Run Day field.', Comment = '%';
-                    Editable = false;
                 }
                 field("Run Date"; Rec."Run Date")
                 {
@@ -39,17 +37,21 @@ page 60451 "Customer Runs"
                 {
                     ToolTip = 'Specifies the value of the Call Day field.', Comment = '%';
                 }
-                field("Call Group"; Rec."Call Group")
-                {
-                    ToolTip = 'Specifies the value of the Call Group field.', Comment = '%';
-                }
                 field("Call Date"; Rec."Call Date")
                 {
                     ToolTip = 'Specifies the value of the Call Date field.', Comment = '%';
                 }
-                field("Drop No"; Rec."Drop No")
+                field("Customer Name"; Rec."Customer Name")
                 {
-                    ToolTip = 'Specifies the value of the Drop No field.', Comment = '%';
+                    ToolTip = 'Specifies the value of the Customer Name field.', Comment = '%';
+                }
+                field("Customer State"; Rec."Customer State")
+                {
+                    ToolTip = 'Specifies the value of the Customer State field.', Comment = '%';
+                }
+                field("Call Group"; Rec."Call Group")
+                {
+                    ToolTip = 'Specifies the value of the Call Group field.', Comment = '%';
                 }
                 field(Holidays; Rec.Holidays)
                 {

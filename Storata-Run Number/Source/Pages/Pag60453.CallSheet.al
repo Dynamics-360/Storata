@@ -27,6 +27,23 @@ page 60453 "Call Sheet"
                 {
                     ToolTip = 'Specifies the value of the Customer State field.', Comment = '%';
                 }
+                field(Blocked; Rec.Blocked)
+                {
+                    ToolTip = 'Specifies the value of the Blocked field.', Comment = '%';
+                    StyleExpr = StyleExp;
+                }
+                field("Drop No"; Rec."Drop No")
+                {
+                    ToolTip = 'Show the value of the Drop No field.', Comment = '%';
+                }
+                field("Sales Phone Number"; Rec."Sales Phone Number")
+                {
+                    ToolTip = 'Specifies the value of the Sales Phone Number field.', Comment = '%';
+                }
+                field("Sales Contact"; Rec."Sales Contact")
+                {
+                    ToolTip = 'Specifies the value of the Sales Contact field.', Comment = '%';
+                }
                 field("Run No"; Rec."Run No")
                 {
                     ToolTip = 'Specifies the value of the Run No field.', Comment = '%';
@@ -38,6 +55,7 @@ page 60453 "Call Sheet"
                 field("Run Date"; Rec."Run Date")
                 {
                     ToolTip = 'Specifies the value of the Run Date field.', Comment = '%';
+                    StyleExpr = StyleExpForNewDate;
                 }
                 field("Call Day"; Rec."Call Day")
                 {
@@ -51,13 +69,13 @@ page 60453 "Call Sheet"
                 {
                     ToolTip = 'Specifies the value of the Call Date field.', Comment = '%';
                 }
+                field("Sales Note"; SalesNoteTxt)
+                {
+                    ToolTip = 'Specifies the value of the Sales Note field.', Comment = '%';
+                }
                 field(Comment; Rec.Comment)
                 {
                     ToolTip = 'Specifies the value of the Comment field.', Comment = '%';
-                }
-                field(Called; Rec.Called)
-                {
-                    ToolTip = 'Specifies the value of the Called field.', Comment = '%';
                 }
                 field("Call Back"; Rec."Call Back")
                 {
@@ -118,6 +136,11 @@ page 60453 "Call Sheet"
             }
         }
     }
+    trigger OnOpenPage()
+    begin
+        Rec.SetRange(Closed, false);
+    end;
+
     trigger OnAfterGetRecord()
     var
         Customer: Record Customer;
@@ -125,7 +148,43 @@ page 60453 "Call Sheet"
         if Customer.Get(Rec."Customer No.") then begin
             Rec."Customer Name" := Customer.Name;
             Rec."Customer State" := Customer.County;
+            Rec."Sales Phone Number" := Customer."Sales Phone Number";
+            Rec.SetNotesTxt(Customer.GetSalesNote());
+            Rec.Modify();
+            SalesNoteTxt := Rec.GetNotesTxt();
+        end;
+
+        UpdateRunDateFromHolidayChanges();
+
+        if Rec.Blocked <> Rec.Blocked::" " then
+            StyleExp := 'unfavorable'
+        else
+            StyleExp := 'None';
+
+        if Rec."Holiday Date Changed" then
+            StyleExpForNewDate := 'unfavorable'
+        else
+            StyleExpForNewDate := 'None';
+
+        CurrPage.Update(false);
+    end;
+
+    local procedure UpdateRunDateFromHolidayChanges()
+    var
+        HolidayChanges: Record "Holiday Changes";
+    begin
+        HolidayChanges.Reset();
+        HolidayChanges.SetRange("Run No", Rec."Run No");
+        HolidayChanges.SetRange("Date to be Replaced", Rec."Run Date");
+        if HolidayChanges.FindSet() then begin
+            Rec."Run Date" := HolidayChanges."New Date";
+            Rec."Holiday Date Changed" := true;
             Rec.Modify();
         end;
     end;
+
+    var
+        SalesNoteTxt: Text;
+        StyleExp: Text;
+        StyleExpForNewDate: Text;
 }

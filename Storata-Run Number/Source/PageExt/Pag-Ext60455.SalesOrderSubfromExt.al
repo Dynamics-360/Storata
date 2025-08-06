@@ -1,6 +1,5 @@
-pageextension 60453 SalesLinesExt extends "Sales Lines"
+pageextension 60455 SalesLineExt extends "Sales Order Subform"
 {
-    Editable = true;
     layout
     {
         addbefore(Quantity)

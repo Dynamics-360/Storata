@@ -45,6 +45,7 @@ codeunit 60450 "Run Number Mgt."
         Run: Record Runs;
         H_Count: Integer;
         CurrentWeekday: Integer;
+        CallWeekday: Integer;
         DaysToAdd: Integer;
         CallDate: Date;
     begin
@@ -53,12 +54,18 @@ codeunit 60450 "Run Number Mgt."
         if Run.Get(CustRun."Run No") then begin
             // DaysToAdd := ((WeekdayOption - Run."Lead Time") - H_Count - CurrentWeekday);
             DaysToAdd := (WeekdayOption - CurrentWeekday - Run."Lead Time");
-            if DaysToAdd <= 0 then
-                DaysToAdd += 7; // If the day is same or before, add days till next week
+            // if DaysToAdd <= 0 then
+            //     DaysToAdd += 7; // If the day is same or before, add days till next week
             CallDate := CurrentDate + DaysToAdd;
+            CallWeekday := Date2DWY(CallDate, 1);
+            if CallWeekday = 7 then
+                CallDate := CallDate - 2
+            else if CallWeekday = 6 then
+                CallDate := CallDate - 1;
 
             Holidays.Reset();
             Holidays.SetRange(Date, CurrentDate, CallDate);
+            Holidays.SetRange(State, CustRun."Customer State");
             if Holidays.FindSet() then begin
                 CustRun.Holidays := Holidays.Count;
                 CustRun.Modify();
@@ -151,4 +158,5 @@ codeunit 60450 "Run Number Mgt."
 
     var
         SKUBuffer: Record DefaultSKUBuffer temporary;
+        NotesTxt: Text;
 }
