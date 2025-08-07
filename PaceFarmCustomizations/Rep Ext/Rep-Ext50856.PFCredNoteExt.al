@@ -2,6 +2,17 @@ reportextension 50856 PFCredNoteExt extends "PF Posted Sales Credit Memo"
 {
     dataset
     {
+        modify("Sales Cr.Memo Header")
+        {
+            trigger OnAfterAfterGetRecord()
+            begin
+                Clear(SalesDoc_Label);
+                if "Applies-to Doc. No." <> '' then
+                    SalesDoc_Label := 'Sales Order'
+                else if "Return Order No." <> '' then
+                    SalesDoc_Label := 'Sales Return Order';
+            end;
+        }
         add("Sales Cr.Memo Header")
         {
             column(ABN_Value; GetABN())
@@ -25,6 +36,13 @@ reportextension 50856 PFCredNoteExt extends "PF Posted Sales Credit Memo"
             {
 
             }
+            column(SalesDocValue; GetSalesDocValue("Sales Cr.Memo Header"))
+            {
+            }
+            column(SalesDocLabel; SalesDoc_Label)
+            {
+            }
+
         }
         add("Sales Cr.Memo Line")
         {
@@ -37,15 +55,26 @@ reportextension 50856 PFCredNoteExt extends "PF Posted Sales Credit Memo"
 
             }
         }
+        add(CopyLoop)
+        {
+            column(CompanyInfo_City; Company_Info.City)
+            {
+            }
+        }
     }
     rendering
     {
-        layout("SalesCreditMemo - D360")
+        layout("Sales Credit Memo - D360")
         {
             Type = RDLC;
-            LayoutFile = './SalesCreditMemoModified.rdl';
+            LayoutFile = './Rep Ext/Layouts/50856_PFSalesCreditMemo.rdl';
         }
     }
+    trigger OnPreReport()
+    begin
+        Company_Info.Get();
+    end;
+
     local procedure GetABN(): Text
     var
         CompanyInfo: Record "Company Information";
@@ -66,6 +95,30 @@ reportextension 50856 PFCredNoteExt extends "PF Posted Sales Credit Memo"
         // Remaining characters
 
         exit(FirstPart + ' ' + SecondPart + ' ' + ThirdPart + ' ' + ForthPart);
-
     end;
+
+    local procedure GetSalesDocValue(SalesCredMemHead: Record "Sales Cr.Memo Header"): Text
+    begin
+        if "Sales Cr.Memo Header"."Applies-to Doc. No." <> '' then
+            exit(GetOrderNo)
+        else if "Sales Cr.Memo Header"."Return Order No." <> '' then
+            exit(SalesCredMemHead."Return Order No.")
+        else
+            exit('');
+    end;
+
+    local procedure GetOrderNo(): Text
+    var
+        SalesInvHead: Record "Sales Invoice Header";
+    begin
+        if SalesInvHead.Get("Sales Cr.Memo Header"."Applies-to Doc. No.") then
+            exit(SalesInvHead."Order No.")
+        else
+            exit('');
+    end;
+
+    var
+        Company_Info: Record "Company Information";
+        SalesDoc_Label: Text;
+        SalesDoc_Value: Text;
 }

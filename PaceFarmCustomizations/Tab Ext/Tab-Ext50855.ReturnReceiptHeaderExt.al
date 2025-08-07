@@ -37,6 +37,5 @@ tableextension 50855 ReturnReceiptHeaderExt extends "Return Receipt Header"
         Clear("Work Description");
         "Work Description".CreateOutStream(OutStream, TEXTENCODING::UTF8);
         OutStream.WriteText(NewWorkDescription);
-        Modify();
     end;
 }

@@ -1,4 +1,4 @@
-page 50850 D360_SalesHeaer
+page 50850 "Storata Import Sales Data"
 {
     ApplicationArea = All;
     Caption = 'Import Sales Data';
@@ -61,7 +61,7 @@ page 50850 D360_SalesHeaer
                 }
 
             }
-            part(D360SalesLines; "50851_PagImportSalesLines")
+            part(StorataalesLines; "Storata Import Sales Lines")
             {
                 ApplicationArea = All;
             }

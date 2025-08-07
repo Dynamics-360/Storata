@@ -134,10 +134,10 @@ reportextension 50859 PurchaseCreditNote extends "Purchase - Credit Memo"
 
     rendering
     {
-        layout(D360PurchaseCreditNote)
+        layout("Purchase Credt Memo - D360")
         {
             Type = RDLC;
-            LayoutFile = 'D360-PurchaseCreditNote.rdl';
+            LayoutFile = './Rep Ext/Layouts/50859_PFPurchaseCreditMemo.rdl';
         }
     }
 

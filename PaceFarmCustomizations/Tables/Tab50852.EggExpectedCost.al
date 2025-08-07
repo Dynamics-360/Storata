@@ -1,4 +1,4 @@
-table 50852 "Egg Expected Cost"
+table 50852 "Storata Egg Expected Cost"
 {
     Caption = 'Egg Expected Cost';
     DataClassification = ToBeClassified;

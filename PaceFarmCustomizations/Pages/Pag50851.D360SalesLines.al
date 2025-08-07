@@ -1,4 +1,4 @@
-page 50851 "50851_PagImportSalesLines"
+page 50851 "Storata Import Sales Lines"
 {
     ApplicationArea = All;
     Caption = 'Import Sales Lines';

@@ -57,6 +57,12 @@ table 60451 "Customer Runs"
             Caption = 'Holidays';
             Editable = false;
         }
+        field(12; "Drop No"; Text[30])
+        {
+            Caption = 'Drop No';
+            FieldClass = FlowField;
+            CalcFormula = lookup(Customer."Drop No." where("No." = field("Customer No.")));
+        }
     }
     keys
     {

@@ -5,7 +5,7 @@ page 60455 Holidays
     PageType = List;
     SourceTable = Holidays;
     UsageCategory = Lists;
-    
+
     layout
     {
         area(Content)
@@ -15,6 +15,10 @@ page 60455 Holidays
                 field("Date"; Rec."Date")
                 {
                     ToolTip = 'Specifies the value of the Date field.', Comment = '%';
+                }
+                field(State; Rec.State)
+                {
+                    ToolTip = 'Specifies the value of the State field.', Comment = '%';
                 }
                 field(Name; Rec.Name)
                 {

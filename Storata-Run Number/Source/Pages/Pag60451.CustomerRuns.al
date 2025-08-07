@@ -47,6 +47,10 @@ page 60451 "Customer Runs"
                 {
                     ToolTip = 'Specifies the value of the Call Date field.', Comment = '%';
                 }
+                field("Drop No"; Rec."Drop No")
+                {
+                    ToolTip = 'Specifies the value of the Drop No field.', Comment = '%';
+                }
                 field(Holidays; Rec.Holidays)
                 {
                     ToolTip = 'Specifies the value of the Holidays field.', Comment = '%';

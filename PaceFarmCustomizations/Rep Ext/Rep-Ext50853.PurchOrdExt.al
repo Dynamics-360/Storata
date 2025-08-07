@@ -21,15 +21,15 @@ reportextension 50853 PurchOrdExt extends "PF Purchase Order"
     }
     rendering
     {
-        layout("PurchOrder-D360")
+        // layout("PurchOrder-D360")
+        // {
+        //     Type = RDLC;
+        //     LayoutFile = './PFPurchaseOrder.rdl';
+        // }
+        layout("Purchase Order - D360")
         {
             Type = RDLC;
-            LayoutFile = './PFPurchaseOrder.rdl';
-        }
-        layout("PurchOrder02-D360")
-        {
-            Type = RDLC;
-            LayoutFile = './PFPurchaseOrder02.rdl';
+            LayoutFile = './Rep Ext/Layouts/50853_PFPurchaseOrder.rdl';
         }
     }
     local procedure GetABN(): Text

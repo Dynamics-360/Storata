@@ -23,11 +23,17 @@ reportextension 50860 PickInstruction extends "Pick Instruction"
             trigger OnAfterAfterGetRecord()
             var
                 TableCountryregion: Record "Country/Region";
+                CustomerRec: Record Customer;
             begin
                 if TableCountryregion.Get("Ship-to Country/Region Code") then
                     ShipCountry := TableCountryregion.Name
                 else
                     ShipCountry := '';
+                if CustomerRec.get("Sell-to Customer No.") then begin
+                    CustomerDropNo := CustomerRec."Drop No.";
+                end
+                else
+                    CustomerDropNo := '';
             end;
         }
         add("Sales Header")
@@ -92,11 +98,31 @@ reportextension 50860 PickInstruction extends "Pick Instruction"
             {
 
             }
+            column(CustomerDropNo; CustomerDropNo)
+            {
+
+            }
+            column(Req_COA; "Req COA")
+            {
+
+            }
+            column(Req_SSCC; "Req SSCC")
+            {
+
+            }
+            column(IC_Reference_Document_No_; "IC Reference Document No.")
+            {
+
+            }
         }
         add("Sales Line")
         {
 
             column(Description_2; "Description 2")
+            {
+
+            }
+            column(Pick_Group; "Pick Group")
             {
 
             }
@@ -110,10 +136,15 @@ reportextension 50860 PickInstruction extends "Pick Instruction"
 
     rendering
     {
-        layout(D360PickInstruction)
+        layout("Pick Instruction - D360")
         {
             Type = RDLC;
-            LayoutFile = 'D360-PickInstruction.rdl';
+            LayoutFile = './Rep Ext/Layouts/50860_PFPickInstruction.rdl';
+        }
+        layout("Pick List - D360")
+        {
+            Type = RDLC;
+            LayoutFile = './Rep Ext/Layouts/50860_PFPickList.rdl';
         }
     }
     var
@@ -121,6 +152,7 @@ reportextension 50860 PickInstruction extends "Pick Instruction"
         Company: Record "Company Information";
         ShipCountry: Text[30];
         Location: Text[100];
+        CustomerDropNo: Text[30];
 
     trigger OnPreReport()
     var

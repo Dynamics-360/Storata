@@ -29,6 +29,19 @@
             "launchBrowser": true,
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true
+        },
+        {
+            "name": "Sandbox (Training)",
+            "request": "launch",
+            "type": "al",
+            "environmentType": "Sandbox",
+            "environmentName": "Training",
+            "tenant": "98557e69-928a-49b9-a0d4-321deb1d6fac",
+            "breakOnError": "All",
+            "launchBrowser": false,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "schemaUpdateMode": "ForceSync"
         }
     ]
 }

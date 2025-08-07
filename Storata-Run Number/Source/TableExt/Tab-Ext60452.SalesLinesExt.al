@@ -5,7 +5,7 @@ tableextension 60452 SalesLinesExt extends "Sales Line"
         field(60450; "Run No."; Code[20])
         {
             Caption = 'Run No.';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Runs;
         }
     }

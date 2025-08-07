@@ -1,10 +1,10 @@
-page 50852 "Egg Expected Cost"
+page 50852 "Storata Egg Expected Cost"
 {
     ApplicationArea = All;
     Caption = 'Egg Expected Cost (Graded)';
     PageType = List;
     Editable = true;
-    SourceTable = "Egg Expected Cost";
+    SourceTable = "Storata Egg Expected Cost";
     UsageCategory = Administration;
 
     layout
