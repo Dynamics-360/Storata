@@ -59,8 +59,12 @@ report 60450 "Update Call Sheet"
     local procedure InsertCallSheet(CustomRuns: Record "Customer Runs")
     var
         CallSheetRec: Record "Call Sheet";
+        Customer: Record Customer;
         Holidays: Record Holidays;
     begin
+        if not Customer.Get(CustomRuns."Customer No.") then
+            Error('Customer %1 not found', CustomRuns."Customer No.");
+
         CallSheetRec.Init();
         CallSheetRec.Validate("Customer No.", "Customer Runs"."Customer No.");
         CallSheetRec.Validate("Run No", CustomRuns."Run No");
@@ -70,6 +74,7 @@ report 60450 "Update Call Sheet"
         CallSheetRec.Validate("Call Date", CustomRuns."Call Date");
         CallSheetRec.Validate("Customer State", CustomRuns."Customer State");
         CallSheetRec.Validate("Call Group", CustomRuns."Call Group");
+        CallSheetRec.SetNotesTxt(Customer.GetSalesNote());
         if CallSheetRec.Insert() then begin
             Holidays.Reset();
             Holidays.SetRange(Date, WorkDate(), CallSheetRec."Call Date");

@@ -11,7 +11,7 @@
       <am:Name>PBIRB</am:Name>
       <am:Version>15.7.1814.616</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2025-07-14T11:58:37.7391217Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-08-05T12:58:53.0515267Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -6929,8 +6929,23 @@ SttTByo7B1StPLXW3rQGZTGdJO0BWdnnRGNdhtHjv2jM3wD4tz0N+wdr7f/c85ygGGOafXUKAO8GFvcF
         <Field Name="Pick_Code">
           <DataField>Pick_Code</DataField>
         </Field>
+        <Field Name="CustomerDropNo">
+          <DataField>CustomerDropNo</DataField>
+        </Field>
+        <Field Name="Req_COA">
+          <DataField>Req_COA</DataField>
+        </Field>
+        <Field Name="Req_SSCC">
+          <DataField>Req_SSCC</DataField>
+        </Field>
+        <Field Name="IC_Reference_Document_No_">
+          <DataField>IC_Reference_Document_No_</DataField>
+        </Field>
         <Field Name="Description_2">
           <DataField>Description_2</DataField>
+        </Field>
+        <Field Name="Pick_Group">
+          <DataField>Pick_Group</DataField>
         </Field>
       </Fields>
       <Query>

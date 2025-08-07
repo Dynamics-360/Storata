@@ -12,4 +12,12 @@ codeunit 50851 PFEventSubs
         end;
     end;
 
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", OnBeforePostSalesDoc, '', false, false)]
+    local procedure "Sales-Post_OnBeforePostSalesDoc"(var Sender: Codeunit "Sales-Post"; var SalesHeader: Record "Sales Header"; CommitIsSuppressed: Boolean; PreviewMode: Boolean; var HideProgressWindow: Boolean; var IsHandled: Boolean; var CalledBy: Integer)
+    begin
+        Processing.CheckCreditLimit(SalesHeader);
+    end;
+
+    var
+        Processing: Codeunit Processing;
 }

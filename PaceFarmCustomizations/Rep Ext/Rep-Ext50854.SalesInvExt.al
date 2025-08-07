@@ -40,7 +40,7 @@ reportextension 50854 SalesInvExt extends "PF Posted Sales Invoice"
     }
     rendering
     {
-        layout("SalesInv - D360")
+        layout("Sales Invoice - D360")
         {
             Type = RDLC;
             LayoutFile = './Rep Ext/Layouts/50854_PFPostedSalesInvoice.rdl';

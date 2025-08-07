@@ -1,5 +1,6 @@
 pageextension 60453 SalesLinesExt extends "Sales Lines"
 {
+    Editable = true;
     layout
     {
         addbefore(Quantity)

@@ -9,6 +9,8 @@ reportextension 50861 PostedSalesReturnReciept extends "Sales - Return Receipt"
                 Paymentterms: Record "Payment Terms";
                 ReturnReceiptLine: Record "Return Receipt Line";
                 CountryRegion: Record "Country/Region";
+                ShipCountryRegion: Record "Country/Region";
+                SalesInvoiceHeader: Record "Sales Invoice Header";
             begin
                 Paymentterms.Reset();
                 if Paymentterms.Get("Payment Terms Code") then
@@ -27,10 +29,73 @@ reportextension 50861 PostedSalesReturnReciept extends "Sales - Return Receipt"
                     Billtocountry := CountryRegion.Name
                 else
                     Billtocountry := '';
+
+                If ShipCountryRegion.get("Ship-to Country/Region Code") then
+                    Shiptocountry := CountryRegion.Name
+                else
+                    Shiptocountry := '';
+                SalesInvoiceHeader.Reset();
+                ShipCountryRegion.Reset();
+                if SalesInvoiceHeader.Get("Applies-to Doc. No.") then begin
+                    PSIShiptoName := SalesInvoiceHeader."Ship-to Name";
+                    PSIShiptoname2 := SalesInvoiceHeader."Ship-to Name 2";
+                    PSIShiptoAddress := SalesInvoiceHeader."Ship-to Address";
+                    PSIShiptoAddress2 := SalesInvoiceHeader."Ship-to Address 2";
+                    PSIShiptoCity := SalesInvoiceHeader."Ship-to City";
+                    PSIShiptoPostCode := SalesInvoiceHeader."Ship-to Post Code";
+                    PSIShiptoCountryRegionCode := SalesInvoiceHeader."Ship-to Country/Region Code";
+                    PSIShiptoCounty := SalesInvoiceHeader."Ship-to County";
+                    if ShipCountryRegion.Get(PSIShiptoCountryRegionCode) then
+                        PSIShiptoCountry := CountryRegion.Name
+                    else
+                        PSIShiptoCountry := '';
+                end
+                else begin
+                    PSIShiptoName := '';
+                    PSIShiptoname2 := '';
+                    PSIShiptoAddress := '';
+                    PSIShiptoAddress2 := '';
+                    PSIShiptoCity := '';
+                    PSIShiptoPostCode := '';
+                    PSIShiptoCountryRegionCode := '';
+                    PSIShiptoCounty := '';
+                    PSIShiptoCountry := '';
+                end;
             end;
         }
         add("Return Receipt Header")
         {
+            column(PSIShiptoname; PSIShiptoname)
+            {
+            }
+            column(PSIShiptoname2; PSIShiptoname2)
+            {
+
+            }
+            column(PSIShiptoAddress; PSIShiptoAddress)
+            {
+
+            }
+            column(PSIShiptoAddress2; PSIShiptoAddress2)
+            {
+
+            }
+            column(PSIShiptoCity; PSIShiptoCity)
+            {
+
+            }
+            column(PSIShiptoCountry; PSIShiptoCountry)
+            {
+
+            }
+            column(PSIShiptoCounty; PSIShiptoCounty)
+            {
+
+            }
+            column(PSIShiptoPostCode; PSIShiptoPostCode)
+            {
+
+            }
             column(Sell_to_Customer_Name; "Sell-to Customer Name")
             {
 
@@ -91,6 +156,22 @@ reportextension 50861 PostedSalesReturnReciept extends "Sales - Return Receipt"
             {
 
             }
+            column(Ship_to_Name; "Ship-to Name")
+            {
+
+            }
+            column(Ship_to_Country; Shiptocountry)
+            {
+
+            }
+            column(Ship_to_Address; "Ship-to Address")
+            {
+
+            }
+            column(Ship_to_Address_2; "Ship-to Address 2")
+            {
+
+            }
             column(Ship_to_Post_Code; "Ship-to Post Code")
             {
 
@@ -131,6 +212,10 @@ reportextension 50861 PostedSalesReturnReciept extends "Sales - Return Receipt"
             {
 
             }
+            column(WorkDesc; PFEventMgt.GetWorkDescription("Return Receipt Header"))
+            {
+
+            }
         }
         add(CopyLoop)
         {
@@ -161,7 +246,7 @@ reportextension 50861 PostedSalesReturnReciept extends "Sales - Return Receipt"
 
     rendering
     {
-        layout(D360SalesReturnReciept)
+        layout("Sals Return Receipt - D360")
         {
             Type = RDLC;
             LayoutFile = './Rep Ext/Layouts/50861_PFSalesReturnReceipt.rdl';
@@ -169,10 +254,21 @@ reportextension 50861 PostedSalesReturnReciept extends "Sales - Return Receipt"
     }
     var
         PaceFarmCodeunit: Codeunit "Pace Farm Codeunit";
+        PFEventMgt: Codeunit "PF_EventMgt";
         Company: Record "Company Information";
         PaymentDescription: Text[100];
         totalamountSR: Decimal;
         Billtocountry: Text[100];
+        Shiptocountry: Text[100];
+        PSIShiptoName: Text[100];
+        PSIShiptoname2: Text[50];
+        PSIShiptoAddress: Text[100];
+        PSIShiptoAddress2: Text[50];
+        PSIShiptoCity: Text[30];
+        PSIShiptoPostCode: Text[20];
+        PSIShiptoCountryRegionCode: Code[10];
+        PSIShiptoCounty: Text[30];
+        PSIShiptoCountry: Text[30];
 
 
     trigger OnPreReport()
