@@ -1,8 +1,50 @@
-pageextension 60450 CustomCardExt extends "Customer Card"
+pageextension 60450 PFCustomerExt extends "Customer Card"
 {
     PromotedActionCategories = ',,,,,,,,,,Run Process';
     layout
     {
+        addafter("Last Date Modified")
+        {
+            field("Drop No."; Rec."Drop No.")
+            {
+                ApplicationArea = All;
+
+            }
+            field("Req. Electronic Inv."; Rec."Req. Electronic Inv.")
+            {
+                ApplicationArea = All;
+            }
+        }
+        addlast(General)
+        {
+            field("External Delivery Note"; ExternalDelivNote)
+            {
+                ApplicationArea = All;
+                MultiLine = true;
+                trigger OnValidate()
+                begin
+                    Rec.SetExternalDeliveryNote(ExternalDelivNote);
+                end;
+            }
+            field("Pick Note"; PickNote)
+            {
+                ApplicationArea = All;
+                MultiLine = true;
+                trigger OnValidate()
+                begin
+                    Rec.SetPickNote(PickNote);
+                end;
+            }
+            field("Posted Invoice Note"; PostedInvNote)
+            {
+                ApplicationArea = All;
+                MultiLine = true;
+                trigger OnValidate()
+                begin
+                    Rec.SetPostedInvoicekNote(PostedInvNote);
+                end;
+            }
+        }
         addafter("Address & Contact")
         {
             group("Customer SKU's")
@@ -27,6 +69,34 @@ pageextension 60450 CustomCardExt extends "Customer Card"
                 }
             }
         }
+        addlast(General)
+        {
+            field("Sales Note"; SalesNote)
+            {
+                ApplicationArea = All;
+                MultiLine = true;
+                Caption = 'Sales Note';
+                ToolTip = 'Enter any sales-related notes for this customer.';
+
+                trigger OnValidate()
+                begin
+                    Rec.SetSalesNote(SalesNote);
+                end;
+            }
+            field("Sales Phone Number"; Rec."Sales Phone Number")
+            {
+                ApplicationArea = All;
+                Caption = 'Sales Phone Number';
+                ToolTip = 'Enter the sales phone number for this customer.';
+            }
+            field("Sales Contact"; Rec."Sales Contact")
+            {
+                ApplicationArea = All;
+                Caption = 'Sales Contact';
+                ToolTip = 'Select the sales contact for this customer.';
+            }
+
+        }
     }
     actions
     {
@@ -49,66 +119,49 @@ pageextension 60450 CustomCardExt extends "Customer Card"
 
                     trigger OnAction()
                     var
-                        SalesHead: Record "Sales Header";
-                        SalesLine: Record "Sales Line";
-                        CustomerSku: Record "Customer SKU";
-                        CustRun: Record "Customer Runs";
-                        SalesOrderPag: Page "Sales Order";
-                        LineNo: Integer;
-                        Count: Integer;
+                        CustomRun: Record "Customer Runs";
+                        CustomRunPag: Page "Customer Runs";
+                        RunMgt: Codeunit "Run Number Mgt.";
                     begin
-                        Count := 0;
-                        CustRun.Reset();
-                        CustRun.SetRange("Customer No.", Rec."No.");
-                        if CustRun.FindFirst() then begin
-                            repeat
-                                Clear(SalesHead);
-                                Clear(SalesLine);
-                                Clear(LineNo);
-                                SalesHead.Init();
-                                SalesHead.validate("Document Type", SalesHead."Document Type"::Order);
-                                SalesHead.Validate("Sell-to Customer No.", Rec."No.");
-                                SalesHead.Validate("Bill-to Customer No.", Rec."No.");
-                                SalesHead.validate("Document Date", Today);
-                                SalesHead.Validate("Run No.", CustRun."Run No");
-                                if SalesHead.Insert(true) then begin
-                                    Count += 1;
-                                    CustomerSku.Reset();
-                                    CustomerSku.SetRange("Customer No.", Rec."No.");
-                                    if CustomerSku.FindFirst() then begin
-                                        repeat
-                                            SalesLine.Init;
-                                            LineNo += 10000;
-                                            SalesLine.validate("Document Type", SalesLine."Document Type"::Order);
-                                            SalesLine.Validate("Document No.", SalesHead."No.");
-                                            SalesLine.validate("Line No.", LineNo);
-                                            SalesLine.Validate(Type, SalesLine.Type::Item);
-                                            SalesLine.Validate("No.", CustomerSku."Item No.");
-                                            SalesLine.Validate(Quantity, CustomerSku.Quantity);
-                                            SalesLine.Insert();
-                                        until CustomerSku.Next() = 0;
-                                    end;
-                                end;
-                            // Commit();
-                            until CustRun.Next() = 0;
+                        CustomRun.Reset();
+                        CustomRun.SetRange("Customer No.", Rec."No.");
+                        if CustomRun.FindSet() then begin
+                            RunMgt.CreateOrder(Rec, CustomRun);
                         end;
-                        if Count > 0 then
-                            Message('%1 order created for Customer %2', Count, Rec."No.");
                     end;
                 }
                 action("Update Run Date")
                 {
                     ApplicationArea = All;
                     Image = ChangeDate;
+                    Promoted = true;
+                    PromotedOnly = true;
+                    PromotedCategory = Category11;
+
                     trigger OnAction()
                     var
-                        UpdateCall: Codeunit "Update Calls";
+                        UpdateCallsDate: Codeunit "Run Number Mgt.";
+                        CallSheet: Report "Update Call Sheet";
                     begin
-                        UpdateCall.CalcUpdateCalls();
+                        UpdateCallsDate.CalcUpdateCalls();
+                        Commit();
+                        CallSheet.Run();
                     end;
                 }
-
             }
         }
     }
+    trigger OnAfterGetRecord()
+    begin
+        SalesNote := Rec.GetSalesNote();
+        ExternalDelivNote := Rec.GetExternalDeliveryNote();
+        PickNote := Rec.GetPickNote();
+        PostedInvNote := Rec.GetPostedInvoiceNote();
+    end;
+
+    var
+        ExternalDelivNote: Text;
+        PickNote: Text;
+        PostedInvNote: Text;
+        SalesNote: Text;
 }

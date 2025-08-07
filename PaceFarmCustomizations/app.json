@@ -1,8 +1,8 @@
 {
   "id": "a494f6a4-e463-47d2-b949-b71dabc7b934",
-  "name": "PaceExten",
-  "publisher": "D360",
-  "version": "1.0.0.6",
+  "name": "Storata - PF Customizatinos",
+  "publisher": "Storata",
+  "version": "1.0.0.9",
   "brief": "",
   "description": "",
   "privacyStatement": "",
@@ -13,9 +13,15 @@
   "dependencies": [
     {
       "id": "88888888-2025-0003-0005-838886613317",
-  "name": "Storata - PF Purchase Process",
-  "publisher": "Storata",
-  "version": "25.5.3.15"
+      "name": "Storata - PF Purchase Process",
+      "publisher": "Storata",
+      "version": "26.0.0.0"
+    },
+    {
+      "id": "84e1fb61-51e5-41f2-9fc1-0b92d85fe134",
+      "name": "Storata - PF Run Number",
+      "publisher": "Storata",
+      "version": "1.0.0.3"
     }
   ],
   "screenshots": [],

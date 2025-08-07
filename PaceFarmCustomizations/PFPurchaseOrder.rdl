@@ -9,7 +9,7 @@
       <am:Name>MSRB</am:Name>
       <am:Version>15.0.20283.0</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2025-06-06T06:08:31.1379475Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-06-17T06:52:43.3813401Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -30,7 +30,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>19.10364cm</Width>
+                  <Width>19.14944cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -73,40 +73,40 @@
                               <TablixBody>
                                 <TablixColumns>
                                   <TablixColumn>
-                                    <Width>4.35826cm</Width>
+                                    <Width>4.55877cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>1.49261cm</Width>
-                                  </TablixColumn>
-                                  <TablixColumn>
-                                    <Width>0.30731cm</Width>
-                                  </TablixColumn>
-                                  <TablixColumn>
-                                    <Width>2.05903cm</Width>
-                                  </TablixColumn>
-                                  <TablixColumn>
-                                    <Width>1.52299cm</Width>
+                                    <Width>3.39737cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
                                     <Width>0.07938cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>0.8021cm</Width>
+                                    <Width>0.07938cm</Width>
+                                  </TablixColumn>
+                                  <TablixColumn>
+                                    <Width>1.39288cm</Width>
+                                  </TablixColumn>
+                                  <TablixColumn>
+                                    <Width>0.07938cm</Width>
+                                  </TablixColumn>
+                                  <TablixColumn>
+                                    <Width>1.17536cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
                                     <Width>0.7793cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>1.78308cm</Width>
+                                    <Width>1.36092cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>1.91201cm</Width>
+                                    <Width>1.97706cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>1.64634cm</Width>
+                                    <Width>1.31534cm</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>2.36123cm</Width>
+                                    <Width>2.9543cm</Width>
                                   </TablixColumn>
                                 </TablixColumns>
                                 <TablixRows>
@@ -413,45 +413,11 @@ Back Order Accepted</Value>
                                               <PaddingBottom>2pt</PaddingBottom>
                                             </Style>
                                           </Textbox>
-                                          <ColSpan>2</ColSpan>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell />
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox35">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style>
-                                                      <FontSize>9pt</FontSize>
-                                                      <Color>Red</Color>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style />
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox35</rd:DefaultName>
-                                            <Style>
-                                              <Border>
-                                                <Style>None</Style>
-                                              </Border>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
-                                            </Style>
-                                          </Textbox>
                                         </CellContents>
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox36">
+                                          <Textbox Name="Textbox4">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
@@ -464,9 +430,7 @@ Back Order Accepted</Value>
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Right</TextAlign>
-                                                </Style>
+                                                <Style />
                                               </Paragraph>
                                               <Paragraph>
                                                 <TextRuns>
@@ -477,9 +441,7 @@ Back Order Accepted</Value>
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Right</TextAlign>
-                                                </Style>
+                                                <Style />
                                               </Paragraph>
                                               <Paragraph>
                                                 <TextRuns>
@@ -491,9 +453,7 @@ Back Order Accepted</Value>
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Right</TextAlign>
-                                                </Style>
+                                                <Style />
                                               </Paragraph>
                                               <Paragraph>
                                                 <TextRuns>
@@ -505,9 +465,7 @@ Back Order Accepted</Value>
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Right</TextAlign>
-                                                </Style>
+                                                <Style />
                                               </Paragraph>
                                               <Paragraph>
                                                 <TextRuns>
@@ -518,12 +476,10 @@ Back Order Accepted</Value>
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Right</TextAlign>
-                                                </Style>
+                                                <Style />
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>Textbox36</rd:DefaultName>
+                                            <rd:DefaultName>Textbox4</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Style>None</Style>
@@ -534,9 +490,11 @@ Back Order Accepted</Value>
                                               <PaddingBottom>2pt</PaddingBottom>
                                             </Style>
                                           </Textbox>
-                                          <ColSpan>2</ColSpan>
+                                          <ColSpan>4</ColSpan>
                                         </CellContents>
                                       </TablixCell>
+                                      <TablixCell />
+                                      <TablixCell />
                                       <TablixCell />
                                       <TablixCell>
                                         <CellContents>
@@ -900,49 +858,13 @@ Back Order Accepted</Value>
                                               <PaddingBottom>2pt</PaddingBottom>
                                             </Style>
                                           </Textbox>
-                                          <ColSpan>4</ColSpan>
+                                          <ColSpan>5</ColSpan>
                                         </CellContents>
                                       </TablixCell>
                                       <TablixCell />
                                       <TablixCell />
                                       <TablixCell />
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox14">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style>
-                                                      <FontSize>9pt</FontSize>
-                                                      <FontWeight>Bold</FontWeight>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Right</TextAlign>
-                                                </Style>
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox14</rd:DefaultName>
-                                            <Style>
-                                              <Border>
-                                                <Style>None</Style>
-                                              </Border>
-                                              <BottomBorder>
-                                                <Style>Solid</Style>
-                                              </BottomBorder>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
+                                      <TablixCell />
                                       <TablixCell>
                                         <CellContents>
                                           <Textbox Name="Textbox20">
@@ -1144,7 +1066,7 @@ Back Order Accepted</Value>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=IIF(Fields!LineAmount.Value = 0 And Fields!Quantity.Value = 0, "", Fields!No_PurchLine.Value)</Value>
+                                                    <Value>=IIF(Fields!LineAmount.Value = 0 And Fields!Quantity.Value = 0 Or Fields!ItemReference.Value &lt;&gt;"", Fields!ItemReference.Value, Fields!No_PurchLine.Value)</Value>
                                                     <Style>
                                                       <FontSize>9pt</FontSize>
                                                     </Style>
@@ -3153,7 +3075,7 @@ IIF(Fields!PayToVendorFaxNo.Value ="","","  Fax : " &amp; Fields!PayToVendorFaxN
                               <KeepTogether>true</KeepTogether>
                               <DataSetName>DataSet_Result</DataSetName>
                               <Height>8.55989cm</Height>
-                              <Width>19.10364cm</Width>
+                              <Width>19.14944cm</Width>
                               <ZIndex>1</ZIndex>
                               <Style>
                                 <Border>
@@ -3213,7 +3135,7 @@ IIF(Fields!PayToVendorFaxNo.Value ="","","  Fax : " &amp; Fields!PayToVendorFaxN
             <Top>0.00336in</Top>
             <Left>0.08573cm</Left>
             <Height>8.85975cm</Height>
-            <Width>19.10364cm</Width>
+            <Width>19.14944cm</Width>
             <Style>
               <FontSize>9pt</FontSize>
             </Style>
@@ -3222,7 +3144,7 @@ IIF(Fields!PayToVendorFaxNo.Value ="","","  Fax : " &amp; Fields!PayToVendorFaxN
         <Height>8.86828cm</Height>
         <Style />
       </Body>
-      <Width>19.207cm</Width>
+      <Width>19.23517cm</Width>
       <Page>
         <PageHeader>
           <Height>4.32908cm</Height>
@@ -3376,7 +3298,7 @@ IIF(Fields!PayToVendorFaxNo.Value ="","","  Fax : " &amp; Fields!PayToVendorFaxN
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>The Supplier acknowledges and accepts theorder placed in accordance with the</Value>
+                      <Value>The Supplier acknowledges and accepts the order placed in accordance with the</Value>
                       <Style>
                         <FontWeight>Bold</FontWeight>
                       </Style>
@@ -4046,6 +3968,9 @@ SttTByo7B1StPLXW3rQGZTGdJO0BWdnnRGNdhtHjv2jM3wD4tz0N+wdr7f/c85ygGGOafXUKAO8GFvcF
         </Field>
         <Field Name="VAT_Identifier">
           <DataField>VAT_Identifier</DataField>
+        </Field>
+        <Field Name="ItemReference">
+          <DataField>ItemReference</DataField>
         </Field>
       </Fields>
       <Query>

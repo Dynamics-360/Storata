@@ -3,11 +3,11 @@ page 60453 "Call Sheet"
     ApplicationArea = All;
     Caption = 'Call Sheet';
     PageType = List;
-    SourceTable = "Customer Runs";
+    SourceTable = "Call Sheet";
     UsageCategory = Lists;
-    Editable = false;
+    Editable = true;
     InsertAllowed = false;
-    DeleteAllowed = false;
+    DeleteAllowed = true;
 
     layout
     {
@@ -27,6 +27,23 @@ page 60453 "Call Sheet"
                 {
                     ToolTip = 'Specifies the value of the Customer State field.', Comment = '%';
                 }
+                field(Blocked; Rec.Blocked)
+                {
+                    ToolTip = 'Specifies the value of the Blocked field.', Comment = '%';
+                    StyleExpr = StyleExp;
+                }
+                field("Drop No"; Rec."Drop No")
+                {
+                    ToolTip = 'Show the value of the Drop No field.', Comment = '%';
+                }
+                field("Sales Phone Number"; Rec."Sales Phone Number")
+                {
+                    ToolTip = 'Specifies the value of the Sales Phone Number field.', Comment = '%';
+                }
+                field("Sales Contact"; Rec."Sales Contact")
+                {
+                    ToolTip = 'Specifies the value of the Sales Contact field.', Comment = '%';
+                }
                 field("Run No"; Rec."Run No")
                 {
                     ToolTip = 'Specifies the value of the Run No field.', Comment = '%';
@@ -38,14 +55,39 @@ page 60453 "Call Sheet"
                 field("Run Date"; Rec."Run Date")
                 {
                     ToolTip = 'Specifies the value of the Run Date field.', Comment = '%';
+                    StyleExpr = StyleExpForNewDate;
                 }
                 field("Call Day"; Rec."Call Day")
                 {
                     ToolTip = 'Specifies the value of the Call Day field.', Comment = '%';
                 }
+                field("Call Group"; Rec."Call Group")
+                {
+                    ToolTip = 'Specifies the value of the Call Group field.', Comment = '%';
+                }
                 field("Call Date"; Rec."Call Date")
                 {
                     ToolTip = 'Specifies the value of the Call Date field.', Comment = '%';
+                }
+                field("Sales Note"; SalesNoteTxt)
+                {
+                    ToolTip = 'Specifies the value of the Sales Note field.', Comment = '%';
+                }
+                field(Comment; Rec.Comment)
+                {
+                    ToolTip = 'Specifies the value of the Comment field.', Comment = '%';
+                }
+                field("Call Back"; Rec."Call Back")
+                {
+                    ToolTip = 'Specifies the value of the Call Back field.', Comment = '%';
+                }
+                field(Closed; Rec.Closed)
+                {
+                    ToolTip = 'Specifies the value of the Closed field.', Comment = '%';
+                }
+                field(Holidays; Rec.Holidays)
+                {
+                    ToolTip = 'Specifies the value of the Holidays field.', Comment = '%';
                 }
             }
         }
@@ -81,45 +123,24 @@ page 60453 "Call Sheet"
 
                 trigger OnAction()
                 var
-                    SalesHead: Record "Sales Header";
-                    SalesLine: Record "Sales Line";
-                    CustomerSku: Record "Customer SKU";
-                    SalesOrderPag: Page "Sales Order";
-                    LineNo: Integer;
+                    Customer: Record Customer;
+                    CustRun: Record "Customer Runs";
+                    CallSheet: Record "Call Sheet";
+                    Run: Record "Runs";
+                    RunMgt: Codeunit "Run Number Mgt.";
                 begin
-                    Clear(SalesHead);
-                    Clear(SalesLine);
-                    Clear(LineNo);
-                    SalesHead.Init();
-                    SalesHead.validate("Document Type", SalesHead."Document Type"::Order);
-                    SalesHead.Validate("Sell-to Customer No.", Rec."Customer No.");
-                    SalesHead.Validate("Bill-to Customer No.", Rec."Customer No.");
-                    SalesHead.validate("Document Date", Today);
-                    SalesHead.Validate("Run No.", Rec."Run No");
-                    if SalesHead.Insert(true) then begin
-                        CustomerSku.Reset();
-                        CustomerSku.SetRange("Customer No.", Rec."Customer No.");
-                        if CustomerSku.FindFirst() then begin
-                            repeat
-                                SalesLine.Init;
-                                LineNo += 10000;
-                                SalesLine.validate("Document Type", SalesLine."Document Type"::Order);
-                                SalesLine.Validate("Document No.", SalesHead."No.");
-                                SalesLine.validate("Line No.", LineNo);
-                                SalesLine.Validate(Type, SalesLine.Type::Item);
-                                SalesLine.Validate("No.", CustomerSku."Item No.");
-                                SalesLine.Validate(Quantity, CustomerSku.Quantity);
-                                SalesLine.Insert();
-                            until CustomerSku.Next() = 0;
-                        end;
-                    end;
-                    // Commit();
-                    Message('Order created for Customer %1', Rec."Customer No.");
+                    if Customer.Get(Rec."Customer No.") then
+                        if CustRun.Get(Rec."Customer No.", Rec."Run No") then
+                            RunMgt.CreateOrder(Customer, CustRun);
                 end;
             }
-
         }
     }
+    trigger OnOpenPage()
+    begin
+        Rec.SetRange(Closed, false);
+    end;
+
     trigger OnAfterGetRecord()
     var
         Customer: Record Customer;
@@ -127,8 +148,43 @@ page 60453 "Call Sheet"
         if Customer.Get(Rec."Customer No.") then begin
             Rec."Customer Name" := Customer.Name;
             Rec."Customer State" := Customer.County;
+            Rec."Sales Phone Number" := Customer."Sales Phone Number";
+            Rec.SetNotesTxt(Customer.GetSalesNote());
+            Rec.Modify();
+            SalesNoteTxt := Rec.GetNotesTxt();
+        end;
+
+        UpdateRunDateFromHolidayChanges();
+
+        if Rec.Blocked <> Rec.Blocked::" " then
+            StyleExp := 'unfavorable'
+        else
+            StyleExp := 'None';
+
+        if Rec."Holiday Date Changed" then
+            StyleExpForNewDate := 'unfavorable'
+        else
+            StyleExpForNewDate := 'None';
+
+        CurrPage.Update(false);
+    end;
+
+    local procedure UpdateRunDateFromHolidayChanges()
+    var
+        HolidayChanges: Record "Holiday Changes";
+    begin
+        HolidayChanges.Reset();
+        HolidayChanges.SetRange("Run No", Rec."Run No");
+        HolidayChanges.SetRange("Date to be Replaced", Rec."Run Date");
+        if HolidayChanges.FindSet() then begin
+            Rec."Run Date" := HolidayChanges."New Date";
+            Rec."Holiday Date Changed" := true;
             Rec.Modify();
         end;
     end;
 
+    var
+        SalesNoteTxt: Text;
+        StyleExp: Text;
+        StyleExpForNewDate: Text;
 }

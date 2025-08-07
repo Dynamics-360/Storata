@@ -24,10 +24,6 @@ page 60452 "Customer SKU"
                 {
                     ToolTip = 'Specifies the value of the Item UOM field.', Comment = '%';
                 }
-                field(Quantity; Rec.Quantity)
-                {
-                    ToolTip = 'Specifies the value of the Quantity field.', Comment = '%';
-                }
             }
         }
     }

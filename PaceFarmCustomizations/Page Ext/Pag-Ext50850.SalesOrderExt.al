@@ -14,4 +14,23 @@ pageextension 50850 SalesOrderExt extends "Sales Order"
             }
         }
     }
+    actions
+    {
+        addafter(Post)
+        {
+            action("Create Stock")
+            {
+                ApplicationArea = All;
+                Promoted = true;
+                PromotedCategory = Process;
+
+                trigger OnAction()
+                var
+                    Process: Codeunit Processing;
+                begin
+                    Process.UpdateStockUsingItemJournal(Rec);
+                end;
+            }
+        }
+    }
 }

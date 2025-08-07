@@ -28,7 +28,8 @@ reportextension 50855 RemiAdvEntries extends "Remittance Advice - Entries"
         layout("Remittance Advice - D360")
         {
             Type = RDLC;
-            LayoutFile = './RemitAdvEntries.rdl';
+            LayoutFile = './Rep Ext/Layouts/50855_PFRemitAdvEntries.rdl';
+
         }
     }
     var
@@ -56,4 +57,6 @@ reportextension 50855 RemiAdvEntries extends "Remittance Advice - Entries"
         exit(FirstPart + ' ' + SecondPart + ' ' + ThirdPart + ' ' + ForthPart);
 
     end;
+
+
 }
