@@ -8,6 +8,7 @@ pageextension 60451 SalesOrdExt extends "Sales Order"
             {
                 ApplicationArea = All, Basic, Suite;
             }
+
             field("Drop No"; Rec."Drop No")
             {
                 ApplicationArea = All;

@@ -1,4 +1,4 @@
-pageextension 60450 PFCustomCardExt extends "Customer Card"
+pageextension 60450 PFCustomerExt extends "Customer Card"
 {
     PromotedActionCategories = ',,,,,,,,,,Run Process';
     layout

@@ -1,4 +1,4 @@
-page 60455 PFHolidays
+page 60455 Holidays
 {
     ApplicationArea = All;
     Caption = 'Holidays';

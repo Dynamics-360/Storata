@@ -10,18 +10,21 @@ tableextension 60450 SalesHeadExt extends "Sales Header"
         }
         field(60451; "Req SSCC"; Boolean)
         {
-            DataClassification = CustomerContent;
             Caption = 'Req SSCC';
+            FieldClass = FlowField;
+            CalcFormula = lookup(Customer."Req SSCC" where("No." = field("Sell-to Customer No.")));
         }
         field(60452; "Req COA"; Boolean)
         {
-            DataClassification = CustomerContent;
             Caption = 'Req COA';
+            FieldClass = FlowField;
+            CalcFormula = lookup(Customer.ReqCOA where("No." = field("Sell-to Customer No.")));
         }
         field(60453; "Requires Electronic Invoice"; Boolean)
         {
-            DataClassification = CustomerContent;
             Caption = 'Requires Electronic Invoice';
+            FieldClass = FlowField;
+            CalcFormula = lookup(Customer."Req. Electronic Inv." where("No." = field("Sell-to Customer No.")));
         }
         field(60454; "Drop No"; Text[30])
         {
@@ -52,9 +55,6 @@ tableextension 60450 SalesHeadExt extends "Sales Header"
                 CustomerRec: Record Customer;
             begin
                 if CustomerRec.get("Sell-to Customer No.") then begin
-                    Rec."Req SSCC" := CustomerRec."Req SSCC";
-                    Rec."Req COA" := CustomerRec.ReqCOA;
-                    Rec."Requires Electronic Invoice" := CustomerRec."Use GLN in Electronic Document";
                     Rec.SetExternalDeliveryNote(CustomerRec.GetExternalDeliveryNote());
                     Rec.SetPickNote(CustomerRec.GetPickNote());
                     Rec.SetPostedInvoicekNote(CustomerRec.GetPostedInvoiceNote());

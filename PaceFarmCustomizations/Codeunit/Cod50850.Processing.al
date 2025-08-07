@@ -111,7 +111,7 @@ codeunit 50850 Processing
     procedure UpdateStockUsingItemJournal(SalesHeader: Record "Sales Header")
     var
         SalesLine: Record "Sales Line";
-        EggExpCost: Record "Egg Expected Cost";
+        EggExpCost: Record "Storata Egg Expected Cost";
         ItemJnlLines: Record "Item Journal Line";
         DimValues: array[8] of Code[20];
         LineNo: Integer;
@@ -269,6 +269,30 @@ codeunit 50850 Processing
         If Rec_ExcelBuffer.Get(RowNo, ColNo) then
             exit(Rec_ExcelBuffer."Cell Value as Text");
 
+    end;
+
+    procedure CheckCreditLimit(SalesHeader: Record "Sales Header")
+    var
+        Customer: Record Customer;
+        UserSetup: Record "User Setup";
+    begin
+        if not Customer.Get(SalesHeader."Sell-to Customer No.") then
+            Error('Customer %1 does not exist.', Customer."No.");
+
+        if Customer."Credit Limit (LCY)" <= 0 then
+            exit;
+
+        Customer.CalcFields("Balance (LCY)");
+        if Customer."Credit Limit (LCY)" < Customer."Balance (LCY)" then
+            Error('You can''t post the order because customer %1 already have the balance of %2', Customer."No.", Customer."Balance (LCY)");
+
+        if Customer."Credit Limit (LCY)" < Customer."Balance (LCY)" + SalesHeader."Amount Including VAT" then begin
+            if not UserSetup.Get(UserId()) then
+                Error('User setup for user %1 does not exist for Credit Limit setup.', UserId());
+
+            if not UserSetup."Sales Limit Override" then
+                Error('You can''t post the order because you don''t have the permission to Ovveride the Credit Limit', Customer."No.", Customer."Balance (LCY)");
+        end;
     end;
 
     var

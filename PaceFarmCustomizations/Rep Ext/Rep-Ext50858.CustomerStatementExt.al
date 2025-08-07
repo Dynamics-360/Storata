@@ -45,10 +45,10 @@ reportextension 50858 CustomerStatementExt extends "Standard Statement"
 
     rendering
     {
-        layout(D360CustomerStatment)
+        layout("Customer Statement - D360")
         {
             Type = RDLC;
-            LayoutFile = 'D360CustomerStatment.rdl';
+            LayoutFile = './Rep Ext/Layouts/50858_PFCustomerStatment.rdl';
         }
     }
     var
