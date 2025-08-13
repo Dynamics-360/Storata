@@ -8,6 +8,7 @@ reportextension 50863 RCTILayer extends "PF RCTI"
             var
                 vendor: Record Vendor;
                 VendorBankAccount: Record "Vendor Bank Account";
+                PurchaseLine: Record "Purchase Line";
             begin
                 vendor.Reset();
                 vendor.Get("Buy-from Vendor No.");
@@ -57,6 +58,13 @@ reportextension 50863 RCTILayer extends "PF RCTI"
                     AGPremium := 0;
                     AGSeconds := 0;
                 end;
+                PurchaseLine.Reset();
+                PurchaseLine.SetRange("Document Type", "Document Type");
+                PurchaseLine.SetFilter("Document No.", '%1', "No.");
+                if PurchaseLine.FindFirst() then
+                    GST := PurchaseLine."VAT %"
+                else
+                    GST := 1;
                 // RCTI_DETAILS BARN 
                 RCTI_Details_.Reset();
                 RCTI_Details_.SetRange("Document Type", RCTI_Details_."Document Type"::Order);
@@ -290,6 +298,10 @@ reportextension 50863 RCTILayer extends "PF RCTI"
 
             }
 
+            column(GST; GST)
+            {
+
+            }
 
         }
 
@@ -357,6 +369,7 @@ reportextension 50863 RCTILayer extends "PF RCTI"
 
             }
         }
+
     }
 
     requestpage
@@ -370,6 +383,11 @@ reportextension 50863 RCTILayer extends "PF RCTI"
         {
             Type = RDLC;
             LayoutFile = './Rep Ext/Layouts/50863_PFRCTILayer.rdl';
+        }
+        layout("RCTI Layer 2- D360")
+        {
+            Type = RDLC;
+            LayoutFile = './Rep Ext/Layouts/50863_PFRCTILayer2.rdl';
         }
     }
     var
@@ -402,6 +420,7 @@ reportextension 50863 RCTILayer extends "PF RCTI"
         Rate_RCTI_FreeRangeSec: Decimal;
         Total_RCTI_OrganicSec: Decimal;
         Rate_RCTI_OrganicSec: Decimal;
+        GST: Decimal;
 
     trigger OnPreReport()
     var

@@ -23,6 +23,63 @@ pageextension 50857 PF_PostedReturnReceiptExt extends "Posted Return Receipt"
                 MultiLine = true;
                 Editable = false;
             }
+            field("Product Relv. Temp."; Rec."Product Relv. Temp.")
+            {
+                ApplicationArea = All;
+            }
+
+            group(PFReturn)
+            {
+                Caption = 'PF - Return';
+                field("Date Produced/UBD"; Rec."Date Produced/UBD")
+                {
+                    ApplicationArea = All;
+                }
+                field("Warehouse Supervisor"; Rec."Warehouse Supervisor")
+                {
+                    ApplicationArea = All;
+                }
+                field("Store Man"; Rec."Store Man")
+                {
+                    ApplicationArea = All;
+                }
+                field(Carrier; Rec.Carrier)
+                {
+                    ApplicationArea = All;
+                }
+                field(Driver; Rec.Driver)
+                {
+                    ApplicationArea = All;
+                }
+                field("Run No."; Rec."Run No.")
+                {
+                    ApplicationArea = All;
+                }
+                field(Product; Rec.Product)
+                {
+                    ApplicationArea = All;
+                }
+            }
+        }
+        addafter(Shipping)
+        {
+            group("Adjustment Details")
+            {
+                Caption = 'Adjustment Details';
+                field("Action Taken"; Rec."Action Taken")
+                {
+                    ApplicationArea = All;
+                }
+                field("Action Take Comment"; Rec."Action Take Comment")
+                {
+                    ApplicationArea = All;
+                }
+                field("Reason for Return Comment"; Rec."Reason for Return Comment")
+                {
+                    ApplicationArea = All;
+                }
+            }
+
         }
     }
 

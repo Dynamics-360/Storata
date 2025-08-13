@@ -3894,6 +3894,57 @@ SttTByo7B1StPLXW3rQGZTGdJO0BWdnnRGNdhtHjv2jM3wD4tz0N+wdr7f/c85ygGGOafXUKAO8GFvcF
         <Field Name="WorkDesc">
           <DataField>WorkDesc</DataField>
         </Field>
+        <Field Name="Store_Man">
+          <DataField>Store_Man</DataField>
+        </Field>
+        <Field Name="Carrier">
+          <DataField>Carrier</DataField>
+        </Field>
+        <Field Name="Driver">
+          <DataField>Driver</DataField>
+        </Field>
+        <Field Name="Run_No">
+          <DataField>Run_No</DataField>
+        </Field>
+        <Field Name="Document_Date">
+          <DataField>Document_Date</DataField>
+        </Field>
+        <Field Name="Product">
+          <DataField>Product</DataField>
+        </Field>
+        <Field Name="Product_Relv__Temp_">
+          <DataField>Product_Relv__Temp_</DataField>
+        </Field>
+        <Field Name="Product_Relv__Temp_Format">
+          <DataField>Product_Relv__Temp_Format</DataField>
+        </Field>
+        <Field Name="Date_Produced_UBD">
+          <DataField>Date_Produced_UBD</DataField>
+        </Field>
+        <Field Name="Reason_Code">
+          <DataField>Reason_Code</DataField>
+        </Field>
+        <Field Name="Reason_for_Return_Comment">
+          <DataField>Reason_for_Return_Comment</DataField>
+        </Field>
+        <Field Name="Warehouse_Supervisor">
+          <DataField>Warehouse_Supervisor</DataField>
+        </Field>
+        <Field Name="Supervisor">
+          <DataField>Supervisor</DataField>
+        </Field>
+        <Field Name="Warehouse_Handling_Time">
+          <DataField>Warehouse_Handling_Time</DataField>
+        </Field>
+        <Field Name="Action_Taken">
+          <DataField>Action_Taken</DataField>
+        </Field>
+        <Field Name="Action_Take_Comment">
+          <DataField>Action_Take_Comment</DataField>
+        </Field>
+        <Field Name="Run_No_">
+          <DataField>Run_No_</DataField>
+        </Field>
         <Field Name="OrderTakenBy">
           <DataField>OrderTakenBy</DataField>
         </Field>
@@ -3917,6 +3968,15 @@ SttTByo7B1StPLXW3rQGZTGdJO0BWdnnRGNdhtHjv2jM3wD4tz0N+wdr7f/c85ygGGOafXUKAO8GFvcF
         </Field>
         <Field Name="VAT_Base_AmountFormat">
           <DataField>VAT_Base_AmountFormat</DataField>
+        </Field>
+        <Field Name="Type">
+          <DataField>Type</DataField>
+        </Field>
+        <Field Name="Condition_on_Arrival">
+          <DataField>Condition_on_Arrival</DataField>
+        </Field>
+        <Field Name="Condition_Comment">
+          <DataField>Condition_Comment</DataField>
         </Field>
       </Fields>
       <Query>

@@ -16,6 +16,10 @@ reportextension 50854 SalesInvExt extends "PF Posted Sales Invoice"
             column(Sell_to_Customer_Name; "Sell-to Customer Name")
             {
             }
+            column(PostedInvoiceNote; GetPostedInvoiceNote)
+            {
+
+            }
         }
         add("Sales Invoice Line")
         {

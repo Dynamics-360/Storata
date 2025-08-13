@@ -11,7 +11,7 @@
       <am:Name>PBIRB</am:Name>
       <am:Version>15.7.1814.616</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2025-07-17T23:45:24.3464039Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-08-07T21:13:49.4554636Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -1364,6 +1364,7 @@ Invoice Account</Value>
             </Textbox>
             <Textbox Name="Textbox234">
               <rd:DefaultName>Textbox231</rd:DefaultName>
+              <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
@@ -1446,7 +1447,7 @@ Invoice Account</Value>
               <Top>1.05853cm</Top>
               <Left>3.02458cm</Left>
               <Height>2.7693cm</Height>
-              <Width>8.69052cm</Width>
+              <Width>5.11286cm</Width>
               <ZIndex>12</ZIndex>
               <Style>
                 <Border>
@@ -1743,7 +1744,7 @@ Con Note No.</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>1.05853cm</Top>
-              <Left>14.02433cm</Left>
+              <Left>8.85585cm</Left>
               <Height>2.7693cm</Height>
               <Width>2.73482cm</Width>
               <ZIndex>20</ZIndex>
@@ -2392,9 +2393,9 @@ Con Note No.</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>1.05853cm</Top>
-              <Left>16.79443cm</Left>
+              <Left>11.62595cm</Left>
               <Height>0.44317cm</Height>
-              <Width>2.92651cm</Width>
+              <Width>2.9969cm</Width>
               <ZIndex>28</ZIndex>
               <Style>
                 <Border>
@@ -2423,9 +2424,9 @@ Con Note No.</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>1.5286cm</Top>
-              <Left>16.788cm</Left>
+              <Left>11.61952cm</Left>
               <Height>0.37261cm</Height>
-              <Width>2.92651cm</Width>
+              <Width>2.9969cm</Width>
               <ZIndex>29</ZIndex>
               <Style>
                 <Border>
@@ -2453,9 +2454,9 @@ Con Note No.</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>2.00704cm</Top>
-              <Left>16.79443cm</Left>
+              <Left>11.62595cm</Left>
               <Height>0.27384cm</Height>
-              <Width>2.89123cm</Width>
+              <Width>2.9969cm</Width>
               <ZIndex>30</ZIndex>
               <Style>
                 <Border>
@@ -2482,9 +2483,9 @@ Con Note No.</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>2.31616cm</Top>
-              <Left>16.79443cm</Left>
+              <Left>11.62595cm</Left>
               <Height>0.37967cm</Height>
-              <Width>2.96162cm</Width>
+              <Width>2.9969cm</Width>
               <ZIndex>31</ZIndex>
               <Style>
                 <Border>
@@ -2511,9 +2512,9 @@ Con Note No.</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>2.69583cm</Top>
-              <Left>16.788cm</Left>
+              <Left>11.61952cm</Left>
               <Height>0.295cm</Height>
-              <Width>2.61026cm</Width>
+              <Width>2.9969cm</Width>
               <ZIndex>32</ZIndex>
               <Style>
                 <Border>
@@ -2547,7 +2548,7 @@ Con Note No.</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>2.99083cm</Top>
-              <Left>16.82971cm</Left>
+              <Left>11.66123cm</Left>
               <Height>0.42954cm</Height>
               <Width>2.96162cm</Width>
               <ZIndex>33</ZIndex>
@@ -2655,6 +2656,49 @@ Con Note No.</Value>
                 </Border>
                 <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox14">
+              <rd:DefaultName>Textbox14</rd:DefaultName>
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Note:</Value>
+                      <Style>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!ExternalDeliveryNote.Value, "DataSet_Result")</Value>
+                      <Style>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.05853cm</Top>
+              <Left>15.5067cm</Left>
+              <Height>2.7693cm</Height>
+              <Width>4.21424cm</Width>
+              <ZIndex>37</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
               </Style>
             </Textbox>
           </ReportItems>
@@ -3001,7 +3045,6 @@ Con Note No.</Value>
             </Rectangle>
             <Rectangle Name="Rectangle7">
               <KeepTogether>true</KeepTogether>
-              <Top>0cm</Top>
               <Left>0.05329cm</Left>
               <Height>3.24581cm</Height>
               <Width>19.69633cm</Width>
@@ -3591,6 +3634,9 @@ SttTByo7B1StPLXW3rQGZTGdJO0BWdnnRGNdhtHjv2jM3wD4tz0N+wdr7f/c85ygGGOafXUKAO8GFvcF
         </Field>
         <Field Name="OrderTakenBy">
           <DataField>OrderTakenBy</DataField>
+        </Field>
+        <Field Name="ExternalDeliveryNote">
+          <DataField>ExternalDeliveryNote</DataField>
         </Field>
       </Fields>
       <Query>

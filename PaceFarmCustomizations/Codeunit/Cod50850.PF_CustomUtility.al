@@ -116,6 +116,7 @@ codeunit 50850 PF_CustomUtility
         ItemJnlLines: Record "Item Journal Line";
         ItemJnlBatch: Record "Item Journal Batch";
         ItemJnlTemplate: Record "Item Journal Template";
+        SalesReceivSetup: Record "Sales & Receivables Setup";
         PostItemJnl: Codeunit "Item Jnl.-Post Line";
         NoSeries: Codeunit "No. Series";
         DocumentNo: Code[20];
@@ -123,8 +124,9 @@ codeunit 50850 PF_CustomUtility
         LineNo: Integer;
     begin
         ItemJnlLines.LockTable(true);
-        if ItemJnlBatch.Get('ITEM', 'GRADING') then
-            DocumentNo := NoSeries.GetNextNo(ItemJnlBatch."No. Series");
+        SalesReceivSetup.Get();
+        if ItemJnlBatch.Get(SalesReceivSetup."Item Journal Template", SalesReceivSetup."Item Journal Batch") then
+            DocumentNo := NoSeries.PeekNextNo(ItemJnlBatch."No. Series");
         SalesLine.Reset();
         SalesLine.SetRange("Document No.", SalesHeader."No.");
         SalesLine.SetRange("Document Type", SalesHeader."Document Type");
@@ -138,8 +140,8 @@ codeunit 50850 PF_CustomUtility
                 EggExpCost.SetRange("Grading Floor", SalesLine."Location Code");
                 if EggExpCost.FindFirst() then begin
                     ItemJnlLines.Init();
-                    ItemJnlLines.Validate("Journal Template Name", 'ITEM');
-                    ItemJnlLines.Validate("Journal Batch Name", 'GRADING');
+                    ItemJnlLines.Validate("Journal Template Name", SalesReceivSetup."Item Journal Template");
+                    ItemJnlLines.Validate("Journal Batch Name", SalesReceivSetup."Item Journal Batch");
                     LineNo := GetItemJnlLastLineNo(ItemJnlLines."Journal Batch Name", ItemJnlLines."Journal Template Name") + 10000;
                     ItemJnlLines.Validate("Line No.", LineNo);
                     ItemJnlLines.Validate("Posting Date", Today);
@@ -163,15 +165,13 @@ codeunit 50850 PF_CustomUtility
         end;
 
         ItemJnlLines.Reset();
-        ItemJnlLines.SetRange("Journal Template Name", 'ITEM');
-        ItemJnlLines.SetRange("Journal Batch Name", 'GRADING');
-        // ItemJnlLines.MarkedOnly(true);
+        ItemJnlLines.SetRange("Journal Template Name", SalesReceivSetup."Item Journal Template");
+        ItemJnlLines.SetRange("Journal Batch Name", SalesReceivSetup."Item Journal Batch");
         if ItemJnlLines.IsEmpty() then
             Error('No Item Journal Lines created for Sales Order %1', SalesHeader."No.")
         else
             Message('Stocks are created for Sales Order %1 in Item Journal successfuly', SalesHeader."No.");
 
-        ItemJnlLines.RenumberDocumentNo();
         if Confirm('Do you want to post the Item Journal?', false) then
             // PostItemJnl.RunWithCheck(ItemJnlLines);
             Codeunit.Run(Codeunit::"Item Jnl.-Post", ItemJnlLines)

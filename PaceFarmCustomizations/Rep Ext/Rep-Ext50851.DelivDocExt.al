@@ -34,6 +34,9 @@ reportextension 50851 DelivDocExt extends "PF Delivery Docket"
             column(OrderTakenBy; PaceFarmCodeunit.GetUserNameFromSecurityId(Header.SystemCreatedBy))
             {
             }
+            column(ExternalDeliveryNote; GetExternalDeliveryNote)
+            {
+            }
         }
     }
     rendering

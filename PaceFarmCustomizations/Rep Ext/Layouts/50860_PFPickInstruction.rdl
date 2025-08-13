@@ -6941,6 +6941,18 @@ SttTByo7B1StPLXW3rQGZTGdJO0BWdnnRGNdhtHjv2jM3wD4tz0N+wdr7f/c85ygGGOafXUKAO8GFvcF
         <Field Name="IC_Reference_Document_No_">
           <DataField>IC_Reference_Document_No_</DataField>
         </Field>
+        <Field Name="Delivery_Terms">
+          <DataField>Delivery_Terms</DataField>
+        </Field>
+        <Field Name="SO_Pick_Note">
+          <DataField>SO_Pick_Note</DataField>
+        </Field>
+        <Field Name="GetPickNote">
+          <DataField>GetPickNote</DataField>
+        </Field>
+        <Field Name="SalesContact">
+          <DataField>SalesContact</DataField>
+        </Field>
         <Field Name="Description_2">
           <DataField>Description_2</DataField>
         </Field>

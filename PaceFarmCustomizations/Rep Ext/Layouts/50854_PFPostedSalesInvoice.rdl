@@ -11,7 +11,7 @@
       <am:Name>PBIRB</am:Name>
       <am:Version>15.7.1814.616</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2025-07-08T06:36:20.2119795Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-08-07T21:13:17.3918264Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -1144,7 +1144,7 @@ Invoice Account</Value>
               <Top>0.98972cm</Top>
               <Left>3.17924cm</Left>
               <Height>3.14688cm</Height>
-              <Width>8.38187cm</Width>
+              <Width>4.95703cm</Width>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border>
@@ -1442,7 +1442,7 @@ Amount</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.98972cm</Top>
-              <Left>13.87215cm</Left>
+              <Left>8.79215cm</Left>
               <Height>3.2773cm</Height>
               <Width>2.73482cm</Width>
               <ZIndex>12</ZIndex>
@@ -1547,7 +1547,7 @@ Amount</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.98972cm</Top>
-              <Left>16.60697cm</Left>
+              <Left>11.52697cm</Left>
               <Height>3.2773cm</Height>
               <Width>3.24487cm</Width>
               <ZIndex>13</ZIndex>
@@ -2302,6 +2302,49 @@ Customer Account</Value>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
                 <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox12">
+              <rd:DefaultName>Textbox12</rd:DefaultName>
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Notes:</Value>
+                      <Style>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!PostedInvoiceNote.Value, "DataSet_Result")</Value>
+                      <Style>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.98972cm</Top>
+              <Left>15.4432cm</Left>
+              <Height>3.2773cm</Height>
+              <Width>4.3068cm</Width>
+              <ZIndex>31</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
               </Style>
             </Textbox>
           </ReportItems>
@@ -3586,6 +3629,9 @@ SttTByo7B1StPLXW3rQGZTGdJO0BWdnnRGNdhtHjv2jM3wD4tz0N+wdr7f/c85ygGGOafXUKAO8GFvcF
         </Field>
         <Field Name="Sell_to_Customer_Name">
           <DataField>Sell_to_Customer_Name</DataField>
+        </Field>
+        <Field Name="PostedInvoiceNote">
+          <DataField>PostedInvoiceNote</DataField>
         </Field>
         <Field Name="PickCode">
           <DataField>PickCode</DataField>

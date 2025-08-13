@@ -24,6 +24,7 @@ reportextension 50860 PickInstruction extends "Pick Instruction"
             var
                 TableCountryregion: Record "Country/Region";
                 CustomerRec: Record Customer;
+                ContactRec: Record Contact;
             begin
                 if TableCountryregion.Get("Ship-to Country/Region Code") then
                     ShipCountry := TableCountryregion.Name
@@ -31,9 +32,14 @@ reportextension 50860 PickInstruction extends "Pick Instruction"
                     ShipCountry := '';
                 if CustomerRec.get("Sell-to Customer No.") then begin
                     CustomerDropNo := CustomerRec."Drop No.";
+                    if ContactRec.Get(CustomerRec."Sales Contact") then
+                        SalesContact := ContactRec.Name
+                    else
+                        SalesContact := '';
                 end
                 else
                     CustomerDropNo := '';
+
             end;
         }
         add("Sales Header")
@@ -114,6 +120,22 @@ reportextension 50860 PickInstruction extends "Pick Instruction"
             {
 
             }
+            column(Delivery_Terms; "Delivery Terms")
+            {
+
+            }
+            column(SO_Pick_Note; "SO_Pick Note")
+            {
+
+            }
+            column(GetPickNote; GetPickNote)
+            {
+
+            }
+            column(SalesContact; SalesContact)
+            {
+
+            }
         }
         add("Sales Line")
         {
@@ -153,6 +175,7 @@ reportextension 50860 PickInstruction extends "Pick Instruction"
         ShipCountry: Text[30];
         Location: Text[100];
         CustomerDropNo: Text[30];
+        SalesContact: Text[50];
 
     trigger OnPreReport()
     var

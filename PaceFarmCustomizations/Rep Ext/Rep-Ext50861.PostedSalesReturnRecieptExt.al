@@ -11,6 +11,7 @@ reportextension 50861 PostedSalesReturnReciept extends "Sales - Return Receipt"
                 CountryRegion: Record "Country/Region";
                 ShipCountryRegion: Record "Country/Region";
                 SalesInvoiceHeader: Record "Sales Invoice Header";
+                Supervisor: Record "Warehouse Supervisor";
             begin
                 Paymentterms.Reset();
                 if Paymentterms.Get("Payment Terms Code") then
@@ -45,6 +46,7 @@ reportextension 50861 PostedSalesReturnReciept extends "Sales - Return Receipt"
                     PSIShiptoPostCode := SalesInvoiceHeader."Ship-to Post Code";
                     PSIShiptoCountryRegionCode := SalesInvoiceHeader."Ship-to Country/Region Code";
                     PSIShiptoCounty := SalesInvoiceHeader."Ship-to County";
+                    Run_No := SalesInvoiceHeader."Run No.";
                     if ShipCountryRegion.Get(PSIShiptoCountryRegionCode) then
                         PSIShiptoCountry := CountryRegion.Name
                     else
@@ -60,7 +62,13 @@ reportextension 50861 PostedSalesReturnReciept extends "Sales - Return Receipt"
                     PSIShiptoCountryRegionCode := '';
                     PSIShiptoCounty := '';
                     PSIShiptoCountry := '';
+                    Run_No := '';
                 end;
+
+                if Supervisor.Get("Warehouse Supervisor") then
+                    SupervisorName := Supervisor."Supervisor Name"
+                else
+                    SupervisorName := '';
             end;
         }
         add("Return Receipt Header")
@@ -216,6 +224,71 @@ reportextension 50861 PostedSalesReturnReciept extends "Sales - Return Receipt"
             {
 
             }
+            column(Store_Man; "Store Man")
+            {
+
+            }
+            column(Carrier; Carrier)
+            {
+
+            }
+            column(Driver; Driver)
+            {
+
+            }
+            column(Run_No; Run_No)
+            {
+
+            }
+            column(Document_Date; "Document Date")
+            {
+
+            }
+            column(Product; Product)
+            {
+
+            }
+            column(Product_Relv__Temp_; "Product Relv. Temp.")
+            {
+
+            }
+            column(Date_Produced_UBD; "Date Produced/UBD")
+            {
+
+            }
+            column(Reason_Code; "Reason Code")
+            {
+
+            }
+            column(Reason_for_Return_Comment; "Reason for Return Comment")
+            {
+
+            }
+            column(Warehouse_Supervisor; SupervisorName)
+            {
+
+            }
+            column(Supervisor; "Warehouse Supervisor")
+            {
+
+            }
+            column(Warehouse_Handling_Time; "Warehouse Handling Time")
+            {
+
+            }
+            column(Action_Taken; "Action Taken")
+            {
+
+            }
+            column(Action_Take_Comment; "Action Take Comment")
+            {
+
+            }
+            column(Run_No_; "Run No.")
+            {
+
+            }
+
         }
         add(CopyLoop)
         {
@@ -240,6 +313,18 @@ reportextension 50861 PostedSalesReturnReciept extends "Sales - Return Receipt"
             {
 
             }
+            column(Type; Type)
+            {
+
+            }
+            column(Condition_on_Arrival; "Condition on Arrival")
+            {
+
+            }
+            column(Condition_Comment; "Condition Comment")
+            {
+
+            }
 
         }
     }
@@ -250,6 +335,11 @@ reportextension 50861 PostedSalesReturnReciept extends "Sales - Return Receipt"
         {
             Type = RDLC;
             LayoutFile = './Rep Ext/Layouts/50861_PFSalesReturnReceipt.rdl';
+        }
+        layout("Sals Return Receipt updated- D360")
+        {
+            Type = RDLC;
+            LayoutFile = './Rep Ext/Layouts/50861_PFSalesReturnReceiptUpdated.rdl';
         }
     }
     var
@@ -269,6 +359,8 @@ reportextension 50861 PostedSalesReturnReciept extends "Sales - Return Receipt"
         PSIShiptoCountryRegionCode: Code[10];
         PSIShiptoCounty: Text[30];
         PSIShiptoCountry: Text[30];
+        Run_No: Code[20];
+        SupervisorName: Text[100];
 
 
     trigger OnPreReport()

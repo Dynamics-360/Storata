@@ -9,7 +9,11 @@ tableextension 50858 PF_SalesLines extends "Sales Line"
             DataClassification = SystemMetadata;
             OptionMembers = " ","1","2","3","4","5";
         }
+        field(50861; "Condition on Arrival"; Option)
+        {
+            DataClassification = CustomerContent;
+            OptionMembers = Good,Leaking,Damaged,Soiled;
+        }
+       
     }
-
-
 }
